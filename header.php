@@ -23,34 +23,62 @@
 <?php 
 $theme_resources = new theme_resources();
 $options = $theme_resources->return_options();
-print_r($options);
+// print_r($options);
+$menu_exists = $theme_resources->menu_check('tfn-primary');
+
+$four_o_four = is_404();  // detect 404 page for display
+$header_logo = get_theme_mod( 'header_logo', '' );
+$header_social_pick = get_theme_mod( 'header_social_pick', '' );
 ?>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'twentyfivenorth' ); ?></a>
+<div id="page" class="site wrapper">
+	<?php 
+	if (!$four_o_four) { ?>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<header id="totop">
+    	<div class="top-holder top-holder-fixed">
+        	<!-- Main Navigation -->
+        	<div class="main-menu">
+            	<nav class="navbar navbar-default">
+                	<div class="container">
+                    	<div class="navbar-header">
+                        	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) );?>">
+								<div class="nav-logo">
+									<img src="<?php echo $header_logo; ?>" alt="Logo" class="smaller-logo img-responsive center-block" />
+								</div>
+							</a>
+						</div>
+						<div id="navbar" class="navbar-collapse collapse">
+						<?php
+                       	get_template_part('inc/wp_bootstrap_navwalker');
+                       	$current = get_page_template_slug();
+                       	wp_nav_menu( array(
+							'menu'			 => 'tfnprimary',
+                           	'theme_location' => 'primary',
+                           	'container' => 'div',
+                           	'container_class' => 'collapse navbar-collapse',
+                           	'depth' => 2, 
+                           	'menu_class' => 'nav navbar-nav',
+							'fallback_cb'	=> 'wp_bootstrap_navwalker::fallback',
+                           	'walker' => new wp_bootstrap_navwalker(),
+                           	'walker_arg' => $current
+                       	));
+						?>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+						</div><!--/.nav-collapse -->
+					</div>
+				</nav>
+			</div> <!-- End Main Navigation -->
+		</div> <!-- End Top Holder -->
+	</header>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'twentyfivenorth' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+	<main>
+	<?php
+	} // end 404 check ?>

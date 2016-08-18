@@ -1,64 +1,41 @@
 <?php
 /**
- * The template for displaying 404 pages (not found).
+ * The 404 template file.
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * This is the page not found page template
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @packageTwentyFiveNorth
  */
 
 get_header(); ?>
+		<div class="wrapper">
+			<main>
+				<section class="nothing-found">
+					<div class="overlay-col">
+						<div class="container">
+							<h1>404</h1>
+							<h2 class="sectionh"><?php echo get_theme_mod( 'page_404_heading', '' ); ?></h2>
+							<p><?php echo get_theme_mod( 'page_404_hdesc', '' ); ?></p>
+						</div> <!-- End Container -->
+					</div> <!-- End Overlay -->
+				</section>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+				<!-- Virtual Tour Section -->
+				<section class="virtual">
+					<div class="container-fluid color-back">
+						<div class="row text-center">
+							<div class="col-md-12">
+								<span><?php echo get_theme_mod( 'page_404_banner', '' ); ?></span> 
+								<a href="<?php echo esc_url( home_url( '/' ) );?>" 
+									class="vtour btn-pri"><?php echo get_theme_mod( 'page_404_btn', '' ); ?></a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<?php get_footer(); ?>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'twentyfivenorth' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'twentyfivenorth' ); ?></p>
-
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-						if ( twentyfivenorth_categorized_blog() ) :
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'twentyfivenorth' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'twentyfivenorth' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+		</div><!-- End Wrapper -->
+	</body>
+</html>

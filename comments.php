@@ -21,14 +21,14 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-
+	<div class="comments">
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'twentyfivenorth' ) ),
+					esc_html( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'twentyfivenorth' ) ),
 					number_format_i18n( get_comments_number() ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -50,8 +50,11 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
+					'type'        => 'comment',
+					'callback'    => 'twentyfivenorth_comments',
+					'style'       => 'ol',
+					'avatar_size' => 50,
+					'short_ping'  => true,
 				) );
 			?>
 		</ol><!-- .comment-list -->
@@ -78,8 +81,13 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'twentyfivenorth' ); ?></p>
 	<?php
 	endif;
-
-	comment_form();
 	?>
+	</div> <!-- .comments -->
+	<?php 
+	$args = array (
+		'comment_notes_before' => '<p class="comment-notes">' 
+			. __( 'Your email address will not be published.', 'twentyfivenorth') . '</p>'
+	);
+	comment_form($args); ?>
 
 </div><!-- #comments -->

@@ -7,22 +7,34 @@
  * @packageTwentyFiveNorth
  */
 
-get_header(); ?>
+get_header(); 
+$sidebar_pos = get_theme_mod('blog_sidebar');
+$main_class = '';
+if ($sidebar_pos == 'left') {
+    $main_class = 'pull-right';
+}
+?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section id="top-section" class="top-section">
+        <div class="blog-header">
+            <div class="blog-header-inner">
+                <h1><?php the_archive_title(); ?></h1>
+            </div>
+            <div class="blog-header-overlay">
+            </div>
+        </div>
+    </section>
+
+	<!-- Blog -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="row">
+                <!-- Main Blog -->
+                <div class="col-xs-12 col-sm-12 col-md-8 <?php echo $main_class;?>">
 
 		<?php
-		if ( have_posts() ) : ?>
+		if ( have_posts() ) :
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
@@ -42,10 +54,19 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
+				
+				</div><!-- .col-md-8 -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				<!-- Blog Sidebar -->
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <div class="blog-sidebar">
+                        <?php get_sidebar(); ?>
+                    </div>
+                </div> <!-- \sidebar -->
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
 
 <?php
-get_sidebar();
 get_footer();

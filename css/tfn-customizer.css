@@ -1,0 +1,23 @@
+/* Show icons in customizer select groups */
+#customize-control-feature_1_icon select,
+#customize-control-feature_2_icon select,
+#customize-control-feature_3_icon select, 
+#customize-control-feature_4_icon select,
+#customize-control-additional_1_icon select,
+#customize-control-additional_2_icon select,
+#customize-control-additional_3_icon select,
+#customize-control-additional_4_icon select,
+#customize-control-contact_1_icon select,
+#customize-control-contact_2_icon select,
+#customize-control-contact_3_icon select {
+	font-family: icomoon, sans-serif;
+}
+
+#customize-control-highlight_1_icon select, 
+#customize-control-highlight_2_icon select,
+#customize-control-highlight_3_icon select,
+#customize-control-agent_1_icon select,
+#customize-control-agent_2_icon select,
+#customize-control-agent_3_icon select {
+	font-family: FontAwesome, sans-serif;
+}
