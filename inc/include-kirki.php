@@ -33,6 +33,11 @@ if ( ! class_exists( 'Kirki' ) ) {
 					var installerStyles = '<style>#plugin-information-tabs,#plugin-information-content {display:none !important;}</style>';
 					jQuery('iframe#kirki-customizer-installer').load( function() {
 						jQuery('iframe#kirki-customizer-installer').contents().find("head").append( installerStyles );
+						// Clone button to parent window
+						var iBody = jQuery('iframe#kirki-customizer-installer').contents().find('body');
+                    	var kButton = iBody.find('#plugin_install_from_iframe').clone();							
+						iBody.find('#plugin_install_from_iframe').hide();
+						parent.jQuery('#customize-control-kirki_installer').append(kButton);
 					});
 					</script>
 					<iframe id="kirki-customizer-installer" src="<?php echo admin_url( 'plugin-install.php?tab=plugin-information&amp;plugin=kirki' ); ?>"></iframe>
@@ -40,7 +45,7 @@ if ( ! class_exists( 'Kirki' ) ) {
 					<style>
 						li#accordion-section-kirki_installer .description { display: none; }
                     			</style>
-					<p><?php printf( __( 'The Kirki Toolkit plugin is installed but not activated. Please <strong><a href="%s">activate it</a></strong> in order to take full advantage of the theme\'s options.', 'twentyfivenorth' ), admin_url( 'plugins.php' ) ); ?></p>
+					<p><?php printf( __( 'The Kirki Toolkit plugin is installed but not activated. Please <strong><a href="%s">activate it</a></strong> in order to take full advantage of the theme\'s options.', 'twenty-five-north' ), admin_url( 'plugins.php' ) ); ?></p>
 				<?php endif;
 			}
 		}
@@ -57,7 +62,7 @@ if ( ! class_exists( 'Kirki' ) ) {
 			// Please note that the title will not be displayed.
 			$wp_customize->add_section( 'kirki_installer', array(
 				'title'       => '',
-				'description' => esc_attr__( 'If you want to take full advantage of the options this theme has to offer, please install the companion Kirki Toolkit plugin.', 'twentyfivenorth' ),
+				'description' => esc_attr__( 'If you want to take full advantage of the options this theme has to offer, please install the companion Kirki Toolkit plugin.', 'twenty-five-north' ),
 				'priority'    => -10,
 				'capability'  => 'install_plugins',
 			) );

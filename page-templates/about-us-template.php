@@ -54,11 +54,11 @@ $about_sections = get_theme_mod('about_sections', '');
                             <div class="agent-contact">
                                 <div class="agent-contact-row">
                                     <div class="icon-holder"><i class="icon-telephone"></i></div>
-                                    <div class="contact-details"><span><?php echo __('PHONE', 'twentyfivenorth');?></span><?php echo $details['agent_phone'];?></div>
+                                    <div class="contact-details"><span><?php echo __('PHONE', 'twenty-five-north');?></span><?php echo $details['agent_phone'];?></div>
                                 </div>
                                 <div class="agent-contact-row">
                                     <div class="icon-holder"><i class="icon-envelope"></i></div>
-                                    <div class="contact-details"><span><?php echo __('EMAIL', 'twentyfivenorth');?></span><?php echo $details['agent_email'];?></div>
+                                    <div class="contact-details"><span><?php echo __('EMAIL', 'twenty-five-north');?></span><?php echo $details['agent_email'];?></div>
                                 </div>
                             </div>
                             <div class="agent-social">

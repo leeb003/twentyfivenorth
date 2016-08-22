@@ -24,10 +24,10 @@ class TFN_Widget_Tag_Cloud extends WP_Widget {
 	 */
 	public function __construct() {
 		$widget_ops = array(
-			'description' => __( 'A cloud of your most used tags.', 'twentyfivenorth' ),
+			'description' => __( 'A cloud of your most used tags.', 'twenty-five-north' ),
 			'customize_selective_refresh' => true,
 		);
-		parent::__construct( 'tfn_tag_cloud', __( 'Tag Cloud - Twenty Five North', 'twentyfivenorth' ), $widget_ops );
+		parent::__construct( 'tfn_tag_cloud', __( 'Tag Cloud - Twenty Five North', 'twenty-five-north' ), $widget_ops );
 	}
 
 	/**
@@ -46,7 +46,7 @@ class TFN_Widget_Tag_Cloud extends WP_Widget {
 			$title = $instance['title'];
 		} else {
 			if ( 'post_tag' == $current_taxonomy ) {
-				$title = __('Tags', 'twentyfivenorth');
+				$title = __('Tags', 'twenty-five-north');
 			} else {
 				$tax = get_taxonomy($current_taxonomy);
 				$title = $tax->labels->name;
@@ -120,7 +120,7 @@ class TFN_Widget_Tag_Cloud extends WP_Widget {
 		$title_id = $this->get_field_id( 'title' );
 		$instance['title'] = ! empty( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 
-		echo '<p><label for="' . $title_id .'">' . __( 'Title:', 'twentyfivenorth' ) . '</label>
+		echo '<p><label for="' . $title_id .'">' . __( 'Title:', 'twenty-five-north' ) . '</label>
 			<input type="text" class="widefat" id="' . $title_id .'" name="' . $this->get_field_name( 'title' ) .'" value="' . $instance['title'] .'" />
 		</p>';
 
@@ -133,7 +133,7 @@ class TFN_Widget_Tag_Cloud extends WP_Widget {
 
 		// No tag cloud supporting taxonomies found, display error message
 		case 0:
-			echo '<p>' . __( 'The tag cloud will not be displayed since there are no taxonomies that support the tag cloud widget.', 'twentyfivenorth' ) . '</p>';
+			echo '<p>' . __( 'The tag cloud will not be displayed since there are no taxonomies that support the tag cloud widget.', 'twenty-five-north' ) . '</p>';
 			printf( $input, '' );
 			break;
 
@@ -150,7 +150,7 @@ class TFN_Widget_Tag_Cloud extends WP_Widget {
 				'<p><label for="%1$s">%2$s</label>' .
 				'<select class="widefat" id="%1$s" name="%3$s">',
 				$id,
-				__( 'Taxonomy:', 'twentyfivenorth' ),
+				__( 'Taxonomy:', 'twenty-five-north' ),
 				$name
 			);
 

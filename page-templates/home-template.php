@@ -27,18 +27,18 @@ $home_sections = get_theme_mod( 'home_sections', array());
 				<div class="row">
 					<div class="col-sm-6 col-xs-10 top-info-sect">
 						<h3>
-							<?php echo get_theme_mod( 'home_info_address', ''); ?>
+							<?php echo get_theme_mod( 'home_info_address', '25 North Street / Your Town, CO 88888 United States'); ?>
 						</h3>
-						<h1><?php echo get_theme_mod( 'home_info_price', ''); ?></h1>
+						<h1><?php echo get_theme_mod( 'home_info_price', '$1,799,000'); ?></h1>
 						<p>
-							<?php echo get_theme_mod( 'home_info_desc', ''); ?>
+							<?php echo get_theme_mod( 'home_info_desc', 'Lovely one owner home with an open floor plan on a corner lot!  Spacious living room with fireplace and walk out to a fully fenced backyard with patio.'); ?>
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-6 col-xs-10 top-cta">
-						<a href="<?php echo get_theme_mod( 'home_info_btn_url', ''); ?>" class="schedule">
-							<?php echo get_theme_mod( 'home_info_btn_text', ''); ?>
+						<a href="<?php echo get_theme_mod( 'home_info_btn_url', '#'); ?>" class="schedule">
+							<?php echo get_theme_mod( 'home_info_btn_text', 'SCHEDULE A SHOWING'); ?>
 						</a>
 					</div>
 				</div>
@@ -54,32 +54,32 @@ $home_sections = get_theme_mod( 'home_sections', array());
 				<div class="col-xs-6 col-sm-6 col-md-3">
 					 <div class="feature">
 						<div class="feature-inner">
-							<i class="<?php echo get_theme_mod( 'feature_1_icon'); ?>"></i><br />
-							<span><?php echo get_theme_mod( 'feature_1_text'); ?></span>
+							<i class="<?php echo get_theme_mod( 'feature_1_icon', 'icon-bed'); ?>"></i><br />
+							<span><?php echo get_theme_mod( 'feature_1_text', '4 Bedrooms'); ?></span>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-3">
 					<div class="feature">
 						<div class="feature-inner">
-							<i class="<?php echo get_theme_mod( 'feature_2_icon'); ?>"></i><br />
-							<span><?php echo get_theme_mod( 'feature_2_text'); ?></span>
+							<i class="<?php echo get_theme_mod( 'feature_2_icon', 'icon-bathtub'); ?>"></i><br />
+							<span><?php echo get_theme_mod( 'feature_2_text', '4 Bathrooms'); ?></span>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-3">
 					<div class="feature">
 						<div class="feature-inner">
-							<i class="<?php echo get_theme_mod( 'feature_3_icon'); ?>"></i><br />
-							<span><?php echo get_theme_mod( 'feature_3_text'); ?></span>
+							<i class="<?php echo get_theme_mod( 'feature_3_icon', 'icon-car2'); ?>"></i><br />
+							<span><?php echo get_theme_mod( 'feature_3_text', '3 Car Garage'); ?></span>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-3">
 					<div class="feature">
 						<div class="feature-inner">
-							<i class="<?php echo get_theme_mod( 'feature_4_icon'); ?>"></i><br />
-							<span><?php echo get_theme_mod( 'feature_4_text'); ?></span>
+							<i class="<?php echo get_theme_mod( 'feature_4_icon', 'icon-pencil-ruler'); ?>"></i><br />
+							<span><?php echo get_theme_mod( 'feature_4_text', '4078 SQ.FT.'); ?></span>
 						</div>
 					</div>
 				</div>
@@ -224,10 +224,10 @@ $home_sections = get_theme_mod( 'home_sections', array());
                   	<div class="col-md-12">
                        	<div id="isotope-filters2" class="filter-container isotopeFilters2">
                            	<ul class="list-inline filter">
-                               	<li class="active"><a href="#" data-filter="*"><?php echo __('All', 'twentyfivenorth');?></a></li>
+                               	<li class="active"><a href="#" data-filter="*"><?php echo __('All', 'twenty-five-north');?></a></li>
 				<?php
 				// list terms in a given taxonomy
-				$taxonomy = 'portcat';
+				$taxonomy = 'tfnphotocat';
 				$tax_terms = get_terms($taxonomy);
 				foreach ($tax_terms as $tax_term) { 
 				?>
@@ -244,9 +244,9 @@ $home_sections = get_theme_mod( 'home_sections', array());
 
 				<?php
 				// display the gallery images
-				$portfolio = '';
+				$photo = '';
 				$args = array(
-            		'post_type' => 'portfolio_entry',
+            		'post_type' => 'photo_entry',
 					'order'	=> 'ASC',
         		);
 
@@ -259,7 +259,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 						$column = 'col-sm-4';
 					}
             		// Pull category for each unique post using the ID 
-            		$terms = get_the_terms( $post->ID, 'portcat' );
+            		$terms = get_the_terms( $post->ID, 'tfnphotocat' );
 
             		if ( $terms && ! is_wp_error( $terms ) ) {
 
@@ -428,7 +428,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 							</div>
 							<?php echo implode(' ', $meta);?>
 							<a href="<?php echo get_permalink($post->ID);?>" 
-								class="readmore"><?php echo __('Read more', 'twentyfivenorth');?></a>
+								class="readmore"><?php echo __('Read more', 'twenty-five-north');?></a>
 						</div>
 					</div>
 				</div>
@@ -445,7 +445,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 								<p><?php echo $partial_content; ?></p>
 							</div>
 							<a href="<?php echo get_permalink($post->ID);?>" 
-								class="readmore"><?php echo __('Read more', 'twentyfivenorth');?></a>
+								class="readmore"><?php echo __('Read more', 'twenty-five-north');?></a>
 							<?php echo implode(' ', array_reverse($meta, true));?>
 						</div>
 					</div>
@@ -479,7 +479,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 			</div>
 			<div class="row vcenter agent-info">
 				<div class="col-md-6 col-sm-12">
-					<img class="img-responsive" src="<?php echo get_theme_mod('agent_photo', '') ;?>" alt="<?php echo __('agent','');?>" />
+					<img class="img-responsive" src="<?php echo get_theme_mod('agent_photo', '') ;?>" alt="<?php echo __('agent','twenty-five-north');?>" />
 				</div>
 				<div class="col-md-6 text-left agent-details">
 					<h3><?php echo get_theme_mod('agent_name', ''); ?></h3>

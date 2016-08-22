@@ -28,7 +28,6 @@ $menu_exists = $theme_resources->menu_check('tfn-primary');
 
 $four_o_four = is_404();  // detect 404 page for display
 $header_logo = get_theme_mod( 'header_logo', '' );
-$header_social_pick = get_theme_mod( 'header_social_pick', '' );
 ?>
 
 <body <?php body_class(); ?>>
@@ -55,15 +54,15 @@ $header_social_pick = get_theme_mod( 'header_social_pick', '' );
 								</div>
 							</a>
 						</div>
-						<div id="navbar" class="navbar-collapse collapse">
 						<?php
                        	get_template_part('inc/wp_bootstrap_navwalker');
                        	$current = get_page_template_slug();
                        	wp_nav_menu( array(
-							'menu'			 => 'tfnprimary',
-                           	'theme_location' => 'primary',
+							'menu'			 => 'primary',
+                           	'theme_location' => 'tfnprimary',
                            	'container' => 'div',
                            	'container_class' => 'collapse navbar-collapse',
+							'container_id' => 'navbar',
                            	'depth' => 2, 
                            	'menu_class' => 'nav navbar-nav',
 							'fallback_cb'	=> 'wp_bootstrap_navwalker::fallback',
@@ -71,8 +70,6 @@ $header_social_pick = get_theme_mod( 'header_social_pick', '' );
                            	'walker_arg' => $current
                        	));
 						?>
-
-						</div><!--/.nav-collapse -->
 					</div>
 				</nav>
 			</div> <!-- End Main Navigation -->

@@ -15,8 +15,10 @@
 get_header(); 
 $sidebar_pos = get_theme_mod('blog_sidebar');
 $main_class = '';
+$sidebar_class = '';
 if ($sidebar_pos == 'left') {
     $main_class = 'pull-right';
+	$sidebar_class = 'left-sidebar';
 }
 ?>
 
@@ -64,7 +66,7 @@ if ($sidebar_pos == 'left') {
 
 				<!-- Blog Sidebar -->
                 <div class="col-xs-12 col-sm-12 col-md-4">
-                    <div class="blog-sidebar">
+                    <div class="blog-sidebar <?php echo $sidebar_class; ?>">
                         <?php get_sidebar(); ?>
                     </div>
                 </div> <!-- \sidebar -->

@@ -27,7 +27,7 @@ function twentyfivenorth_setup() {
 	 * If you're building a theme based onTwentyFiveNorth, use a find and replace
 	 * to change 'twentyfivenorth' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'twentyfivenorth', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'twenty-five-north', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -52,7 +52,7 @@ function twentyfivenorth_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'tfnprimary' => __( 'Primary', 'twentyfivenorth' ),
+		'tfnprimary' => __( 'Primary', 'twenty-five-north' ),
 	) );
 
 	/*
@@ -84,12 +84,13 @@ add_action( 'after_setup_theme', 'twentyfivenorth_setup' );
  */
 add_filter( 'wp_nav_menu_items', 'add_icons_to_nav', 10, 2);
 function add_icons_to_nav( $items, $args ) {
+	$header_social = get_theme_mod( 'header_social' );
 	$header_social_pick = get_theme_mod( 'header_social_pick' );
 	$nav_extra = '';
 	$nav_sep = '';
 	//print_r($args);
-	if ($args->theme_location == 'primary') {
-		if (empty($header_social_pick)) { return $items; }
+	if ($args->theme_location == 'tfnprimary') {
+		if (empty($header_social_pick) || $header_social == 0 ) { return $items; }
 		$items .= '<li class="nav-sep"><span></span></li>';
 		foreach ($header_social_pick as $k => $v) {
 			$items  .= '<li class="social-link">'
@@ -119,9 +120,9 @@ add_action( 'after_setup_theme', 'twentyfivenorth_content_width', 0 );
  */
 function twentyfivenorth_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'twentyfivenorth' ),
+		'name'          => esc_html__( 'Sidebar', 'twenty-five-north' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'twentyfivenorth' ),
+		'description'   => esc_html__( 'Add widgets here.', 'twenty-five-north' ),
 		'before_widget' => '<section id="%1$s" class="widget sidebar-widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
@@ -135,6 +136,11 @@ add_action( 'widgets_init', 'twentyfivenorth_widgets_init' );
  */
 function twentyfivenorth_scripts() {
 	$tfn_theme = wp_get_theme();
+	$templates = array(
+        'page-templates/home-template.php',
+        'page-templates/home-demo-sticky-template.php',
+        'page-templates/home-demo-template.php'
+    );
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
 	wp_enqueue_style( 'linearicons', get_template_directory_uri() . '/css/linearicons.min.css' );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
@@ -143,9 +149,12 @@ function twentyfivenorth_scripts() {
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.min.css' );
 	wp_enqueue_style( 'twentyfivenorth-style', get_stylesheet_uri() );
 	// Other pages (not Front Page) styles
-	if (!is_page_template('page-templates/home-template.php')) {
+	if (!is_page_template($templates)) {
 		$top_background = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
 		$top_background = $top_background[0];
+		$testimonial_color = get_theme_mod('testimonial_color');
+		$testimonial_bg = get_theme_mod('testimonial_bg');
+		$four_o_four_bg = get_theme_mod('background_404');
 		$about_css = "
 			.tfn-page-header.blog-header {
 				background: transparent url('$top_background') no-repeat fixed top;
@@ -153,9 +162,32 @@ function twentyfivenorth_scripts() {
 			}
 			.blog-header h1 {
 				color: #fff;
-			}";
+			}
+			.testimonials-overlay {
+				background: $testimonial_color;
+			}
+			.testimonials-section {
+				background-image: url('$testimonial_bg');
+			}
+			.overlay-col {
+                background-image: url('$four_o_four_bg');
+            }
+			";
 		wp_add_inline_style( 'twentyfivenorth-style', $about_css );
+	} else { // home template
+		$color_primary = get_theme_mod('color_primary', '#fec107');
+		$secondary_color = get_theme_mod('color_secondary', '#46505c');
+		$gallery_bg = get_theme_mod('gallery_background', get_template_directory_uri() . '/img/gallery-bg.jpg');
+		$gallery_css = "
+			.overlay-col {
+				background-image: url('$gallery_bg');
+			}
+			.portfolio-section figure .overlay-background .inner {
+			 	background: linear-gradient(to right bottom, $secondary_color 50%, $color_primary 50%);
+			}";
+		wp_add_inline_style( 'twentyfivenorth-style', $gallery_css );
 	}
+
 
 	// Scripts
 	wp_enqueue_script( 'twentyfivenorth-navigation', get_template_directory_uri() . '/js/navigation.js', 
@@ -169,8 +201,8 @@ function twentyfivenorth_scripts() {
 	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery'), '', true);
 	wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '', true);
 
-	// Front Page
-	if (is_page_template('page-templates/home-template.php')) {
+	// Front Page or demo pages
+	if (is_page_template($templates)) {
 		$agent_map_marker = get_theme_mod('agent_map_marker');
     	$agent_map_lat = trim(get_theme_mod('agent_map_lat'));
     	$agent_map_lng = trim(get_theme_mod('agent_map_lng'));
@@ -190,7 +222,7 @@ function twentyfivenorth_scripts() {
 	}
 
 	// Not Front Page JS
-	if (!is_page_template('page-templates/home-template.php')) {
+	if (!is_page_template($templates)) {
 		wp_enqueue_script( 'twentyfivenorth-pagejs', get_template_directory_uri() . '/js/25north-page.js',
         array( 'bootstrap-dropdown' ), $tfn_theme->get('Version'), true);
 		$sending_msg = get_theme_mod('contact_form_sending_text');
@@ -222,9 +254,11 @@ function twentyfivenorth_scripts() {
 		// and if about map enabled
 		$about_sections = get_theme_mod('about_sections');
 		$map_enabled = false;
-		foreach ($about_sections as $section => $elem) {
-			if ($elem['section'] == 'aboutmap') {
-				$map_enabled = true;
+		if (!empty($about_sections)) {
+			foreach ($about_sections as $section => $elem) {
+				if ($elem['section'] == 'aboutmap') {
+					$map_enabled = true;
+				}
 			}
 		}
 		if ($map_enabled) {
@@ -339,18 +373,18 @@ add_action( 'customize_controls_enqueue_scripts', 'twentyfivenorth_admin_scripts
 function twentyfivenorth_comment_placeholders( $fields ) {
 	$fields['author'] = str_replace(
 		'<input', '<input placeholder="'
-		. __('Name', 'twentyfivenorth') . '"',
+		. __('Name', 'twenty-five-north') . '"',
 	$fields['author']
 	);
 	$fields['email'] = str_replace(
 		'<input id="email"',
 		'<input id="email" placeholder="'
-		. __('Email', 'twentyfivenorth') . '"',
+		. __('Email', 'twenty-five-north') . '"',
 	$fields['email']
 	);		
 	$fields['url'] = str_replace(
 		'<input id="url"',
-		'<input id="url" placeholder="' . __('Website', 'twentyfivenorth') . '"',
+		'<input id="url" placeholder="' . __('Website', 'twenty-five-north') . '"',
 	$fields['url']
 	);
 	return $fields;
@@ -394,18 +428,18 @@ function twentyfivenorth_comments($comment, $args, $depth) {
 			<?php 
 			$post_author = '';
 			if (get_comment_author() == get_the_author()) {
-				$post_author = '<span class="post-author">(' . __('Post author', 'twentyfivenorth') . ')</span>';
+				$post_author = '<span class="post-author">(' . __('Post author', 'twenty-five-north') . ')</span>';
 			}
         	printf( '<cite class="fn">%s' . ' ' . $post_author . '</cite>', get_comment_author_link() ); ?>
     		<?php if ( $comment->comment_approved == '0' ) : ?>
-         	<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twentyfivenorth' ); ?></em>
+         	<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twenty-five-north' ); ?></em>
           	<br />
     		<?php endif; ?>
 
     		<p><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
         	<?php
         	/* translators: 1: date, 2: time */
-        	printf( '%1$s - %2$s', get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'twentyfivenorth' ), '  ', '' );
+        	printf( '%1$s - %2$s', get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'twenty-five-north' ), '  ', '' );
         	?>
 			</p> 
 		</div> <!-- .comment-meta-content -->
@@ -425,12 +459,6 @@ function twentyfivenorth_comments($comment, $args, $depth) {
 }
 
 /**
- * Implement the Custom Header feature.
- * *** We don't need this, remove if not required for ThemeForest ***
- */
-//require INC_DIR . 'custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require INC_DIR . 'template-tags.php';
@@ -446,14 +474,19 @@ require INC_DIR . 'extras.php';
 require INC_DIR . 'font-arrays.php';
 
 /**
+ * Kirki Dynamic styles
+ */
+require INC_DIR . 'dynamic-styles.php';
+
+/**
  * Recommend the Kirki plugin
  */
-require INC_DIR . 'include-kirki.php';
+require_once INC_DIR . 'include-kirki.php';
 
 /**
  * Load the Kirki Fallback class (if Kirki is uninstalled, settings should still work on the frontend)
  */
-require INC_DIR . 'twentyfivenorth-kirki.php';
+require INC_DIR . 'twenty-five-north-kirki.php';
 
 /**
  * Customizer additions.
@@ -466,11 +499,13 @@ require INC_DIR . 'customizer.php';
 require_once ADMIN_DIR . 'theme-resources.php';
 
 /**
- * Theme Head
+ * Theme Custom CSS and JS Code
  */
-require_once ADMIN_DIR . 'theme-head.php';
-$theme_head = new theme_head;
-add_action('wp_head', array($theme_head, 'output_custom') );
+require_once ADMIN_DIR . 'custom-code-output.php';
+$custom_code_output = new custom_code_output;
+add_action('wp_head', array($custom_code_output, 'output_custom_css') );
+add_action('wp_footer', array($custom_code_output, 'output_custom_js') );
+
 
 /**
  * Theme Hooks - hooks provided for development
@@ -499,6 +534,11 @@ function twentyfivenorth_register_custom_recent_posts() {
 	register_widget( 'TFN_Widget_Tag_Cloud' );
 }
 add_action( 'widgets_init', 'twentyfivenorth_register_custom_recent_posts' );
+
+/**
+ * Disable MasterSlider Update Notifications
+ */
+add_filter( 'masterslider_disable_auto_update', '__return_true' );
 
 
 /**

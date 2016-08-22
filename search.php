@@ -23,7 +23,7 @@ if ($sidebar_pos == 'left') {
 	<section id="top-section" class="top-section">
         <div class="blog-header">
             <div class="blog-header-inner">
-                <h1><?php printf( esc_html__( 'Search Results for: %s', 'twentyfivenorth' ), '<span>' . get_search_query() . '
+                <h1><?php printf( esc_html__( 'Search Results for: %s', 'twenty-five-north' ), '<span>' . get_search_query() . '
 						</span>' ); ?></h1>
             </div>
             <div class="blog-header-overlay">

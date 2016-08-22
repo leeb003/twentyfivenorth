@@ -33,6 +33,39 @@ function twentyfivenorth_register_required_plugins() {
 			'external_url'       => 'http://docs.averta.net/display/mswpdoc/Master+Slider+WordPress+Documentation',
 			'is_callable'        => '',
 		),
+		//mystickymenu
+		array(
+			'name'				 => 'My Sticky Menu',
+			'slug'				 => 'mystickymenu',
+			'source'			 => 'https://wordpress.org/plugins/mystickymenu',
+			'version'			 => '1.8.3',
+			'force_activation'   => false,
+			'force_deactivation' => false,
+			'external_url'       => 'https://wordpress.org/plugins/mystickymenu/faq/',
+			'required'			 => false
+		),
+		// Envato Market plugin
+		array(
+			'name' 				 => 'WP Envato Market',
+			'slug'				 => 'envato-market',
+			'source'			 => 'http://envato.github.io/wp-envato-market/dist/envato-market.zip',
+			'version'			 => '1.0.0-RC2',
+			'force_activation'   => false,
+			'force_deactivation' => false,
+			'external_url'		 => 'https://github.com/envato/wp-envato-market',
+			'required'			 => false
+		),
+		// TFN-Plugin
+		array(
+            'name'               => 'Twenty Five North Plugin',
+            'slug'               => 'tfn-plugin',
+            'source'             => get_template_directory() . '/inc/plugins/tfn-plugin.zip',
+            'version'            => '1.0',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'http://sh-themes.com',
+            'required'           => true
+        ),
 /*
 		// This is an example of how to include a plugin bundled with a theme.
 		array(
@@ -97,7 +130,7 @@ function twentyfivenorth_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'twentyfivenorth',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'twenty-five-north',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.
@@ -108,76 +141,76 @@ function twentyfivenorth_register_required_plugins() {
 
 		/*
 		'strings'      => array(
-			'page_title'                      => __( 'Install Required Plugins', 'twentyfivenorth' ),
-			'menu_title'                      => __( 'Install Plugins', 'twentyfivenorth' ),
+			'page_title'                      => __( 'Install Required Plugins', 'twenty-five-north' ),
+			'menu_title'                      => __( 'Install Plugins', 'twenty-five-north' ),
 			/* translators: %s: plugin name. * /
-			'installing'                      => __( 'Installing Plugin: %s', 'twentyfivenorth' ),
+			'installing'                      => __( 'Installing Plugin: %s', 'twenty-five-north' ),
 			/* translators: %s: plugin name. * /
-			'updating'                        => __( 'Updating Plugin: %s', 'twentyfivenorth' ),
-			'oops'                            => __( 'Something went wrong with the plugin API.', 'twentyfivenorth' ),
+			'updating'                        => __( 'Updating Plugin: %s', 'twenty-five-north' ),
+			'oops'                            => __( 'Something went wrong with the plugin API.', 'twenty-five-north' ),
 			'notice_can_install_required'     => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'This theme requires the following plugin: %1$s.',
 				'This theme requires the following plugins: %1$s.',
-				'twentyfivenorth'
+				'twenty-five-north'
 			),
 			'notice_can_install_recommended'  => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'This theme recommends the following plugin: %1$s.',
 				'This theme recommends the following plugins: %1$s.',
-				'twentyfivenorth'
+				'twenty-five-north'
 			),
 			'notice_ask_to_update'            => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-				'twentyfivenorth'
+				'twenty-five-north'
 			),
 			'notice_ask_to_update_maybe'      => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'There is an update available for: %1$s.',
 				'There are updates available for the following plugins: %1$s.',
-				'twentyfivenorth'
+				'twenty-five-north'
 			),
 			'notice_can_activate_required'    => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'The following required plugin is currently inactive: %1$s.',
 				'The following required plugins are currently inactive: %1$s.',
-				'twentyfivenorth'
+				'twenty-five-north'
 			),
 			'notice_can_activate_recommended' => _n_noop(
 				/* translators: 1: plugin name(s). * /
 				'The following recommended plugin is currently inactive: %1$s.',
 				'The following recommended plugins are currently inactive: %1$s.',
-				'twentyfivenorth'
+				'twenty-five-north'
 			),
 			'install_link'                    => _n_noop(
 				'Begin installing plugin',
 				'Begin installing plugins',
-				'twentyfivenorth'
+				'twenty-five-north'
 			),
 			'update_link' 					  => _n_noop(
 				'Begin updating plugin',
 				'Begin updating plugins',
-				'twentyfivenorth'
+				'twenty-five-north'
 			),
 			'activate_link'                   => _n_noop(
 				'Begin activating plugin',
 				'Begin activating plugins',
-				'twentyfivenorth'
+				'twenty-five-north'
 			),
-			'return'                          => __( 'Return to Required Plugins Installer', 'twentyfivenorth' ),
-			'plugin_activated'                => __( 'Plugin activated successfully.', 'twentyfivenorth' ),
-			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'twentyfivenorth' ),
+			'return'                          => __( 'Return to Required Plugins Installer', 'twenty-five-north' ),
+			'plugin_activated'                => __( 'Plugin activated successfully.', 'twenty-five-north' ),
+			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'twenty-five-north' ),
 			/* translators: 1: plugin name. * /
-			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'twentyfivenorth' ),
+			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'twenty-five-north' ),
 			/* translators: 1: plugin name. * /
-			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'twentyfivenorth' ),
+			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'twenty-five-north' ),
 			/* translators: 1: dashboard link. * /
-			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'twentyfivenorth' ),
-			'dismiss'                         => __( 'Dismiss this notice', 'twentyfivenorth' ),
-			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'twentyfivenorth' ),
-			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'twentyfivenorth' ),
+			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'twenty-five-north' ),
+			'dismiss'                         => __( 'Dismiss this notice', 'twenty-five-north' ),
+			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'twenty-five-north' ),
+			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'twenty-five-north' ),
 
 			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
 		),

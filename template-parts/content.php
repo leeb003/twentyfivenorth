@@ -47,12 +47,12 @@ $meta = $theme_resources->tfn_meta($post, 'blog_meta'); // pass the post array a
         <?php
             the_content( sprintf(
                 /* translators: %s: Name of current post. */
-                wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentyfivenorth' ), array( 'span' => array( 'class' => array() ) ) ),
+                wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twenty-five-north' ), array( 'span' => array( 'class' => array() ) ) ),
                 the_title( '<span class="screen-reader-text">"', '"</span>', false )
             ) );
 
             wp_link_pages( array(
-                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'twentyfivenorth' ),
+                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'twenty-five-north' ),
                 'after'  => '</div>',
             ) );
         ?>
@@ -103,7 +103,7 @@ $meta = $theme_resources->tfn_meta($post, 'blog_meta'); // pass the post array a
 						<?php
             			$content = get_the_content( sprintf(
                 			/* translators: %s: Name of current post. */
-                			wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentyfivenorth' ), 
+                			wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twenty-five-north' ), 
 							array( 'span' => array( 'class' => array() ) ) ),
                 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
             			) );
@@ -118,7 +118,7 @@ $meta = $theme_resources->tfn_meta($post, 'blog_meta'); // pass the post array a
 					</div>
 					<?php echo implode(' ', $meta);?>
 					<a class="readmore" 
-						href="<?php echo $get_permalink;?>"><?php echo __('Read more', 'twentyfivenorth');?></a>
+						href="<?php echo $get_permalink;?>"><?php echo __('Read more', 'twenty-five-north');?></a>
 				</div>
 			</div>
 		</div><!-- .col -->

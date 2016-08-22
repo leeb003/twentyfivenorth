@@ -7,7 +7,7 @@ Description: Twenty Five North is a gorgeous Single Property Real Estate Theme w
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: twentyfivenorth
+Text Domain: twenty-five-north
 Tags: four-columns, left-sidebar, right-sidebar, grid-layout, custom-colors, custom-menu, featured-image-header, theme-options
 */
 
@@ -95,13 +95,11 @@ a:hover {
   -ms-transform: translateZ(0);
 }
 h1 {
-  font-family: 'Roboto', sans-serif;
   font-size: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 h2 {
-  font: 36px/36px 'Roboto', sans-serif;
   font-weight: 900;
   color: #46505c;
   text-align: center;
@@ -111,13 +109,11 @@ h2 {
   text-transform: uppercase;
 }
 h3 {
-  font: 27px/35px 'Roboto', sans-serif;
   color: #46505c;
   text-align: center;
   font-weight: 600;
 }
 h4 {
-  font: 15px/20px 'Roboto', sans-serif;
   letter-spacing: 0.075em;
   color: #46505c;
   text-transform: uppercase;
@@ -357,7 +353,7 @@ a.detail-switch span {
   padding: 20px 5px;
   margin-right: 10px;
 }
-.navbar-nav > li.social-link a {
+.navbar-default .navbar-nav > li.social-link > a {
   color: #bbbbbb;
   padding-right: 7px;
   padding-left: 7px;
@@ -421,6 +417,7 @@ a.detail-switch span {
   background-color: #fec107;
 }
 .navbar-nav > li > .dropdown-menu {
+  border: 0;
   border-top: 2px solid #fec107;
   padding: 0;
   border-radius: 0;
@@ -769,30 +766,6 @@ a.detail-switch span {
 table.property-info {
   margin-bottom: 25px;
 }
-.detail-pane {
-  padding-right: 30px;
-  font-size: 14px;
-  line-height: 24px;
-}
-.detail-pane h3 {
-  margin-top: 35px;
-  color: #333333;
-  text-align: center;
-  background-color: #fec107;
-}
-.detail-pane ul {
-  padding: 0;
-  list-style: none;
-  margin: 0px 0 20px 0;
-}
-.detail-pane ul li {
-  padding: 20px 0px;
-}
-.detail-pane li i {
-  margin-right: 5px;
-  color: #fec107;
-  font-size: 18px;
-}
 .feat-title {
   display: inline-block;
   float: left;
@@ -872,16 +845,6 @@ table.property-info {
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;
-}
-.highlight-icon {
-  font-size: 35px;
-  line-height: 80px;
-  height: 80px;
-  width: 80px;
-  color: #ffffff;
-  background-color: #fec107;
-  margin: 0 auto;
-  border-radius: 50%;
 }
 /*
  * --- 2.4 Additional Info ---
@@ -963,7 +926,6 @@ table.property-info {
   right: 0;
   bottom: 0;
   top: 0;
-  background: linear-gradient(to right bottom, #46505c 50%, #fec107 50%);
 }
 .portfolio-section figure .overlay {
   z-index: 2;
@@ -1428,7 +1390,6 @@ p.text {
   color: #aaaaaa;
 }
 .testimonials-section {
-  background: #46505c url('../img/noisy_grid.png');
   position: relative;
 }
 .testimonials-overlay {
@@ -1739,6 +1700,7 @@ p.text {
 .widget_recent_comments ul,
 .widget_recent_entries ul,
 .widget_pages ul,
+.widget_nav_menu ul,
 .widget_meta ul {
   padding-left: 0;
   list-style: none;
@@ -1748,6 +1710,7 @@ p.text {
 .widget_recent_comments ul li,
 .widget_recent_entries ul li,
 .widget_pages ul li,
+.widget_nav_menu ul li,
 .widget_meta ul li {
   margin-bottom: 10px;
   position: relative;
@@ -1757,6 +1720,7 @@ p.text {
 .widget_recent_comments ul li:before,
 .widget_recent_entries ul li:before,
 .widget_pages ul li:before,
+.widget_nav_menu ul li:before,
 .widget_meta ul li:before {
   font-family: 'icomoon';
   content: "\e937";
@@ -1766,6 +1730,9 @@ p.text {
 
 .widget_calendar #wp-calendar {
 	width: 100%;
+}
+.widget.sidebar-widget ul li ul.sub-menu {
+	padding-left: 25px;
 }
 .tfn-tags {
   overflow: hidden;
@@ -1851,6 +1818,87 @@ p.text {
 .sb-smdate {
   float: right;
   color: #9c9c9c;
+}
+.gallery-caption {
+    color: #707070;
+    color: rgba(51, 51, 51, 0.7);
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 0.5em 0;
+}
+.sticky {
+}
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
 }
 /*
  * === 6. BLOG SINGLE ENTRY PAGE ===
@@ -2207,6 +2255,9 @@ p.logged-in-as {
 .footer_text {
   float: left;
   line-height: 80px;
+}
+.footer_text.text-center {
+	float: none;
 }
 .footer_icons {
   float: right;

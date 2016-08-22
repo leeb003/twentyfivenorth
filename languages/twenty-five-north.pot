@@ -1,0 +1,1453 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Twenty Five North\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-20 15:02-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Lee Beck <info@scripthat.com>\n"
+"Language-Team: SH-Themes <info@scripthat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: /var/www/html/wp/25north/wp-content/themes/twenty-five-north\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:55
+msgid "Primary"
+msgstr ""
+
+#: functions.php:361
+msgid "Name"
+msgstr ""
+
+#: functions.php:367
+msgid "Email"
+msgstr ""
+
+#: functions.php:372
+msgid "Website"
+msgstr ""
+
+#: functions.php:416
+msgid "Post author"
+msgstr ""
+
+#: functions.php:420
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:427
+msgid "(Edit)"
+msgstr ""
+
+#: comments.php:89
+msgid "Your email address will not be published."
+msgstr ""
+
+#: searchform.php:8
+msgid "Search"
+msgstr ""
+
+#: page-templates/about-us-template.php:57
+msgid "PHONE"
+msgstr ""
+
+#: page-templates/about-us-template.php:61
+msgid "EMAIL"
+msgstr ""
+
+#: page-templates/home-template.php:227
+msgid "All"
+msgstr ""
+
+#: page-templates/home-template.php:431
+#: page-templates/home-template.php:448
+msgid "Read more"
+msgstr ""
+
+#: page-templates/home-template.php:482
+msgid "agent"
+msgstr ""
+
+#: admin/theme-resources.php:57
+msgid "Comments"
+msgstr ""
+
+#: admin/theme-resources.php:76
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: admin/theme-resources.php:85
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content.php:50
+#: template-parts/content.php:106
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/class-tfn-widget-recent-posts.php:28
+msgid "Your site&#8217;s most recent Posts."
+msgstr ""
+
+#: inc/class-tfn-widget-recent-posts.php:31
+msgid "Recent Posts - Twenty Five North"
+msgstr ""
+
+#: inc/class-tfn-widget-recent-posts.php:50
+#: inc/customizer.php:726
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/class-tfn-widget-recent-posts.php:142
+msgid "Title:"
+msgstr ""
+
+#: inc/class-tfn-widget-recent-posts.php:145
+msgid "Number of posts to show:"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Primary Site Color"
+msgstr ""
+
+#: inc/customizer.php:60
+msgid "Secondary Site Color"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Google Maps API Key"
+msgstr ""
+
+#: inc/customizer.php:74
+msgid "Insert your Google Maps API Key if using the theme map sections.  More information can be found at Google..."
+msgstr ""
+
+#: inc/customizer.php:251
+msgid "Header"
+msgstr ""
+
+#: inc/customizer.php:252
+msgid "Header Settings"
+msgstr ""
+
+#: inc/customizer.php:260
+msgid "Insert your logo"
+msgstr ""
+
+#: inc/customizer.php:262
+msgid "Be sure to add a logo that will fit well"
+msgstr ""
+
+#: inc/customizer.php:270
+msgid "Enable Header social links?"
+msgstr ""
+
+#: inc/customizer.php:272
+msgid "Choose to display social links in the header"
+msgstr ""
+
+#: inc/customizer.php:280
+#: inc/customizer.php:358
+msgid "Social Links"
+msgstr ""
+
+#: inc/customizer.php:282
+#: inc/customizer.php:360
+msgid "Choose the social network and set a link."
+msgstr ""
+
+#: inc/customizer.php:286
+#: inc/customizer.php:364
+msgid "Social Link"
+msgstr ""
+
+#: inc/customizer.php:312
+#: inc/customizer.php:379
+msgid "Social URL"
+msgstr ""
+
+#: inc/customizer.php:313
+#: inc/customizer.php:380
+msgid "This is the Link URL"
+msgstr ""
+
+#: inc/customizer.php:318
+#: inc/customizer.php:385
+#: inc/customizer.php:2246
+msgid "Social Network"
+msgstr ""
+
+#: inc/customizer.php:329
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer.php:330
+msgid "Footer Settings"
+msgstr ""
+
+#: inc/customizer.php:338
+msgid "Insert your footer text"
+msgstr ""
+
+#: inc/customizer.php:340
+msgid "Text for the footer area"
+msgstr ""
+
+#: inc/customizer.php:348
+msgid "Enable Footer social links?"
+msgstr ""
+
+#: inc/customizer.php:350
+msgid "Choose to display social links in the footer"
+msgstr ""
+
+#: inc/customizer.php:396
+msgid "Home Page"
+msgstr ""
+
+#: inc/customizer.php:405
+msgid "Top Image or Slider"
+msgstr ""
+
+#: inc/customizer.php:406
+msgid "Choose to use either an image or slider for the top of the home page.  Note - you need to use the Home Page template on the page you selected for your homepage."
+msgstr ""
+
+#: inc/customizer.php:419
+msgid "Home Page Top Image"
+msgstr ""
+
+#: inc/customizer.php:442
+msgid "Home Page Top Slider"
+msgstr ""
+
+#: inc/customizer.php:445
+msgid "Insert the shortcode for your slider here"
+msgstr ""
+
+#: inc/customizer.php:461
+msgid "Top Infobox Address"
+msgstr ""
+
+#: inc/customizer.php:464
+msgid "Insert the property address"
+msgstr ""
+
+#: inc/customizer.php:471
+msgid "Top Infobox Price"
+msgstr ""
+
+#: inc/customizer.php:473
+msgid "$1,799,000"
+msgstr ""
+
+#: inc/customizer.php:474
+msgid "Insert the property price"
+msgstr ""
+
+#: inc/customizer.php:481
+msgid "Top Infobox Description"
+msgstr ""
+
+#: inc/customizer.php:484
+msgid "Insert a property short description"
+msgstr ""
+
+#: inc/customizer.php:491
+msgid "Top Infobox Button Text"
+msgstr ""
+
+#: inc/customizer.php:493
+msgid "SCHEDULE A SHOWING"
+msgstr ""
+
+#: inc/customizer.php:494
+msgid "Insert the button text"
+msgstr ""
+
+#: inc/customizer.php:501
+msgid "Top Infobox Button Url"
+msgstr ""
+
+#: inc/customizer.php:503
+msgid "http://www.example.com"
+msgstr ""
+
+#: inc/customizer.php:504
+msgid "Insert the button url e.g. http://www.example.com"
+msgstr ""
+
+#: inc/customizer.php:512
+msgid "Top Features section."
+msgstr ""
+
+#: inc/customizer.php:513
+msgid "Enable or Disable the top features section for the home page.  When enabled, choices will appear below."
+msgstr ""
+
+#: inc/customizer.php:518
+msgid "Enabled"
+msgstr ""
+
+#: inc/customizer.php:519
+msgid "Disabled"
+msgstr ""
+
+#: inc/customizer.php:553
+msgid "Top Feature Icon 1"
+msgstr ""
+
+#: inc/customizer.php:554
+#: inc/customizer.php:569
+#: inc/customizer.php:584
+#: inc/customizer.php:599
+msgid "Choose the first icon for the Home Page top feature section"
+msgstr ""
+
+#: inc/customizer.php:568
+msgid "Top Feature Icon 2"
+msgstr ""
+
+#: inc/customizer.php:583
+msgid "Top Feature Icon 3"
+msgstr ""
+
+#: inc/customizer.php:598
+msgid "Top Feature Icon 4"
+msgstr ""
+
+#: inc/customizer.php:623
+msgid "Top Feature Text 1"
+msgstr ""
+
+#: inc/customizer.php:626
+#: inc/customizer.php:644
+#: inc/customizer.php:662
+#: inc/customizer.php:680
+#: inc/customizer.php:2540
+#: inc/customizer.php:2558
+#: inc/customizer.php:2576
+msgid "Add your short description"
+msgstr ""
+
+#: inc/customizer.php:641
+msgid "Top Feature Text 2"
+msgstr ""
+
+#: inc/customizer.php:659
+msgid "Top Feature Text 3"
+msgstr ""
+
+#: inc/customizer.php:677
+msgid "Top Feature Text 4"
+msgstr ""
+
+#: inc/customizer.php:705
+msgid "Home Page Sections"
+msgstr ""
+
+#: inc/customizer.php:707
+msgid "Add, Remove, and sort your home page sections.  Sections are setup in the Configure Sections Tab."
+msgstr ""
+
+#: inc/customizer.php:711
+#: inc/customizer.php:759
+msgid "Page Section"
+msgstr ""
+
+#: inc/customizer.php:719
+#: inc/customizer.php:767
+#: inc/customizer.php:871
+msgid "Section"
+msgstr ""
+
+#: inc/customizer.php:720
+#: inc/customizer.php:768
+#: inc/customizer.php:872
+#: inc/customizer.php:875
+msgid "Choose a section"
+msgstr ""
+
+#: inc/customizer.php:723
+msgid "Property Highlights"
+msgstr ""
+
+#: inc/customizer.php:724
+msgid "Photo Gallery"
+msgstr ""
+
+#: inc/customizer.php:725
+msgid "Additional Information"
+msgstr ""
+
+#: inc/customizer.php:727
+msgid "Featured Agent"
+msgstr ""
+
+#: inc/customizer.php:728
+#: inc/customizer.php:776
+msgid "Page Builder Section"
+msgstr ""
+
+#: inc/customizer.php:733
+#: inc/customizer.php:781
+msgid "Page Builder Choice"
+msgstr ""
+
+#: inc/customizer.php:734
+#: inc/customizer.php:782
+msgid "If this is a Page Builder Section, choose the page with content to use."
+msgstr ""
+
+#: inc/customizer.php:744
+msgid "About Us Page"
+msgstr ""
+
+#: inc/customizer.php:753
+msgid "About Us Sections"
+msgstr ""
+
+#: inc/customizer.php:755
+msgid "Add, Remove, and sort your about us page sections.  Sections are setup in the Configure Sections Tab."
+msgstr ""
+
+#: inc/customizer.php:771
+msgid "Select A Section"
+msgstr ""
+
+#: inc/customizer.php:772
+msgid "Top Agents Slider"
+msgstr ""
+
+#: inc/customizer.php:773
+msgid "Testimonials"
+msgstr ""
+
+#: inc/customizer.php:774
+msgid "Contact Us Section"
+msgstr ""
+
+#: inc/customizer.php:775
+msgid "Map"
+msgstr ""
+
+#: inc/customizer.php:802
+msgid "404 Page background image"
+msgstr ""
+
+#: inc/customizer.php:818
+msgid "Top Heading"
+msgstr ""
+
+#: inc/customizer.php:821
+msgid "Insert the Heading below 404"
+msgstr ""
+
+#: inc/customizer.php:828
+msgid "Heading description"
+msgstr ""
+
+#: inc/customizer.php:831
+msgid "Insert the description below the heading"
+msgstr ""
+
+#: inc/customizer.php:838
+msgid "Banner Text"
+msgstr ""
+
+#: inc/customizer.php:841
+msgid "Insert the text for the banner below"
+msgstr ""
+
+#: inc/customizer.php:848
+msgid "Banner Button Text"
+msgstr ""
+
+#: inc/customizer.php:851
+msgid "Insert the home button text"
+msgstr ""
+
+#: inc/customizer.php:876
+msgid "Home - Property Highlights"
+msgstr ""
+
+#: inc/customizer.php:877
+msgid "Home - Photo Gallery"
+msgstr ""
+
+#: inc/customizer.php:878
+msgid "Home - Additional Information"
+msgstr ""
+
+#: inc/customizer.php:879
+msgid "Home - Recent Posts"
+msgstr ""
+
+#: inc/customizer.php:880
+msgid "Home - Featured Agent"
+msgstr ""
+
+#: inc/customizer.php:881
+msgid "About - Top Agents"
+msgstr ""
+
+#: inc/customizer.php:882
+msgid "About - Testimonials"
+msgstr ""
+
+#: inc/customizer.php:883
+msgid "About - Contact"
+msgstr ""
+
+#: inc/customizer.php:884
+msgid "About - Map"
+msgstr ""
+
+#: inc/customizer.php:897
+msgid "Set the Highlights section title"
+msgstr ""
+
+#: inc/customizer.php:914
+msgid "Set the Highlights section description"
+msgstr ""
+
+#: inc/customizer.php:946
+msgid "Highlight Icon 1"
+msgstr ""
+
+#: inc/customizer.php:947
+#: inc/customizer.php:963
+#: inc/customizer.php:979
+msgid "Choose an icon for the Home Page Highlight Section"
+msgstr ""
+
+#: inc/customizer.php:962
+msgid "Highlight Icon 2"
+msgstr ""
+
+#: inc/customizer.php:978
+msgid "Highlight Icon 3"
+msgstr ""
+
+#: inc/customizer.php:1003
+msgid "Highlight 1 Title"
+msgstr ""
+
+#: inc/customizer.php:1020
+msgid "Highlight 1 Text"
+msgstr ""
+
+#: inc/customizer.php:1037
+msgid "Highlight 2 Title"
+msgstr ""
+
+#: inc/customizer.php:1054
+msgid "Highlight 2 Text"
+msgstr ""
+
+#: inc/customizer.php:1071
+msgid "Highlight 3 Title"
+msgstr ""
+
+#: inc/customizer.php:1088
+msgid "Highlight 3 Text"
+msgstr ""
+
+#: inc/customizer.php:1105
+msgid "Highlight Icon Hover Color"
+msgstr ""
+
+#: inc/customizer.php:1140
+msgid "Highlight Slider"
+msgstr ""
+
+#: inc/customizer.php:1141
+msgid "Enable or disable the highlight slider. Note - you need at least 2 slides."
+msgstr ""
+
+#: inc/customizer.php:1162
+msgid "Slide settings"
+msgstr ""
+
+#: inc/customizer.php:1164
+msgid "Set up the slides for the highlights section."
+msgstr ""
+
+#: inc/customizer.php:1168
+msgid "Slide"
+msgstr ""
+
+#: inc/customizer.php:1188
+#: inc/customizer.php:2388
+msgid "Title"
+msgstr ""
+
+#: inc/customizer.php:1189
+msgid "This is the slide title"
+msgstr ""
+
+#: inc/customizer.php:1194
+msgid "Slide Text"
+msgstr ""
+
+#: inc/customizer.php:1199
+msgid "Feature list, separate items with commas"
+msgstr ""
+
+#: inc/customizer.php:1204
+msgid "Slide feature text"
+msgstr ""
+
+#: inc/customizer.php:1209
+msgid "Slide feature text 2"
+msgstr ""
+
+#: inc/customizer.php:1214
+msgid "Slide Image"
+msgstr ""
+
+#: inc/customizer.php:1226
+msgid "Photo Gallery Title"
+msgstr ""
+
+#: inc/customizer.php:1243
+msgid "Photo Gallery Description"
+msgstr ""
+
+#: inc/customizer.php:1260
+msgid "Enable Banner"
+msgstr ""
+
+#: inc/customizer.php:1261
+msgid "Enable or disable the bottom gallery banner and link."
+msgstr ""
+
+#: inc/customizer.php:1282
+#: inc/customizer.php:1303
+msgid "Photo Gallery Banner Text"
+msgstr ""
+
+#: inc/customizer.php:1324
+msgid "Photo Gallery Banner Link"
+msgstr ""
+
+#: inc/customizer.php:1325
+#: inc/customizer.php:1875
+msgid "Link in the form http://www.example.com"
+msgstr ""
+
+#: inc/customizer.php:1346
+msgid "Banner Button Link Window"
+msgstr ""
+
+#: inc/customizer.php:1347
+#: inc/customizer.php:1621
+#: inc/customizer.php:1892
+msgid "Choose to open link in new or existing window."
+msgstr ""
+
+#: inc/customizer.php:1352
+#: inc/customizer.php:1626
+#: inc/customizer.php:1897
+msgid "Blank Page"
+msgstr ""
+
+#: inc/customizer.php:1353
+#: inc/customizer.php:1627
+#: inc/customizer.php:1898
+msgid "Same Page"
+msgstr ""
+
+#: inc/customizer.php:1373
+msgid "Photo Gallery Background Image"
+msgstr ""
+
+#: inc/customizer.php:1374
+msgid ""
+"Choose a background image for the photo gallery section.  All images and categories are set under the Port\n"
+"folio Entries tab in your WordPress admin."
+msgstr ""
+
+#: inc/customizer.php:1402
+msgid "Additional Information Title"
+msgstr ""
+
+#: inc/customizer.php:1418
+msgid "Additional Information Description"
+msgstr ""
+
+#: inc/customizer.php:1448
+msgid "Additional Icon 1"
+msgstr ""
+
+#: inc/customizer.php:1449
+#: inc/customizer.php:1464
+#: inc/customizer.php:1479
+#: inc/customizer.php:1494
+msgid "Choose an icon for the Additional Information area."
+msgstr ""
+
+#: inc/customizer.php:1463
+msgid "Additional Icon 2"
+msgstr ""
+
+#: inc/customizer.php:1478
+msgid "Additional Icon 3"
+msgstr ""
+
+#: inc/customizer.php:1493
+msgid "Additional Icon 4"
+msgstr ""
+
+#: inc/customizer.php:1518
+msgid "Icon 1 Text"
+msgstr ""
+
+#: inc/customizer.php:1535
+msgid "Icon 2 Text"
+msgstr ""
+
+#: inc/customizer.php:1552
+msgid "Icon 3 Text"
+msgstr ""
+
+#: inc/customizer.php:1569
+msgid "Icon 4 Text"
+msgstr ""
+
+#: inc/customizer.php:1586
+msgid "Additional Information Button Text"
+msgstr ""
+
+#: inc/customizer.php:1603
+msgid "Additional Information Button Link"
+msgstr ""
+
+#: inc/customizer.php:1620
+msgid "Button Link Window"
+msgstr ""
+
+#: inc/customizer.php:1646
+msgid "Posts Section Title"
+msgstr ""
+
+#: inc/customizer.php:1663
+msgid "Posts Section Description"
+msgstr ""
+
+#: inc/customizer.php:1687
+msgid "Posts"
+msgstr ""
+
+#: inc/customizer.php:1688
+msgid "Choose the number of posts to display in this section"
+msgstr ""
+
+#: inc/customizer.php:1705
+msgid "Posts Sorting"
+msgstr ""
+
+#: inc/customizer.php:1706
+msgid "Choose how you would like to sort the posts"
+msgstr ""
+
+#: inc/customizer.php:1709
+msgid "Ascending"
+msgstr ""
+
+#: inc/customizer.php:1710
+msgid "Descending"
+msgstr ""
+
+#: inc/customizer.php:1724
+msgid "Choose the meta attributes to display"
+msgstr ""
+
+#: inc/customizer.php:1725
+msgid "3 or less recommended for display"
+msgstr ""
+
+#: inc/customizer.php:1755
+#: inc/customizer.php:2231
+msgid "Agent Title"
+msgstr ""
+
+#: inc/customizer.php:1772
+msgid "Agent Description"
+msgstr ""
+
+#: inc/customizer.php:1789
+#: inc/customizer.php:2226
+msgid "Agent Name"
+msgstr ""
+
+#: inc/customizer.php:1806
+msgid "Agent Credentials"
+msgstr ""
+
+#: inc/customizer.php:1823
+msgid "Agent Information"
+msgstr ""
+
+#: inc/customizer.php:1840
+msgid "Insert your agent photo"
+msgstr ""
+
+#: inc/customizer.php:1842
+msgid "Demo image is 350px x 558px"
+msgstr ""
+
+#: inc/customizer.php:1858
+msgid "Agent Button Text"
+msgstr ""
+
+#: inc/customizer.php:1874
+msgid "Agent Button Link"
+msgstr ""
+
+#: inc/customizer.php:1891
+msgid "Agent Button Link Window"
+msgstr ""
+
+#: inc/customizer.php:1913
+msgid "Enable Infobar below agent?"
+msgstr ""
+
+#: inc/customizer.php:1918
+#: inc/customizer.php:2075
+msgid "Enable"
+msgstr ""
+
+#: inc/customizer.php:1919
+#: inc/customizer.php:2076
+msgid "Disable"
+msgstr ""
+
+#: inc/customizer.php:1951
+msgid "Agent Info Icon 1"
+msgstr ""
+
+#: inc/customizer.php:1965
+msgid "Agent Info Icon 2"
+msgstr ""
+
+#: inc/customizer.php:1979
+msgid "Agent Info Icon 3"
+msgstr ""
+
+#: inc/customizer.php:2004
+msgid "Agent Info 1 Text"
+msgstr ""
+
+#: inc/customizer.php:2026
+msgid "Agent Info 2 Text"
+msgstr ""
+
+#: inc/customizer.php:2048
+msgid "Agent Info 3 Text"
+msgstr ""
+
+#: inc/customizer.php:2070
+msgid "Enable Map below agent?"
+msgstr ""
+
+#: inc/customizer.php:2091
+#: inc/customizer.php:2775
+msgid "Insert your map marker"
+msgstr ""
+
+#: inc/customizer.php:2113
+#: inc/customizer.php:2792
+msgid "Insert the location latitude"
+msgstr ""
+
+#: inc/customizer.php:2135
+#: inc/customizer.php:2809
+msgid "Insert the location longitude"
+msgstr ""
+
+#: inc/customizer.php:2160
+msgid "Add your Agents Slider Title"
+msgstr ""
+
+#: inc/customizer.php:2176
+msgid "Add your Agents Slider Description"
+msgstr ""
+
+#: inc/customizer.php:2192
+msgid "Select An Icon"
+msgstr ""
+
+#: inc/customizer.php:2200
+#: inc/customizer.php:2357
+msgid "Agents"
+msgstr ""
+
+#: inc/customizer.php:2202
+msgid "Add, Remove, and sort your agents and their info."
+msgstr ""
+
+#: inc/customizer.php:2206
+msgid "Agent"
+msgstr ""
+
+#: inc/customizer.php:2221
+msgid "Agent Photo"
+msgstr ""
+
+#: inc/customizer.php:2236
+msgid "Agent Phone"
+msgstr ""
+
+#: inc/customizer.php:2241
+msgid "Agent Email"
+msgstr ""
+
+#: inc/customizer.php:2252
+msgid "Social Link (e.g. http://www.example.com)"
+msgstr ""
+
+#: inc/customizer.php:2257
+msgid "Social Network 2"
+msgstr ""
+
+#: inc/customizer.php:2263
+msgid "Social Link 2 (e.g. http://www.example.com)"
+msgstr ""
+
+#: inc/customizer.php:2268
+msgid "Social Network 3"
+msgstr ""
+
+#: inc/customizer.php:2274
+msgid "Social Link 3 (e.g. http://www.example.com)"
+msgstr ""
+
+#: inc/customizer.php:2287
+msgid "Add your Testimonial Title"
+msgstr ""
+
+#: inc/customizer.php:2304
+msgid "Insert a background image for this section"
+msgstr ""
+
+#: inc/customizer.php:2305
+msgid "Our demo uses a transparent image"
+msgstr ""
+
+#: inc/customizer.php:2330
+msgid "Testimonial Background Color"
+msgstr ""
+
+#: inc/customizer.php:2359
+msgid "Add, Remove, and sort your testimonials.  You need at least 2 to display."
+msgstr ""
+
+#: inc/customizer.php:2363
+msgid "Testimonial"
+msgstr ""
+
+#: inc/customizer.php:2378
+msgid "The Testimonial"
+msgstr ""
+
+#: inc/customizer.php:2402
+msgid "First Text Section Title"
+msgstr ""
+
+#: inc/customizer.php:2419
+msgid "First Text Section"
+msgstr ""
+
+#: inc/customizer.php:2436
+msgid "Second Text Section Title"
+msgstr ""
+
+#: inc/customizer.php:2453
+msgid "Second Text Section"
+msgstr ""
+
+#: inc/customizer.php:2482
+msgid "Contact Section Icon 1"
+msgstr ""
+
+#: inc/customizer.php:2483
+msgid "Choose the first icon for the contact section"
+msgstr ""
+
+#: inc/customizer.php:2497
+msgid "Contact Section Icon 2"
+msgstr ""
+
+#: inc/customizer.php:2498
+msgid "Choose the second icon for the contact section"
+msgstr ""
+
+#: inc/customizer.php:2512
+msgid "Contact Section Icon 3"
+msgstr ""
+
+#: inc/customizer.php:2513
+msgid "Choose the third icon for the contact section"
+msgstr ""
+
+#: inc/customizer.php:2537
+msgid "Contact Icon Text 1"
+msgstr ""
+
+#: inc/customizer.php:2555
+msgid "Contact Icon Text 2"
+msgstr ""
+
+#: inc/customizer.php:2573
+msgid "Contact Icon Text 3"
+msgstr ""
+
+#: inc/customizer.php:2591
+msgid "Contact Form Title"
+msgstr ""
+
+#: inc/customizer.php:2594
+msgid "Add your contact form title"
+msgstr ""
+
+#: inc/customizer.php:2609
+msgid "Contact Form Name Placeholder"
+msgstr ""
+
+#: inc/customizer.php:2612
+msgid "Add your contact form name placeholder"
+msgstr ""
+
+#: inc/customizer.php:2627
+msgid "Contact Form Email Placeholder"
+msgstr ""
+
+#: inc/customizer.php:2630
+msgid "Add your contact form email placeholder"
+msgstr ""
+
+#: inc/customizer.php:2645
+msgid "Contact Form Message Placeholder"
+msgstr ""
+
+#: inc/customizer.php:2648
+msgid "Add your contact form message placeholder"
+msgstr ""
+
+#: inc/customizer.php:2663
+msgid "Contact Form Button Text"
+msgstr ""
+
+#: inc/customizer.php:2666
+msgid "Add your contact form Button Text"
+msgstr ""
+
+#: inc/customizer.php:2681
+msgid "Contact Form Sending Text"
+msgstr ""
+
+#: inc/customizer.php:2684
+msgid "Add the text to display when sending"
+msgstr ""
+
+#: inc/customizer.php:2699
+msgid "Contact Form Email"
+msgstr ""
+
+#: inc/customizer.php:2702
+msgid "Add the email address to recieve the contact submission.  If not set, the admin email will be used."
+msgstr ""
+
+#: inc/customizer.php:2717
+msgid "Contact Form Subject"
+msgstr ""
+
+#: inc/customizer.php:2720
+msgid "Add the email subject line for the contact form submissions."
+msgstr ""
+
+#: inc/customizer.php:2735
+msgid "Contact Form Success Message"
+msgstr ""
+
+#: inc/customizer.php:2738
+msgid "Add the text to display on success"
+msgstr ""
+
+#: inc/customizer.php:2753
+msgid "Contact Form Error Message"
+msgstr ""
+
+#: inc/customizer.php:2756
+msgid "Add the text to display on error"
+msgstr ""
+
+#: inc/customizer.php:2835
+msgid "Blog Title"
+msgstr ""
+
+#: inc/customizer.php:2836
+msgid "Set the title to be displayed for your blog."
+msgstr ""
+
+#: inc/customizer.php:2846
+msgid "Insert the blog top background image"
+msgstr ""
+
+#: inc/customizer.php:2862
+msgid "Blog Sidebar"
+msgstr ""
+
+#: inc/customizer.php:2863
+msgid "Choose the blog sidebar location."
+msgstr ""
+
+#: inc/customizer.php:2877
+msgid "Blog Roll Content"
+msgstr ""
+
+#: inc/customizer.php:2878
+msgid "Choose to display a summary or full content."
+msgstr ""
+
+#: inc/customizer.php:2892
+msgid "Blog Summary Length"
+msgstr ""
+
+#: inc/customizer.php:2893
+msgid "Choose how many words to display for main blog view content."
+msgstr ""
+
+#: inc/customizer.php:2916
+msgid "Blog Meta"
+msgstr ""
+
+#: inc/customizer.php:2917
+msgid "Choose the meta tags to display with posts"
+msgstr ""
+
+#: inc/include-kirki.php:43
+#, php-format
+msgid "The Kirki Toolkit plugin is installed but not activated. Please <strong><a href=\"%s\">activate it</a></strong> in order to take full advantage of the theme's options."
+msgstr ""
+
+#: inc/template-tags.php:67
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:393
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:394
+#: inc/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:399
+#, php-format
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:403
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3592
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3600
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/post-like.php:176
+msgid "0"
+msgstr ""
+
+#: inc/post-like.php:177
+msgid "Likes"
+msgstr ""
+
+#: inc/post-like.php:180
+msgid "Unlike"
+msgstr ""
+
+#: inc/post-like.php:184
+msgid "Like"
+msgstr ""
+
+#: inc/post-like.php:199
+#: inc/post-like.php:260
+msgid "You Like:"
+msgstr ""
+
+#: inc/post-like.php:223
+msgid "You don't like anything yet."
+msgstr ""
+
+#: inc/post-like.php:292
+msgid "Today's Most Popular Posts"
+msgstr ""
+
+#: inc/post-like.php:324
+msgid "This Month's Most Popular Posts"
+msgstr ""
+
+#: inc/post-like.php:356
+msgid "This Week's Most Popular Posts"
+msgstr ""
+
+#: inc/post-like.php:375
+msgid "Most Popular Posts"
+msgstr ""
+
+#: inc/class-tfn-widget-tag-cloud.php:27
+msgid "A cloud of your most used tags."
+msgstr ""
+
+#: inc/class-tfn-widget-tag-cloud.php:30
+msgid "Tag Cloud - Twenty Five North"
+msgstr ""
+
+#: inc/class-tfn-widget-tag-cloud.php:49
+msgid "Tags"
+msgstr ""
+
+#: inc/class-tfn-widget-tag-cloud.php:136
+msgid "The tag cloud will not be displayed since there are no taxonomies that support the tag cloud widget."
+msgstr ""
+
+#: inc/class-tfn-widget-tag-cloud.php:153
+msgid "Taxonomy:"
+msgstr ""
+

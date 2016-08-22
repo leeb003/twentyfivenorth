@@ -173,15 +173,15 @@ function AlreadyLiked( $post_id ) { // test if user liked before
  */
 function getPostLikeLink( $post_id ) {
 	$like_count = get_post_meta( $post_id, "_post_like_count", true ); // get post likes
-	$count = ( empty( $like_count ) || $like_count == "0" ) ? __('0', 'twentyfivenorth') : esc_attr( $like_count );
-	$count = $count . ' ' . __('Likes', 'twentyfivenorth');
+	$count = ( empty( $like_count ) || $like_count == "0" ) ? __('0', 'twenty-five-north') : esc_attr( $like_count );
+	$count = $count . ' ' . __('Likes', 'twenty-five-north');
 	if ( AlreadyLiked( $post_id ) ) {
 		$class = esc_attr( ' liked' );
-		$title = __( 'Unlike', 'twentyfivenorth' );
+		$title = __( 'Unlike', 'twenty-five-north' );
 		$heart = '<i class="icon-hearts"></i>';
 	} else {
 		$class = esc_attr( '' );
-		$title = __( 'Like', 'twentyfivenorth' );
+		$title = __( 'Like', 'twenty-five-north' );
 		$heart = '<i class="icon-hearts"></i>';
 	}
 	$output = '<a href="#" class="jm-post-like'.$class.'" data-post_id="'.$post_id.'" title="'.$title.'">'.$heart.'&nbsp;'.$count.'</a>';
@@ -196,7 +196,7 @@ add_action( 'edit_user_profile', 'show_user_likes' );
 function show_user_likes( $user ) { ?>        
     <table class="form-table">
         <tr>
-			<th><label for="user_likes"><?php _e( 'You Like:', 'twentyfivenorth' ); ?></label></th>
+			<th><label for="user_likes"><?php _e( 'You Like:', 'twenty-five-north' ); ?></label></th>
 			<td>
             <?php
 			$user_likes = get_user_option( "_liked_posts", $user->ID );
@@ -220,7 +220,7 @@ function show_user_likes( $user ) { ?>
 				}
 				echo $like_list;
 			} else {
-				echo "<p>" . _e( 'You don\'t like anything yet.', 'twentyfivenorth' ) . "</p>\n";
+				echo "<p>" . _e( 'You don\'t like anything yet.', 'twenty-five-north' ) . "</p>\n";
 			} ?>
             </td>
 		</tr>
@@ -257,7 +257,7 @@ function frontEndUserLikes() {
 		if ( $count > 0 ) {
 			$limited_likes = array_slice( $the_likes, 0, 5 ); // this will limit the number of posts returned to 5
 			$like_list .= "<aside>\n";
-			$like_list .= "<h3>" . __( 'You Like:', 'twentyfivenorth' ) . "</h3>\n";
+			$like_list .= "<h3>" . __( 'You Like:', 'twenty-five-north' ) . "</h3>\n";
 			$like_list .= "<ul>\n";
 			foreach ( $limited_likes as $the_like ) {
 				$like_list .= "<li><a href='" . esc_url( get_permalink( $the_like ) ) . "' title='" . esc_attr( get_the_title( $the_like ) ) . "'>" . get_the_title( $the_like ) . "</a></li>\n";
@@ -289,7 +289,7 @@ function jm_most_popular_today() {
 	$pop_posts = new WP_Query( $args );
 	if ( $pop_posts->have_posts() ) {
 		echo "<aside>\n";
-		echo "<h3>" . _e( 'Today\'s Most Popular Posts', 'twentyfivenorth' ) . "</h3>\n";
+		echo "<h3>" . _e( 'Today\'s Most Popular Posts', 'twenty-five-north' ) . "</h3>\n";
 		echo "<ul>\n";
 		while ( $pop_posts->have_posts() ) {
 			$pop_posts->the_post();
@@ -321,7 +321,7 @@ function jm_most_popular_month() {
 	$pop_posts = new WP_Query( $args );
 	if ( $pop_posts->have_posts() ) {
 		echo "<aside>\n";
-		echo "<h3>" . _e( 'This Month\'s Most Popular Posts', 'twentyfivenorth' ) . "</h3>\n";
+		echo "<h3>" . _e( 'This Month\'s Most Popular Posts', 'twenty-five-north' ) . "</h3>\n";
 		echo "<ul>\n";
 		while ( $pop_posts->have_posts() ) {
 			$pop_posts->the_post();
@@ -353,7 +353,7 @@ function jm_most_popular_week() {
 	$pop_posts = new WP_Query( $args );
 	if ( $pop_posts->have_posts() ) {
 		echo "<aside>\n";
-		echo "<h3>" . _e( 'This Week\'s Most Popular Posts', 'twentyfivenorth' ) . "</h3>\n";
+		echo "<h3>" . _e( 'This Week\'s Most Popular Posts', 'twenty-five-north' ) . "</h3>\n";
 		echo "<ul>\n";
 		while ( $pop_posts->have_posts() ) {
 			$pop_posts->the_post();
@@ -372,7 +372,7 @@ function jm_most_popular_week() {
 function jm_most_popular() {
 	global $post;
 	echo "<aside>\n";
-	echo "<h3>" . _e( 'Most Popular Posts', 'twentyfivenorth' ) . "</h3>\n";
+	echo "<h3>" . _e( 'Most Popular Posts', 'twenty-five-north' ) . "</h3>\n";
 	echo "<ul>\n";
 	$args = array(
 		 'post_type' => array( 'post', 'enter-your-comma-separated-post-types-here' ),

@@ -88,9 +88,14 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 				$atts['aria-haspopup']	= 'true';
 			} else {
 				/* Modified to allow anchor links to redirect to home page if
-				 * not currently on the home page - lb
+				 * not currently on the home page, or using one of the demo templates - lb
 				 */
-				if ( !is_front_page() && preg_match('/^#\S+/', $item->url) ) {  // set href to include home url
+				$templates = array( 'page-templates/home-demo-sticky-template.php', 'page-templates/home-demo-template.php');
+
+				if ( !is_front_page() 
+					&& !is_page_template($templates) 
+					&& preg_match('/^#\S+/', $item->url) ) {  // set href to include home url
+
 					$atts['href'] = esc_url( home_url( '/' )) . $item->url;
 				} else {
 					$atts['href'] = ! empty( $item->url ) ? $item->url : '';

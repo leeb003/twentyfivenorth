@@ -2,7 +2,7 @@
 /**
  * Widget API: WP_Widget_Recent_Posts class
  *
- * @package twentyfivenorth
+ * @package twenty-five-north 
  * @subpackage Widgets
  * @since 1.0
  */
@@ -25,10 +25,10 @@ class TFN_Widget_Recent_Posts extends WP_Widget {
 	public function __construct() {
 		$widget_ops = array(
 			'classname' => 'widget_recent_entries',
-			'description' => __( 'Your site&#8217;s most recent Posts.', 'twentyfivenorth' ),
+			'description' => __( 'Your site&#8217;s most recent Posts.', 'twenty-five-north' ),
 			'customize_selective_refresh' => true,
 		);
-		parent::__construct( 'tfn-recent-posts', __( 'Recent Posts - Twenty Five North', 'twentyfivenorth' ), $widget_ops );
+		parent::__construct( 'tfn-recent-posts', __( 'Recent Posts - Twenty Five North', 'twenty-five-north' ), $widget_ops );
 		$this->alt_option_name = 'widget_recent_entries';
 	}
 
@@ -47,7 +47,7 @@ class TFN_Widget_Recent_Posts extends WP_Widget {
 			$args['widget_id'] = $this->id;
 		}
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts', 'twentyfivenorth' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts', 'twenty-five-north' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -139,10 +139,10 @@ class TFN_Widget_Recent_Posts extends WP_Widget {
 		$number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
 		$show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
 ?>
-		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'twentyfivenorth' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'twenty-five-north' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'twentyfivenorth' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'twenty-five-north' ); ?></label>
 		<input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" /></p>
 
 <?php
