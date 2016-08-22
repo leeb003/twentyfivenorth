@@ -536,6 +536,14 @@ function twentyfivenorth_register_custom_recent_posts() {
 add_action( 'widgets_init', 'twentyfivenorth_register_custom_recent_posts' );
 
 /**
+ * Admin Classes and functions
+ */
+if (is_admin()) {
+    require_once ADMIN_DIR . '/theme-admin.php';
+    new themeAdmin();
+}
+
+/**
  * Disable MasterSlider Update Notifications
  */
 add_filter( 'masterslider_disable_auto_update', '__return_true' );

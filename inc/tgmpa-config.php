@@ -59,7 +59,7 @@ function twentyfivenorth_register_required_plugins() {
 		array(
             'name'               => 'Twenty Five North Plugin',
             'slug'               => 'tfn-plugin',
-            'source'             => get_template_directory() . '/inc/plugins/tfn-plugin.zip',
+            'source'             => 'http://tfn-plugins.sh-themes.com/tfn-plugin.zip',
             'version'            => '1.0',
             'force_activation'   => false,
             'force_deactivation' => false,

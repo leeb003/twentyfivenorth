@@ -114,7 +114,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
         'font-size'      => '40px',
         'line-height'    => '1.5',
         'letter-spacing' => '0',
-        'color'          => '#333333',
+        'color'          => '#46505c',
     ),
     'output' => array(
         array(
