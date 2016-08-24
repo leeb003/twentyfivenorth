@@ -1,0 +1,108 @@
+<wpml-config>
+  <custom-types>
+    <custom-type translate="1">photo_entry</custom-type>
+  </custom-types>
+  <taxonomies>
+    <taxonomy translate="1">tfnphotocat</taxonomy>
+  </taxonomies>
+  <custom-fields>
+    <custom-field action="translate">_wp_page_template</custom-field>
+    <custom-field action="translate">_wp_attached_file</custom-field>
+    <custom-field action="translate">_wp_attachment_metadata</custom-field>
+    <custom-field action="translate">_wp_attachment_context</custom-field>
+    <custom-field action="translate">_thumbnail_id</custom-field>
+    <custom-field action="translate">_user_liked</custom-field>
+    <custom-field action="translate">_post_like_count</custom-field>
+    <custom-field action="translate">_edit_lock</custom-field>
+    <custom-field action="translate">_menu_item_type</custom-field>
+    <custom-field action="translate">_menu_item_menu_item_parent</custom-field>
+    <custom-field action="translate">_menu_item_object_id</custom-field>
+    <custom-field action="translate">_menu_item_object</custom-field>
+    <custom-field action="translate">_menu_item_target</custom-field>
+    <custom-field action="translate">_menu_item_classes</custom-field>
+    <custom-field action="translate">_menu_item_xfn</custom-field>
+    <custom-field action="translate">_menu_item_url</custom-field>
+    <custom-field action="translate">_menu_item_orphaned</custom-field>
+    <custom-field action="translate">_edit_last</custom-field>
+  </custom-fields>
+  <admin-texts>
+    <key name="theme_mods_twenty-five-north">
+      <key name="nav_menu_locations">
+        <key name="tfnprimary"/>
+      </key>
+      <key name="header_logo"/>
+      <key name="topagents_agents">
+        <key name="0">
+          <key name="agent_photo"/>
+          <key name="agent_name"/>
+          <key name="agent_title"/>
+        </key>
+      </key>
+      <key name="testimonials">
+        <key name="0"/>
+      </key>
+      <key name="footer_text"/>
+      <key name="home_info_address"/>
+      <key name="home_info_price"/>
+      <key name="home_info_desc"/>
+      <key name="home_info_btn_text"/>
+      <key name="home_features"/>
+      <key name="feature_1_text"/>
+      <key name="feature_2_text"/>
+      <key name="feature_4_text"/>
+      <key name="page_404_heading"/>
+      <key name="page_404_hdesc"/>
+      <key name="page_404_banner"/>
+      <key name="page_404_btn"/>
+      <key name="blog_title"/>
+      <key name="blog_background"/>
+      <key name="blog_summary"/>
+      <key name="highlights_title"/>
+      <key name="highlights_desc"/>
+      <key name="highlight_1_title"/>
+      <key name="highlight_1_text"/>
+      <key name="highlight_2_title"/>
+      <key name="highlight_2_text"/>
+      <key name="highlight_3_title"/>
+      <key name="highlight_3_text"/>
+      <key name="gallery_title"/>
+      <key name="gallery_text"/>
+      <key name="gallery_banner_text"/>
+      <key name="gallery_banner_btn_text"/>
+      <key name="additional_title"/>
+      <key name="additional_text"/>
+      <key name="additional_1_text"/>
+      <key name="additional_2_text"/>
+      <key name="additional_3_text"/>
+      <key name="additional_4_text"/>
+      <key name="additional_btn_text"/>
+      <key name="posts_text"/>
+      <key name="agent_title"/>
+      <key name="agent_desc"/>
+      <key name="agent_name"/>
+      <key name="agent_cred"/>
+      <key name="agent_info"/>
+      <key name="agent_btn_text"/>
+      <key name="agent_1_text"/>
+      <key name="agent_2_text"/>
+      <key name="agent_3_text"/>
+      <key name="posts_title"/>
+      <key name="topagents_title"/>
+      <key name="topagents_text"/>
+      <key name="testimonial_title"/>
+      <key name="contact_text_1"/>
+      <key name="contact_title_2"/>
+      <key name="contact_text_2"/>
+      <key name="contact_1_text"/>
+      <key name="contact_2_text"/>
+      <key name="contact_form_title"/>
+      <key name="contact_form_name"/>
+      <key name="contact_form_email"/>
+      <key name="contact_form_btn_text"/>
+      <key name="contact_form_sending_text"/>
+      <key name="contact_form_subject"/>
+      <key name="contact_form_success_msg"/>
+      <key name="contact_form_error_msg"/>
+    </key>
+  </admin-texts>
+</wpml-config>

@@ -343,6 +343,10 @@ a.detail-switch span {
 .navbar-default .navbar-nav > li > .dropdown-menu {
   margin-top: 10px;
 }
+.navbar-default .dropdown.icl-menu img {
+    vertical-align: inherit;
+    margin-right: 5px;
+}
 .navbar-nav {
   float: right;
 }

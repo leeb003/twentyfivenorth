@@ -1,17 +1,664 @@
 /*
-Theme Name: _s
-
-Adding support for language written in a Right To Left (RTL) direction is easy -
-it's just a matter of overwriting all the horizontal positioning attributes
-of your CSS stylesheet in a separate stylesheet file named rtl.css.
-
-https://codex.wordpress.org/Right_to_Left_Language_Support
-
+Theme Name: Twenty Five North
+Theme URI: http://www.sh-themes.com/themes
+Author: SH Themes
+Author URI: http://www.sh-themes.com/
+Description: Twenty Five North is a gorgeous Single Property Real Estate Theme with included theme options, sliders and tools to make your next property listing stand out above the crowd.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twenty-five-north
+Tags: four-columns, left-sidebar, right-sidebar, grid-layout, custom-colors, custom-menu, featured-image-header, theme-options
 */
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. GENERAL STYLES
+	1.1 Header Styles
+	1.2 Buttons
+2. FRONT PAGE STYLES
+	2.1 Main image section
+	2.2 Features section
+	2.3 Details section
+	2.4 Additional Info
+	2.5 Photos Section
+	2.6 Posts Section
+	2.7 Agent Section
+3. ABOUT US PAGE STYLES
+4. 404 Page
+5. BLOG PAGE STYLES
+	5.1 Blog Sidebar
+6. BLOG SINGLE ENTRY PAGE
+	6.1 Comments
+	6.2 Comment meta
+	6.3 Comment content
+	6.4 Comment meta content
+	6.5 Respond
+7. FOOTER
+8. General Media Queries
+-------------------------------------------------------------------*/
+/*
+ * === 1. GENERAL STYLES ===
+ */
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  direction: rtl;
+  unicode-bidi: embed;		   
+}
+.response {
+  padding: 0 0 20px 0;
+}
+.slide-count {
+  bottom: 20px;
+  right: 30px;
+}
+.infoblock {
+  text-align: right;
+}
+.infoblock h3 {
+  text-align: right;
+}
+.infoblock h3:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: '';
+  border-bottom: 2px solid #fec107;
+  width: 50px;
+}
+.infoblock ul {
+  direction: rtl;
+}
+.infoblock ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 30px;
+  direction: rtl;
+}
+.infoblock ul li:before {
+  content: "";
+}
+.infoblock ul li::after {
+  font-family: fontawesome;
+  content: "\f22d";
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 18px;
+}
+a.detail-switch span {
+  padding-left: 12px;
+  padding-right: 15px;
+}
+.sqft-cont {
+  float: left;
+}
+.pull-right {
+  float: left !important;
+}
+/*
+ * --- 1.1 Header Styles ---
+ */
+.navbar-default .dropdown.icl-menu img {
+    vertical-align: inherit;
+    margin-left: 5px;
+}
+.navbar-nav {
+  float: left;
+}
+.navbar-header {
+  float: right;
+}
+.navbar-nav > li.nav-sep span {
+  border-left: 1px solid #dddddd;
+  border-right: 0;
+  padding: 20px 5px;
+  margin-left: 10px;
+}
+.navbar-brand {
+  margin-left: 20px;
+  margin-right: -15px;
+  float: right;
+}
+.navbar-brand.not-shown {
+  margin-left: 0px;
+}
+@media (min-width: 768px) {
+  .navbar-header {
+    float: right;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-header {
+    width: 100%;
+  }
+  .navbar-default.navbar-nav .open .dropdown-menu {
+    text-align: center;
+  }
+  ul.dropdown-menu li {
+    clear: both;
+  }
+  .navbar-nav li {
+    clear: both;
+    float:none;
+  }
+  .nav {
+    padding-right: 0;
+  }
+}
+.navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-brand {
+  float: right;
+}
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    margin-right: -15px;
+    margin-left: auto;
+  }
+}
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 25px 5px 15px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: right;
+  }
+  .navbar-nav > li {
+    float: right;
+  }
+  .navbar-nav.navbar-right:last-child {
+    margin-left: -15px;
+    margin-right: auto;
+  }
+  .navbar-nav.navbar-right.flip {
+    float: left !important;
+  }
+  .navbar-nav.navbar-right .dropdown-menu {
+    left: 0;
+    right: auto;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-text {
+    float: right;
+  }
+  .navbar-text.navbar-right:last-child {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+.dropdown-menu {
+  right: 0;
+  left: auto;
+  float: left;
+  text-align: right;
+}
+.dropdown-menu.pull-left {
+  left: 0;
+  float: right;
+  right: auto;
+}
+.pull-left > .dropdown-menu {
+  left: 0;
+  float: right;
+  right: auto;
+}
+.top-info-sect,
+.top-cta {
+  float: right;
+}
+.navbar-nav.pull-left > li > .dropdown-menu,
+.navbar-nav > li > .dropdown-menu.pull-left {
+  right: auto;
+  left: 0;
+}
+
+.caret {
+  margin-right: 3px;
+  line-height: 28px;
+}
+/*
+ * --- 1.2 buttons ---
+ */
+.btn-pri {
+  margin-left: 10px;
+}
+.btn-pri:hover:after {
+  left: 120%;
+  -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn-pri:after {
+  background: #FFF;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .2;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+}
+.btn-sec {
+  margin-left: 10px;
+}
+/*
+ * === 2. FRONT PAGE STYLES ===
+ */
+/*
+ * --- 2.1 Main image section ---
+ */
+.top-info-sect h3 {
+  text-align: right;
+}
+/*
+ * --- 2.2 Features section ---
+ */
+/*
+ * --- 2.3 Details section ---
+ */
+.btn-pri.vtour {
+  margin-right: 40px;
+}
+.details-text {
+  padding-right: 30px;
+}
+.details-text td {
+  padding-left: 15px;
+}
+.feat-title {
+  float: right;
+}
+.feat-item {
+  display: inline-block;
+  float: left;
+}
+/*
+ * --- 2.4 Additional Info ---
+ */
+.additional-items .col-md-3:not(:last-child) {
+  border-right: 1px solid #dddddd;
+}
+/*
+ * --- 2.5 Photos Section ---
+ */
+.portfolio-section figure {
+  float: right;
+}
+.portfolio-section .article-title {
+  float: right;
+}
+/*
+ * --- 2.6 Posts Section ---
+ */
+.post-content {
+  text-align: right;
+}
+.post-content.pull-left {
+  text-align: left;
+}
+.bl-date-holder {
+  float: right;
+}
+.bl-date-holder.inline-date {
+  margin-left: 30px;
+  margin-right: 0;
+}
+.bl-title h3 {
+	text-align: right;
+}
+.pull-left .bl-title h3 {
+  text-align: left;
+}
+.bl-comments,
+.bl-views {
+  float: right;
+  margin-left: 20px;
+  margin-right: 0;
+}
+.pull-left .bl-comments,
+.pull-left .bl-views {
+  float: left;
+}
+.bl-comments i,
+.bl-views i {
+  padding-left: 5px;
+}
+.readmore {
+  float: left
+}
+.pull-left .readmore {
+  float: right;
+}
+/*
+ * --- 2.7 Agent Section ---
+ */
+.agent-info img {
+  float: left;
+}
+.agent-info h3 {
+  text-align: right;
+}
+.agent-details {
+  text-align: right;
+ }
+.contact-items .row {
+  text-align: right;
+}
+.icon-ring {
+  margin-left: 10px;
+}
+p.text {
+  text-align: right;
+}
+/*
+ * === 3. ABOUT US PAGE STYLES ===
+ */
+.owl-carousel-agents .owl-prev {
+  left: -60px;
+}
+.owl-carousel-agents .owl-next {
+  right: -60px;
+}
+.owl-carousel-agents .owl-prev i:first-child,
+.owl-carousel-agents .owl-next i:first-child {
+  margin-right: -5px;
+}
+.agent-contact {
+  text-align: right;
+  float: right;
+}
+.agent-social {
+  float: left;
+}
+.agent-social ul {
+  padding-right: 0;
+}
+.icon-holder,
+.agent-contact .details {
+  float: right;
+}
+.icon-holder {
+  margin-left: 10px;
+}
+.statement h4::before {
+  border-right: 2px solid #fec107;
+  border-left: 0;
+  content: "";
+  padding-left: 10px;
+  height: 35px;
+}
+.contactus-detail {
+  float: right;
+}
+.contact-form h3 {
+  text-align: right;
+}
+/* 
+ * === 4. 404 Page ===
+ */
+/*
+ * === 5. BLOG PAGE STYLES ===
+ */
+.blog-section .bl-title h2 {
+  text-align: right;
+}
+@media (max-width: 991px) {
+}
+.blog-sep {
+  float: right;
+}
+.search-form .submits {
+  left:0;
+  right: auto;
+}
+blockquote {
+  border-left: 0;
+  border-right: 5px solid #eee;
+}
+/*
+ * --- 5.1 Blog Sidebar ---
+ */
+.blog-sidebar {
+  margin-left: 0;
+  margin-right: 30px;
+}
+.blog-sidebar h4 {
+  text-align: right;
+}
+.blog-sidebar.left-sidebar {
+  margin-left: 30px;
+  margin-right: 0;
+}
+.top-space .col-sm-2 {
+  float: right;
+}
+@media (max-width: 768px) {
+  .blog-sidebar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.widget_archive ul,
+.widget_categories ul,
+.widget_recent_comments ul,
+.widget_recent_entries ul,
+.widget_pages ul,
+.widget_nav_menu ul,
+.widget_meta ul {
+  padding-right: 0;
+}
+.widget_archive ul li:before,
+.widget_categories ul li:before,
+.widget_recent_comments ul li:before,
+.widget_recent_entries ul li:before,
+.widget_pages ul li:before,
+.widget_nav_menu ul li:before,
+.widget_meta ul li:before {
+  font-family: 'icomoon';
+  content: "\e937";
+  padding-left: 10px;
+  left: 0;
+}
+
+.widget.sidebar-widget ul li ul.sub-menu {
+	padding-right: 25px;
+}
+.tfn-tags ul {
+  padding-right: 0;
+}
+.tfn-tags ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 10px;
+}
+.recent_thumb img {
+  float: right;
+}
+.sb-title {
+  float: left;
+}
+.sb-auth {
+  float: right;
+}
+.sb-smdate {
+  float: left;
+}
+.wp-caption {
+    padding: 5px 3px 10px;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
 
 /*
-body {
-	direction: rtl;
-	unicode-bidi: embed;
+ * === 6. BLOG SINGLE ENTRY PAGE ===
+ */
+.post-cat-tags .post-categories {
+  margin-left: 20px;
 }
-*/
+/*
+ *  --- 6.1 Comments ---
+ */
+.comments h2 {
+  text-align: right;
+}
+.comment .children {
+  padding-right: 5%;
+  border-right: 2px solid #EEE;
+}
+/*
+ * --- 6.2 Comment meta ---
+ */
+.comment-meta .avatar {
+  float: right;
+}
+.comment-actions a {
+  margin-left: 5px;
+}
+.comment-actions a:last-child {
+  margin-left: 0;
+}
+/*
+ * --- 6.3 Comment content ---
+ */
+/*
+ * --- 6.4 Comment meta content ---
+ */
+.comment-meta-content {
+    margin-right: 65px;
+}
+.bypostauthor .comment-meta-content cite .post-author {
+  margin-right: 3px;
+}
+
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: right;
+}
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: left;
+}
+/*
+ * --- 6.5 Respond ---
+ */
+h3.comment-reply-title {
+  text-align: right;
+}
+/*
+ * === 7. FOOTER ===
+ */
+.footer {
+  float: right;
+}
+.footer_text {
+  float: right;
+}
+.footer_icons {
+  float: left;
+}
+.footer_icons a:last-child {
+  margin-right: 10px;
+}
+/*
+ * === 8. General Media Queries ===
+ */
+@media (max-width: 768px) {
+  .pull-left .bl-title h3 {
+    text-align: right;
+  }
+  .bl-comments,
+  .pull-left .bl-comments,
+  .pull-left .bl-views {
+    float: right;
+  }
+  .pull-left .bl-views {
+    margin-left: 20px;
+  }
+  .pull-left .readmore {
+    float: left;
+  }
+}
+@media (max-width: 991px) {
+  .detail-pane ul {
+    padding-right: 10px;
+  }
+}
+/* Navbar collapse sooner */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (max-width: 991px) {
+  .additional-items .col-md-3:nth-child(odd) {
+    border-right: 1px solid #dddddd;
+  }
+}
+@media (max-width: 1200px) {
+  .owl-carousel-agents .owl-prev {
+    left: 10px;
+    top: 40%;
+  }
+  .owl-carousel-agents .owl-next {
+    right: 10px;
+    top: 40%;
+  }
+}
+/*
+ * --- IE Adjustments ---
+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ */
+  /* IE10+ CSS styles go here */
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (max-width: 768px) {
+  /* IE10+ CSS styles go here */
+}
+/*
+ *  -- Admin Bar adjustments --
+ */
+.admin-bar .navbar-default {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .navbar-default {
+    top: 32px;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, 
+  .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: right;
+  }
+  .slide .col-md-8 {
+    float:left;
+  }

@@ -263,6 +263,16 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
 	'priority'		=> 10,
 	'default'		=> ''
 ) );
+/* Enable WPML Language Switcher */
+twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
+    'type'          => 'checkbox',
+    'settings'      => 'wpml_switcher',
+    'label'         => __('Enable WPML language switcher?', 'twenty-five-north'),
+    'section'       => 'header_section',
+    'description'   => __('Choose to display the language switcher formatted for the top menu. Only used if using WPML', 'twenty-five-north'),
+    'default'       => '0',
+    'priority'      => '10',
+) );
 /* Enable Social Links */
 twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
 	'type'			=> 'checkbox',

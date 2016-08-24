@@ -66,6 +66,17 @@ function twentyfivenorth_register_required_plugins() {
             'external_url'       => 'http://sh-themes.com',
             'required'           => true
         ),
+		// Kirki - yes, here too
+		array(
+			'name'				 => 'Kirki',
+			'slug'				 => 'kirki',
+			'source'			 => 'https://wordpress.org/plugins/kirki/',
+			'version'			 => '2.3.5',
+			'force_activation'   => false,
+			'force_deactivation' => false,
+			'external_url'	  	 => 'https://wordpress.org/plugins/kirki/',
+			'required'			 => true
+		),
 /*
 		// This is an example of how to include a plugin bundled with a theme.
 		array(

@@ -58,6 +58,7 @@ class CTImport extends WP_Import {
 			if (file_exists($this->sidebar_file)) {  // create the initial sidebars from sidebar_data.txt 
 													 // (manual export of sidebars_widgets)
 				$sidebar_data = unserialize(file_get_contents($this->sidebar_file));
+				delete_option( 'sidebars_widgets'); // clear out the old
 				update_option( 'sidebars_widgets', $sidebar_data );
 			}
 			$parsedFile = $this->import_widget_file($this->demo_widget_file);
@@ -65,11 +66,14 @@ class CTImport extends WP_Import {
 		}
 		// Customizer Options configurations from demo
         if (file_exists($this->demo_options)) {
-			$theme = wp_get_theme();
-			$theme = strtolower($theme);
-            $file_contents = file_get_contents($this->demo_options);
+			$theme = get_option('stylesheet'); // get the theme slug
 			$theme_mods = unserialize(file_get_contents($this->demo_options));
-			update_option("theme_mods_$theme", $theme_mods);
+			$theme_mods_filtered = array();
+            foreach ($theme_mods as $key => $value) {
+                // filter and reset key fields that need updating
+                $theme_mods_filtered[$key] = str_replace($this->demo_url, $this->site_url, $value);
+            }
+			update_option("theme_mods_$theme", $theme_mods_filtered);
         }
 
 		/* Pre-set home page and menus after other items are done 

@@ -66,7 +66,7 @@ class theme_import_admin {
 			<p class="info-desc">
 				<b><?php echo __('Success!', 'twenty-five-north');?></b>
 				<br /><br />
-				<?php echo __('The Import has completed.  Please be sure to assign your menus under Appearance->Menus so they will be available', 'twenty-five-north'); ?>
+				<?php echo __('The Import has completed.  Now you can start changing things in the customizer, as a sidenote - you might need to save each of the posts again for them to display.', 'twenty-five-north'); ?>
 			</p>
 		</div>
 				

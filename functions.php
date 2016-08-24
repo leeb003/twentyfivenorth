@@ -80,9 +80,58 @@ endif;
 add_action( 'after_setup_theme', 'twentyfivenorth_setup' );
 
 /** 
+ * WPML Language Switcher bootstrap nav layout
+ */
+function twentyfivenorth_lang_switch($items, $args) {
+	$wpml_switcher = get_theme_mod('wpml_switcher', '');
+	if ($wpml_switcher != '1') { return $items; }
+    $languages = apply_filters( 'wpml_active_languages', NULL, array( 'skip_missing' => 0) );
+    $count = count($languages);
+    $icl = '';
+    if(!empty ($languages) ) {
+        foreach( $languages as $lang ){
+            if ($lang['active']) {
+                $extra_class = ' class="menu-item dropdown icl-menu"';
+                $icl .= sprintf( '<li' . "%s" . '><a href="' . "%s" . '" class="dropdown-toggle"'
+                     . ' data-toggle="dropdown">'
+                     . '<img src="' . "%s" . '" alt="' . "%s" . '" /><span class="language-name">%s</span>'
+                     . ' <span class="caret"> </span></a>',
+                    $extra_class,
+                    $lang['url'],
+                    $lang['country_flag_url'],
+                    $lang['native_name'],
+                    $lang['native_name']
+                );
+                if ($count > 1) {  // Only create the dropdown if there is more than the current language
+                    $icl .= '<ul class="dropdown-menu" role="menu">';
+                }
+            }
+        }
+        foreach ( $languages as $lang ) {
+            if (!$lang['active']) {
+                $icl .= sprintf( '<li class="menu-item"><a href="' . "%s" . '"><img src="' . "%s" . '" alt="'
+                    . "%s" . '" /><span class="language-name">' . "%s" . '</span></a></li>',
+                    $lang['url'],
+                    $lang['country_flag_url'],
+                    $lang['native_name'],
+                    $lang['native_name']
+                    );
+            }
+        }
+        if ($count > 1) {
+            $icl .= '</ul>';
+        }
+        $icl .= '</li>';
+    }
+    return $items . $icl;
+}
+// Add Styled Language select for wpml
+add_filter('wp_nav_menu_items', 'twentyfivenorth_lang_switch', 20, 2);
+
+/** 
  * Add custom icons to primary menu
  */
-add_filter( 'wp_nav_menu_items', 'add_icons_to_nav', 10, 2);
+add_filter( 'wp_nav_menu_items', 'add_icons_to_nav', 25, 2);
 function add_icons_to_nav( $items, $args ) {
 	$header_social = get_theme_mod( 'header_social' );
 	$header_social_pick = get_theme_mod( 'header_social_pick' );
@@ -200,7 +249,6 @@ function twentyfivenorth_scripts() {
 	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.pack.js', array('jquery'), '', true );
 	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery'), '', true);
 	wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '', true);
-
 	// Front Page or demo pages
 	if (is_page_template($templates)) {
 		$agent_map_marker = get_theme_mod('agent_map_marker');
@@ -211,7 +259,8 @@ function twentyfivenorth_scripts() {
     	wp_localize_script(  'twentyfivenorth-js', 'tfn_vars', array(
         	'agentMapMarker'  => $agent_map_marker,
         	'agentMapLat' => $agent_map_lat,
-        	'agentMapLng' => $agent_map_lng
+        	'agentMapLng' => $agent_map_lng,
+			'is_rtl'      => is_rtl()
     	));
 		
 		// and if map enabled
@@ -249,6 +298,7 @@ function twentyfivenorth_scripts() {
 			'aboutMapLat'	 => $about_map_lat,
 			'aboutMapLng'	 => $about_map_lng,
 			'tfnAdminUrl'    => admin_url(),
+			'is_rtl'         => is_rtl()
 		));
 
 		// and if about map enabled

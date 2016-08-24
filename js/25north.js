@@ -139,7 +139,9 @@
 		myTemplate.Fancybox();
 
 		/* Features section Owl Carousel */
+		var rtl = tfn_vars.is_rtl ? tfn_vars.is_rtl : false;
 		$('#owl-carousel-features').owlCarousel ({
+			rtl: rtl,
 			items: 1,
 			animateOut: 'fadeOutLeft',
     		animateIn: 'fadeInRight',

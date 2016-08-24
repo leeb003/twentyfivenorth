@@ -298,7 +298,7 @@ class twentyfivenorth_Kirki {
 						$value = ( is_string( $value ) ) ? $value : '';
 						// Make sure background-images are properly formatted
 						if ( 'background-image' == $property ) {
-							if ( false === strrpos( $this->value, 'url(' ) ) {
+							if ( isset($this->value) && false === strrpos( $this->value, 'url(' ) ) {
 								$this->value = 'url("' . esc_url_raw( $value ) . '")';
 							}
 						} else {

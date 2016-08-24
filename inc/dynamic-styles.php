@@ -23,7 +23,7 @@ function tfn_primary_color(){
             'property' => 'border-color'
         ),
         array(
-            'element'  => '.infoblock ul li:before',
+            'element'  => '.infoblock ul li:before, .infoblock ul li::after',
             'property' => 'color'
         ),
         array(

@@ -79,7 +79,7 @@
 
 		/* Call NavLink hover function */
 		hoverNavLinks();
-
+		var rtl = tfnpage_vars.is_rtl ? tfnpage_vars.is_rtl : false;
 		/* Agents Owl Carousel */
     	$('#owl-carousel-agents').owlCarousel ({
 			responsive: {
@@ -100,6 +100,7 @@
 					nav: true
 				}
 			},	
+			rtl: rtl,
         	margin: 30,
         	loop: true,
         	smartSpeed: 450,
@@ -109,6 +110,7 @@
     	});
 		/* Testimonial Carousel */
 		$('#owl-carousel-testimonials').owlCarousel ({
+			rtl: rtl,
 			items: 1,
 			smartSpeed: 450,
 			nav: false,
