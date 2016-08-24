@@ -114,7 +114,7 @@ class CTImport extends WP_Import {
             $theme = strtolower($theme);
             update_option("theme_mods_$theme", $menu_locations);
 			*/
-            update_option('permalink_structure', '/%postname%/');  // pretty permalinks
+            /* update_option('permalink_structure', '/%postname%/');  // pretty permalinks - they'd have to reset anyways, just leave it for now */
         } // end update front page and menu setup (Main Demo)
 	}
 
