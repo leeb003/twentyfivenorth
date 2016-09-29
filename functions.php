@@ -446,7 +446,11 @@ add_filter( 'comment_form_default_fields', 'twentyfivenorth_comment_placeholders
  * 
  */
 function twentyfivenorth_comment_field_placeholder( $fields ) {
-	$comment_field = $fields['comment'];
+	$comment_field = str_replace(
+		'<textarea id="comment"',
+		'<textarea id="comment" placeholder="' . __('Comment', 'twenty-five-north') . '"',
+		$fields['comment']
+	);
 	unset ( $fields['comment'] );
 
 	$fields['comment'] = $comment_field;

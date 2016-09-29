@@ -19,7 +19,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
+<?php do_action('before_post_comments'); ?>
 <div id="comments" class="comments-area">
 	<div class="comments">
 	<?php
@@ -91,3 +91,4 @@ if ( post_password_required() ) {
 	comment_form($args); ?>
 
 </div><!-- #comments -->
+<?php do_action('after_post_comments'); ?>

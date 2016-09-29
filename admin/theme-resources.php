@@ -58,10 +58,11 @@ class theme_resources {
 		$meta = array();
 		foreach ($posts_atts as $k => $v) {
 			if ($v == 'comments') {
+				$comments_link = get_comments_link();
 				$meta[] = <<<EOT
 					<div class="bl-comments">
 						<i class="icon-bubbles"></i>
-							$post->comment_count $comments_text
+							$post->comment_count <a href="$comments_link">$comments_text</a>
 						</div>
 EOT;
 	        } elseif ($v == 'like') {

@@ -14,7 +14,7 @@ $footer_social_pick = get_theme_mod( 'footer_social_pick', array() );
 ?>
 
 	</main><!-- #main content -->
-
+	<?php do_action('before_footer'); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer">
 			<div class="container">
@@ -41,6 +41,7 @@ $footer_social_pick = get_theme_mod( 'footer_social_pick', array() );
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<?php do_action('after_wrapper'); ?>
 
 <?php wp_footer(); ?>
 

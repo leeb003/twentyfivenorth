@@ -11,6 +11,7 @@
 get_header();
 $about_sections = get_theme_mod('about_sections', '');
 ?>
+	<?php do_action('before_page_header'); ?>
 	<section id="top-section" class="top-section">
 		<div class="tfn-page-header blog-header">
 			<div class="blog-header-inner">
@@ -19,7 +20,7 @@ $about_sections = get_theme_mod('about_sections', '');
 			<div class="blog-header-overlay"></div>
 		</div>
 	</section>
-
+	<?php do_action('before_page_content'); ?>
 	<section class="main-section">
 		<div class="container">
 		<?php

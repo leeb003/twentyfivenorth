@@ -14,7 +14,7 @@ if ($sidebar_pos == 'left') {
     $main_class = 'pull-right';
 }
 ?>
-
+	<?php do_action('before_archive_header'); ?>
 	<section id="top-section" class="top-section">
         <div class="blog-header">
             <div class="blog-header-inner">
@@ -25,6 +25,7 @@ if ($sidebar_pos == 'left') {
         </div>
     </section>
 
+	<?php do_action('before_archive_content'); ?>
 	<!-- Blog -->
     <section class="blog-section">
         <div class="container">
@@ -59,9 +60,11 @@ if ($sidebar_pos == 'left') {
 
 				<!-- Blog Sidebar -->
                 <div class="col-xs-12 col-sm-12 col-md-4">
+					<?php do_action('before_archive_sidebar'); ?>
                     <div class="blog-sidebar">
                         <?php get_sidebar(); ?>
                     </div>
+					<?php do_action('after_archive_sidebar'); ?>
                 </div> <!-- \sidebar -->
 
 			</div><!-- .row -->

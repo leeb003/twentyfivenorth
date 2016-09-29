@@ -33,6 +33,7 @@ if ($sidebar_pos == 'left') {
             <div class="row">
                 <!-- Main Blog -->
                 <div class="col-xs-12 col-sm-12 col-md-8 <?php echo $main_class;?>">
+					<?php do_action('before_single_header'); ?>
 					<?php
         			while ( have_posts() ) : the_post();
 
@@ -47,12 +48,15 @@ if ($sidebar_pos == 'left') {
 
         			endwhile; // End of the loop.
         			?>
+					 <?php do_action('after_single_content'); ?>
 				</div>
 
 				<!-- Blog Sidebar -->
     	   		<div class="col-xs-12 col-sm-12 col-md-4">
         	   		<div class="blog-sidebar <?php echo $sidebar_class;?>">
+						<?php do_action('before_single_sidebar'); ?>
 						<?php get_sidebar(); ?>
+						 <?php do_action('after_single_sidebar'); ?>	
 					</div>
 				</div> <!-- \sidebar -->
 			</div> 

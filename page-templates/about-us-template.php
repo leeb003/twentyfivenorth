@@ -12,6 +12,7 @@
 get_header();
 $about_sections = get_theme_mod('about_sections', '');
 ?>
+	<?php do_action('before_about_header'); ?>
 	<section id="top-section" class="top-section">
 		<div class="tfn-page-header blog-header">
 			<div class="blog-header-inner">
@@ -20,7 +21,7 @@ $about_sections = get_theme_mod('about_sections', '');
 			<div class="blog-header-overlay"></div>
 		</div>
 	</section>
-
+	<?php do_action('before_about_content'); ?>
 	<?php foreach ($about_sections as $k => $v) { // cycle through the page sections for display ?>
         <?php if ($v['section'] == 'topagents') { ?>
 
@@ -228,6 +229,6 @@ $about_sections = get_theme_mod('about_sections', '');
 
 		} // end sections
 		?>
-
+	<?php do_action('after_about_content'); ?>
 <?php
 get_footer();

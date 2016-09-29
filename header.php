@@ -31,10 +31,11 @@ $header_logo = get_theme_mod( 'header_logo', '' );
 ?>
 
 <body <?php body_class(); ?>>
+<?php do_action('after_body'); ?>
 <div id="page" class="site wrapper">
+	<?php do_action('before_header'); ?>
 	<?php 
 	if (!$four_o_four) { ?>
-
 	<header id="totop">
     	<div class="top-holder top-holder-fixed">
         	<!-- Main Navigation -->
@@ -75,7 +76,7 @@ $header_logo = get_theme_mod( 'header_logo', '' );
 			</div> <!-- End Main Navigation -->
 		</div> <!-- End Top Holder -->
 	</header>
-
+	<?php do_action('before_main_content'); ?>
 	<main>
 	<?php
 	} // end 404 check ?>

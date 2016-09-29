@@ -15,6 +15,7 @@ $home_slider = get_theme_mod( 'home_slider', '' );
 $home_features = get_theme_mod( 'home_features', 'off');
 $home_sections = get_theme_mod( 'home_sections', array());
 ?>
+	<?php do_action('before_home_header'); ?>
 	<section class="top-section">
 	<?php if ($home_top == 'topimage') { // Top Image ?>
 		<div class="main-image"></div>
@@ -45,7 +46,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 			</div>
 		</div>
 	</section>
-
+	<?php do_action('before_home_content'); ?>
 	<?php if ($home_features == 'on') { // display our top features ?>
 	<!-- Features -->
     <section id="features" class="features">
@@ -542,6 +543,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 
 	<?php } // end page sections ?>
 
+	<?php do_action('after_home_content'); ?>
 
 <?php
 get_footer();

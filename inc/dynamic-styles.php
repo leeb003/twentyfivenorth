@@ -240,7 +240,7 @@ function tfn_secondary_color(){
 			'property' => 'color'
 		),
 		array(
-			'element'  => '.caret',
+			'element'  => '.caret, a.readmore',
 			'property' => 'color'
 		),
 		array(
