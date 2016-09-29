@@ -5,7 +5,7 @@
  * @theme_resources
  */
 
-class theme_resources {
+class tfn_theme_resources {
 
     //properties
 	public $options = array();	

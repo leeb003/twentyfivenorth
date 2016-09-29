@@ -15,17 +15,17 @@ get_header(); ?>
 					<div class="overlay-col">
 						<div class="container">
 							<h1>404</h1>
-							<h2 class="sectionh"><?php echo get_theme_mod( 'page_404_heading', '' ); ?></h2>
-							<p><?php echo get_theme_mod( 'page_404_hdesc', '' ); ?></p>
+							<h2 class="sectionh"><?php echo esc_html(get_theme_mod( 'page_404_heading', '' )); ?></h2>
+							<p><?php echo esc_html(get_theme_mod( 'page_404_hdesc', '' )); ?></p>
 						</div> <!-- End Container -->
 
 						<div class="virtual upper80">
 							<div class="container-fluid color-back">
                         		<div class="row text-center">
                             		<div class="col-md-12">
-                                		<span><?php echo get_theme_mod( 'page_404_banner', '' ); ?></span>
+                                		<span><?php echo esc_html(get_theme_mod( 'page_404_banner', '' )); ?></span>
                                 		<a href="<?php echo esc_url( home_url( '/' ) );?>" 
-                                    		class="vtour btn-pri"><?php echo get_theme_mod( 'page_404_btn', '' ); ?></a>
+                                    		class="vtour btn-pri"><?php echo esc_html(get_theme_mod( 'page_404_btn', '' )); ?></a>
                             		</div>
                         		</div>
 							</div>

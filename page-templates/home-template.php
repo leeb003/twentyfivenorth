@@ -28,18 +28,18 @@ $home_sections = get_theme_mod( 'home_sections', array());
 				<div class="row">
 					<div class="col-sm-6 col-xs-10 top-info-sect">
 						<h3>
-							<?php echo get_theme_mod( 'home_info_address', '25 North Street / Your Town, CO 88888 United States'); ?>
+							<?php echo esc_html(get_theme_mod( 'home_info_address', '25 North Street / Your Town, CO 88888 United States')); ?>
 						</h3>
-						<h1><?php echo get_theme_mod( 'home_info_price', '$1,799,000'); ?></h1>
+						<h1><?php echo esc_html(get_theme_mod( 'home_info_price', '$1,799,000')); ?></h1>
 						<p>
-							<?php echo get_theme_mod( 'home_info_desc', 'Lovely one owner home with an open floor plan on a corner lot!  Spacious living room with fireplace and walk out to a fully fenced backyard with patio.'); ?>
+							<?php echo esc_html(get_theme_mod( 'home_info_desc', 'Lovely one owner home with an open floor plan on a corner lot!  Spacious living room with fireplace and walk out to a fully fenced backyard with patio.')); ?>
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-6 col-xs-10 top-cta">
-						<a href="<?php echo get_theme_mod( 'home_info_btn_url', '#'); ?>" class="schedule">
-							<?php echo get_theme_mod( 'home_info_btn_text', 'SCHEDULE A SHOWING'); ?>
+						<a href="<?php echo esc_url(get_theme_mod( 'home_info_btn_url', '#')); ?>" class="schedule">
+							<?php echo esc_html(get_theme_mod( 'home_info_btn_text', 'SCHEDULE A SHOWING')); ?>
 						</a>
 					</div>
 				</div>
@@ -55,32 +55,32 @@ $home_sections = get_theme_mod( 'home_sections', array());
 				<div class="col-xs-6 col-sm-6 col-md-3">
 					 <div class="feature">
 						<div class="feature-inner">
-							<i class="<?php echo get_theme_mod( 'feature_1_icon', 'icon-bed'); ?>"></i><br />
-							<span><?php echo get_theme_mod( 'feature_1_text', '4 Bedrooms'); ?></span>
+							<i class="<?php echo esc_html(get_theme_mod( 'feature_1_icon', 'icon-bed')); ?>"></i><br />
+							<span><?php echo esc_html(get_theme_mod( 'feature_1_text', '4 Bedrooms')); ?></span>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-3">
 					<div class="feature">
 						<div class="feature-inner">
-							<i class="<?php echo get_theme_mod( 'feature_2_icon', 'icon-bathtub'); ?>"></i><br />
-							<span><?php echo get_theme_mod( 'feature_2_text', '4 Bathrooms'); ?></span>
+							<i class="<?php echo esc_html(get_theme_mod( 'feature_2_icon', 'icon-bathtub')); ?>"></i><br />
+							<span><?php echo esc_html(get_theme_mod( 'feature_2_text', '4 Bathrooms')); ?></span>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-3">
 					<div class="feature">
 						<div class="feature-inner">
-							<i class="<?php echo get_theme_mod( 'feature_3_icon', 'icon-car2'); ?>"></i><br />
-							<span><?php echo get_theme_mod( 'feature_3_text', '3 Car Garage'); ?></span>
+							<i class="<?php echo esc_html(get_theme_mod( 'feature_3_icon', 'icon-car2')); ?>"></i><br />
+							<span><?php echo esc_html(get_theme_mod( 'feature_3_text', '3 Car Garage')); ?></span>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-3">
 					<div class="feature">
 						<div class="feature-inner">
-							<i class="<?php echo get_theme_mod( 'feature_4_icon', 'icon-pencil-ruler'); ?>"></i><br />
-							<span><?php echo get_theme_mod( 'feature_4_text', '4078 SQ.FT.'); ?></span>
+							<i class="<?php echo esc_html(get_theme_mod( 'feature_4_icon', 'icon-pencil-ruler')); ?>"></i><br />
+							<span><?php echo esc_html(get_theme_mod( 'feature_4_text', '4078 SQ.FT.')); ?></span>
 						</div>
 					</div>
 				</div>
@@ -95,8 +95,8 @@ $home_sections = get_theme_mod( 'home_sections', array());
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h2 class="sectionh"><?php echo get_theme_mod( 'highlights_title', ''); ?></h2>
-					<p><?php echo get_theme_mod( 'highlights_desc', ''); ?></p>
+					<h2 class="sectionh"><?php echo esc_html(get_theme_mod( 'highlights_title', '')); ?></h2>
+					<p><?php echo esc_html(get_theme_mod( 'highlights_desc', '')); ?></p>
 				</div>
 			</div>
 			<div class="row highlight-info">
@@ -109,10 +109,10 @@ $home_sections = get_theme_mod( 'home_sections', array());
 							<div class="rct"></div>
 							<div class="rct"></div>
 						</div>
-						<i class="fa <?php echo get_theme_mod( 'highlight_1_icon', ''); ?>"></i>
+						<i class="fa <?php echo esc_html(get_theme_mod( 'highlight_1_icon', '')); ?>"></i>
 					</div>
-					<h4><?php echo get_theme_mod( 'highlight_1_title', ''); ?></h4>
-					<p><?php echo get_theme_mod( 'highlight_1_text', ''); ?></p>
+					<h4><?php echo esc_html(get_theme_mod( 'highlight_1_title', '')); ?></h4>
+					<p><?php echo esc_html(get_theme_mod( 'highlight_1_text', '')); ?></p>
 				</div>
 				<div class="col-md-4">
 					<div class="shape">
@@ -123,10 +123,10 @@ $home_sections = get_theme_mod( 'home_sections', array());
 							<div class="rct"></div>
 							<div class="rct"></div>
 						</div>
-						<i class="fa <?php echo get_theme_mod( 'highlight_2_icon', ''); ?>"></i>
+						<i class="fa <?php echo esc_html(get_theme_mod( 'highlight_2_icon', '')); ?>"></i>
 					</div>
-					<h4><?php echo get_theme_mod( 'highlight_2_title', ''); ?></h4>
-					<p><?php echo get_theme_mod( 'highlight_2_text', ''); ?></p>
+					<h4><?php echo esc_html(get_theme_mod( 'highlight_2_title', '')); ?></h4>
+					<p><?php echo esc_html(get_theme_mod( 'highlight_2_text', '')); ?></p>
 				</div>
 				<div class="col-md-4">
 					<div class="shape">
@@ -137,10 +137,10 @@ $home_sections = get_theme_mod( 'home_sections', array());
 							<div class="rct"></div>
 							<div class="rct"></div>
 						</div>
-						<i class="fa <?php echo get_theme_mod( 'highlight_3_icon', ''); ?>"></i>
+						<i class="fa <?php echo esc_html(get_theme_mod( 'highlight_3_icon', '')); ?>"></i>
 					</div>
-					<h4><?php echo get_theme_mod( 'highlight_3_title', ''); ?></h4>
-					<p><?php echo get_theme_mod( 'highlight_3_text', ''); ?></p>
+					<h4><?php echo esc_html(get_theme_mod( 'highlight_3_title', '')); ?></h4>
+					<p><?php echo esc_html(get_theme_mod( 'highlight_3_text', '')); ?></p>
 				</div>
 			</div>
 		<!-- Highlights slider -->
@@ -176,14 +176,14 @@ $home_sections = get_theme_mod( 'home_sections', array());
                     	</div>
                     	<div class="col-sm-12 col-md-7">
                     		<div class="infoblock">
-                        		<h3><?php echo $v['slide_title']; ?></h3>
-                            	<p><?php echo $v['slide_text']; ?></p>
+                        		<h3><?php echo esc_html($v['slide_title']); ?></h3>
+                            	<p><?php echo esc_html($v['slide_text']); ?></p>
                             	<ul class="infoblock-feats">
 								<?php 
 								$feature_list = explode(',', $v['slide_feature_list']);
 								foreach ($feature_list as $k1 => $v1) {
 								?>
-                            		<li><?php echo $v1; ?></li>
+                            		<li><?php echo esc_html($v1); ?></li>
 								<?php
 								} 
 								?>
@@ -191,11 +191,11 @@ $home_sections = get_theme_mod( 'home_sections', array());
                         		<div class="info-actions">
                             		<a href="#" class="detail-switch">
                                 		<i class="fa fa-angle-double-left"></i>
-                                    	<span><?php echo $next_text; ?></span>
+                                    	<span><?php echo esc_html($next_text); ?></span>
                                 	</a>
                                 	<div class="sqft-cont">
-                                		<span class="sqft-desc"><?php echo $v['slide_feature_text'];?> : </span>
-										<span class="sqft"><?php echo $v['slide_feature_text_2'];?></span>
+                                		<span class="sqft-desc"><?php echo esc_html($v['slide_feature_text']);?> : </span>
+										<span class="sqft"><?php echo esc_html($v['slide_feature_text_2']);?></span>
                                 	</div>
                            		</div>
                         	</div>
@@ -219,13 +219,13 @@ $home_sections = get_theme_mod( 'home_sections', array());
 	<section id="images" class="media portfolio-section port-col">
     	<div class="overlay-col">
         	<div class="container">
-            	<h2 class="sectionh"><?php echo get_theme_mod('gallery_title', '');?></h2>
-               	<p><?php echo get_theme_mod('gallery_text', '');?></p>
+            	<h2 class="sectionh"><?php echo esc_html(get_theme_mod('gallery_title', ''));?></h2>
+               	<p><?php echo esc_html(get_theme_mod('gallery_text', ''));?></p>
                 <div class="row">
                   	<div class="col-md-12">
                        	<div id="isotope-filters2" class="filter-container isotopeFilters2">
                            	<ul class="list-inline filter">
-                               	<li class="active"><a href="#" data-filter="*"><?php echo __('All', 'twenty-five-north');?></a></li>
+                               	<li class="active"><a href="#" data-filter="*"><?php echo esc_html__('All', 'twenty-five-north');?></a></li>
 				<?php
 				// list terms in a given taxonomy
 				$taxonomy = 'tfnphotocat';
@@ -318,8 +318,8 @@ $home_sections = get_theme_mod( 'home_sections', array());
     	<div class="container-fluid color-back">
         	<div class="row text-center">
             	<div class="col-md-12">
-                	<span><?php echo get_theme_mod('gallery_banner_text', ''); ?></span>
-					<a href="<?php echo get_theme_mod('gallery_banner_btn_link', ''); ?>" target="_<?php echo get_theme_mod('gallery_banner_btn_window', ''); ?>" class="vtour btn-pri"><?php echo get_theme_mod('gallery_banner_btn_text', ''); ?></a>
+                	<span><?php echo esc_html(get_theme_mod('gallery_banner_text', '')); ?></span>
+					<a href="<?php echo esc_url(get_theme_mod('gallery_banner_btn_link', '')); ?>" target="_<?php echo esc_html(get_theme_mod('gallery_banner_btn_window', '')); ?>" class="vtour btn-pri"><?php echo esc_html(get_theme_mod('gallery_banner_btn_text', '')); ?></a>
                 </div>
             </div>
 		</div>
@@ -336,40 +336,40 @@ $home_sections = get_theme_mod( 'home_sections', array());
     	<div class="container">
         	<div class="row text-center">
             	<div class="col-md-12">
-                	<h2 class="sectionh"><?php echo get_theme_mod('additional_title', ''); ?></h2>
-                    <p><?php echo get_theme_mod('additional_text', ''); ?></p>
+                	<h2 class="sectionh"><?php echo esc_html(get_theme_mod('additional_title', '')); ?></h2>
+                    <p><?php echo esc_html(get_theme_mod('additional_text', '')); ?></p>
                 </div>
             </div>
             <div class="row additional-items">
             	<div class="col-xs-6 col-sm-6 col-md-3">
                 	<div class="add-item">
                     	<div class="add-inner">
-                        	<i class="<?php echo get_theme_mod('additional_1_icon', ''); ?>"></i><br />
-                            <span><?php echo get_theme_mod('additional_1_text', ''); ?></span>
+                        	<i class="<?php echo esc_html(get_theme_mod('additional_1_icon', '')); ?>"></i><br />
+                            <span><?php echo esc_html(get_theme_mod('additional_1_text', '')); ?></span>
                         </div>
                     </div>
                 </div>
 				<div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="add-item">
                         <div class="add-inner">
-                            <i class="<?php echo get_theme_mod('additional_2_icon', ''); ?>"></i><br />
-                            <span><?php echo get_theme_mod('additional_2_text', ''); ?></span>
+                            <i class="<?php echo esc_html(get_theme_mod('additional_2_icon', '')); ?>"></i><br />
+                            <span><?php echo esc_html(get_theme_mod('additional_2_text', '')); ?></span>
                         </div>
                     </div>
                 </div>
 				<div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="add-item">
                         <div class="add-inner">
-                            <i class="<?php echo get_theme_mod('additional_3_icon', ''); ?>"></i><br />
-                            <span><?php echo get_theme_mod('additional_3_text', ''); ?></span>
+                            <i class="<?php echo esc_html(get_theme_mod('additional_3_icon', '')); ?>"></i><br />
+                            <span><?php echo esc_html(get_theme_mod('additional_3_text', '')); ?></span>
                         </div>
                     </div>
                 </div>
 				<div class="col-xs-6 col-sm-6 col-md-3">
                     <div class="add-item">
                         <div class="add-inner">
-                            <i class="<?php echo get_theme_mod('additional_4_icon', ''); ?>"></i><br />
-                            <span><?php echo get_theme_mod('additional_4_text', ''); ?></span>
+                            <i class="<?php echo esc_html(get_theme_mod('additional_4_icon', '')); ?>"></i><br />
+                            <span><?php echo esc_html(get_theme_mod('additional_4_text', '')); ?></span>
                         </div>
                     </div>
                 </div>
@@ -377,8 +377,8 @@ $home_sections = get_theme_mod( 'home_sections', array());
             <div class="row text-center">
             	<div class="col-md-12">
                   	<a class="btn-sec" 
-					   href="<?php echo get_theme_mod('additional_btn_link', ''); ?>" 
-					   target="<?php echo get_theme_mod('additional_btn_window', ''); ?>"><?php echo get_theme_mod('additional_btn_text', ''); ?></a>
+					   href="<?php echo esc_url(get_theme_mod('additional_btn_link', '')); ?>" 
+					   target="<?php echo esc_html(get_theme_mod('additional_btn_window', '')); ?>"><?php echo esc_html(get_theme_mod('additional_btn_text', '')); ?></a>
                 </div>
             </div>
         </div>
@@ -396,8 +396,8 @@ $home_sections = get_theme_mod( 'home_sections', array());
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="sectionh"><?php echo get_theme_mod('posts_title', ''); ?></h2>
-                    <p><?php echo get_theme_mod('posts_text', ''); ?></p>
+                    <h2 class="sectionh"><?php echo esc_html(get_theme_mod('posts_title', '')); ?></h2>
+                    <p><?php echo esc_html(get_theme_mod('posts_text', '')); ?></p>
                 </div>
             </div>
 			<div class="posts-container">
@@ -409,7 +409,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 				$featured = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 				$partial_content = strip_shortcodes($post->post_content);
 				$partial_content = wp_trim_words( $partial_content, 35, '...');
-				$theme_resources = new theme_resources;
+				$theme_resources = new tfn_theme_resources;
 				$meta = $theme_resources->tfn_meta($post, 'posts_atts'); // pass the post array and theme option to get
 				if ($i&1) { // odd entries
 		?>
@@ -429,7 +429,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 							</div>
 							<?php echo implode(' ', $meta);?>
 							<a href="<?php echo get_permalink($post->ID);?>" 
-								class="readmore"><?php echo __('Read more', 'twenty-five-north');?></a>
+								class="readmore"><?php echo esc_html__('Read more', 'twenty-five-north');?></a>
 						</div>
 					</div>
 				</div>
@@ -446,7 +446,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 								<p><?php echo $partial_content; ?></p>
 							</div>
 							<a href="<?php echo get_permalink($post->ID);?>" 
-								class="readmore"><?php echo __('Read more', 'twenty-five-north');?></a>
+								class="readmore"><?php echo esc_html__('Read more', 'twenty-five-north');?></a>
 							<?php echo implode(' ', array_reverse($meta, true));?>
 						</div>
 					</div>
@@ -474,19 +474,19 @@ $home_sections = get_theme_mod( 'home_sections', array());
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="sectionh"><?php echo get_theme_mod('agent_title', ''); ?></h2>
-					<p><?php echo get_theme_mod('agent_desc', ''); ?></p>
+					<h2 class="sectionh"><?php echo esc_html(get_theme_mod('agent_title', '')); ?></h2>
+					<p><?php echo esc_html(get_theme_mod('agent_desc', '')); ?></p>
 				</div>
 			</div>
 			<div class="row vcenter agent-info">
 				<div class="col-md-6 col-sm-12">
-					<img class="img-responsive" src="<?php echo get_theme_mod('agent_photo', '') ;?>" alt="<?php echo __('agent','twenty-five-north');?>" />
+					<img class="img-responsive" src="<?php echo esc_html(get_theme_mod('agent_photo', ''));?>" alt="" />
 				</div>
 				<div class="col-md-6 text-left agent-details">
-					<h3><?php echo get_theme_mod('agent_name', ''); ?></h3>
-					<span><?php echo get_theme_mod('agent_cred', ''); ?></span>
-					<p><?php echo get_theme_mod('agent_info', ''); ?></p>
-					<a class="btn-third" href="<?php echo get_theme_mod('agent_btn_link', ''); ?>" target="_<?php echo get_theme_mod('agent_btn_window', ''); ?>"><?php echo get_theme_mod('agent_btn_text', ''); ?></a>
+					<h3><?php echo esc_html(get_theme_mod('agent_name', '')); ?></h3>
+					<span><?php echo esc_html(get_theme_mod('agent_cred', '')); ?></span>
+					<p><?php echo esc_html(get_theme_mod('agent_info', '')); ?></p>
+					<a class="btn-third" href="<?php echo esc_url(get_theme_mod('agent_btn_link', '')); ?>" target="_<?php echo esc_html(get_theme_mod('agent_btn_window', '')); ?>"><?php echo esc_html(get_theme_mod('agent_btn_text', '')); ?></a>
 				</div>
 			</div>
 		</div>
@@ -497,16 +497,16 @@ $home_sections = get_theme_mod( 'home_sections', array());
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-lg-4">
-						<div class="icon-ring"><i class="fa <?php echo get_theme_mod('agent_1_icon', '');?>"></i></div>
-						<p class="text"><?php echo get_theme_mod('agent_1_text', '');?></p>
+						<div class="icon-ring"><i class="fa <?php echo esc_html(get_theme_mod('agent_1_icon', ''));?>"></i></div>
+						<p class="text"><?php echo esc_html(get_theme_mod('agent_1_text', ''));?></p>
 					</div>
 					<div class="col-md-6 col-lg-4">
-						<div class="icon-ring"><i class="fa <?php echo get_theme_mod('agent_2_icon', '');?>"></i></div>
-						<p class="text"><?php echo get_theme_mod('agent_2_text', '');?></p>
+						<div class="icon-ring"><i class="fa <?php echo esc_html(get_theme_mod('agent_2_icon', ''));?>"></i></div>
+						<p class="text"><?php echo esc_html(get_theme_mod('agent_2_text', ''));?></p>
 					</div>
 					<div class="col-md-6 col-lg-4">
-						<div class="icon-ring"><i class="fa <?php echo get_theme_mod('agent_3_icon', '');?>"></i></div>
-						<p class="text"><?php echo get_theme_mod('agent_3_text', '');?></p>
+						<div class="icon-ring"><i class="fa <?php echo esc_html(get_theme_mod('agent_3_icon', ''));?>"></i></div>
+						<p class="text"><?php echo esc_html(get_theme_mod('agent_3_text', ''));?></p>
 					</div>
 				</div>
 			</div>

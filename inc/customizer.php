@@ -128,7 +128,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'type'        => 'typography',
     'settings'    => 'h2__typography',
     'label'       => esc_attr__( 'H2 Typography', 'twenty-five-north' ),
-    'description' => esc_attr__( 'Select the typography options for your H1 headers.', 'twenty-five-north' ),
+    'description' => esc_attr__( 'Select the typography options for your H2 headers.', 'twenty-five-north' ),
     'help'        => esc_attr__( 'The typography options you set here will apply to the H2 elements of your site.', 'twenty-five-north' ),
     'section'     => 'general',
     'priority'    => 10,
@@ -152,7 +152,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'type'        => 'typography',
     'settings'    => 'h3__typography',
     'label'       => esc_attr__( 'H3 Typography', 'twenty-five-north' ),
-    'description' => esc_attr__( 'Select the typography options for your H1 headers.', 'twenty-five-north' ),
+    'description' => esc_attr__( 'Select the typography options for your H3 headers.', 'twenty-five-north' ),
     'help'        => esc_attr__( 'The typography options you set here will apply to the H3 elements on your site.', 'twenty-five-north' ),
     'section'     => 'general',
     'priority'    => 10,
@@ -176,7 +176,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'type'        => 'typography',
     'settings'    => 'h4__typography',
     'label'       => esc_attr__( 'H4 Typography', 'twenty-five-north' ),
-    'description' => esc_attr__( 'Select the typography options for your H1 headers.', 'twenty-five-north' ),
+    'description' => esc_attr__( 'Select the typography options for your H4 headers.', 'twenty-five-north' ),
     'help'        => esc_attr__( 'The typography options you set here will apply to the H4 elements on your site.', 'twenty-five-north' ),
     'section'     => 'general',
     'priority'    => 10,
@@ -261,7 +261,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
 	'section'		=> 'header_section',
 	'description'	=> __( 'Be sure to add a logo that will fit well', 'twenty-five-north'),
 	'priority'		=> 10,
-	'default'		=> ''
+	'default'		=> get_template_directory_uri() . '/img/25north.png' 
 ) );
 /* Enable WPML Language Switcher */
 twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(

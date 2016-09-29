@@ -30,8 +30,8 @@ $about_sections = get_theme_mod('about_sections', '');
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="sectionh"><?php echo get_theme_mod('topagents_title', ''); ?></h2>
-                    <p><?php echo get_theme_mod('topagents_text', ''); ?></p>
+                    <h2 class="sectionh"><?php echo esc_html(get_theme_mod('topagents_title', '')); ?></h2>
+                    <p><?php echo esc_html(get_theme_mod('topagents_text', '')); ?></p>
                 </div>
             </div>
             <div class="row">
@@ -47,31 +47,31 @@ $about_sections = get_theme_mod('about_sections', '');
 			?>
                     <div class="agent-slide">
                         <div class="agent-photo">
-                            <img src="<?php echo $agent_photo;?>" alt="" />
+                            <img src="<?php echo esc_url($agent_photo);?>" alt="" />
                         </div>
                         <div class="agent-data text-center">
-                            <h4><?php echo $details['agent_name']; ?></h4>
-                            <p><?php echo $details['agent_title']; ?></p>
+                            <h4><?php echo esc_html($details['agent_name']); ?></h4>
+                            <p><?php echo esc_html($details['agent_title']); ?></p>
                             <div class="agent-contact">
                                 <div class="agent-contact-row">
                                     <div class="icon-holder"><i class="icon-telephone"></i></div>
-                                    <div class="contact-details"><span><?php echo __('PHONE', 'twenty-five-north');?></span><?php echo $details['agent_phone'];?></div>
+                                    <div class="contact-details"><span><?php echo esc_html__('PHONE', 'twenty-five-north');?></span><?php echo esc_html($details['agent_phone']);?></div>
                                 </div>
                                 <div class="agent-contact-row">
                                     <div class="icon-holder"><i class="icon-envelope"></i></div>
-                                    <div class="contact-details"><span><?php echo __('EMAIL', 'twenty-five-north');?></span><?php echo $details['agent_email'];?></div>
+                                    <div class="contact-details"><span><?php echo esc_html__('EMAIL', 'twenty-five-north');?></span><?php echo esc_html($details['agent_email']);?></div>
                                 </div>
                             </div>
                             <div class="agent-social">
                                 <ul>
 								<?php if ($details['social_choice_1'] != 'na') { ?>
-                                    <li><a href="<?php echo $details['social_url_1'];?>" target="_blank"><i class="fa <?php echo $details['social_choice_1']?>"></i></a></li>
+                                    <li><a href="<?php echo esc_url($details['social_url_1']);?>" target="_blank"><i class="fa <?php echo esc_html($details['social_choice_1']);?>"></i></a></li>
 								<?php } 
 									  if ($details['social_choice_2'] != 'na') { ?>
-                                    <li><a href="<?php echo $details['social_url_2'];?>" target="_blank"><i class="fa <?php echo $details['social_choice_2']?>"></i></a></li>
+                                    <li><a href="<?php echo esc_url($details['social_url_2']);?>" target="_blank"><i class="fa <?php echo esc_html($details['social_choice_2']);?>"></i></a></li>
 								<?php }
 									  if ($details['social_choice_3'] != 'na') { ?>
-                                    <li><a href="<?php echo $details['social_url_3'];?>" target="_blank"><i class="fa <?php echo $details['social_choice_3']?>"></i></a></li>
+                                    <li><a href="<?php echo esc_url($details['social_url_3']);?>" target="_blank"><i class="fa <?php echo esc_html($details['social_choice_3'])?>"></i></a></li>
 								<?php } ?>
                                 </ul>
                             </div>
@@ -112,9 +112,9 @@ $about_sections = get_theme_mod('about_sections', '');
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <p class="quote"><?php echo $entry['testimonial'];?></p>
+                            <p class="quote"><?php echo esc_html($entry['testimonial']);?></p>
                             <div class="quote-person">
-                                <?php echo $entry['name']; ?> - <span><?php echo $entry['title'];?></span>
+                                <?php echo esc_html($entry['name']); ?> - <span><?php echo esc_html($entry['title']);?></span>
                             </div>
                         </div>
                     </div>
@@ -137,62 +137,62 @@ $about_sections = get_theme_mod('about_sections', '');
                 <div class="row vcenter">
                     <div class="col-lg-4 col-md-6 statement">
                         <div>
-                            <h4><?php echo get_theme_mod('contact_title_1', ''); ?></h4>
-                            <p><?php echo get_theme_mod('contact_text_1', ''); ?></p>
+                            <h4><?php echo esc_html(get_theme_mod('contact_title_1', '')); ?></h4>
+                            <p><?php echo esc_html(get_theme_mod('contact_text_1', '')); ?></p>
                         </div>
 
                         <div>
-                            <h4><?php echo get_theme_mod('contact_title_2', ''); ?></h4>
-                            <p><?php echo get_theme_mod('contact_text_2', ''); ?></p>
+                            <h4><?php echo esc_html(get_theme_mod('contact_title_2', '')); ?></h4>
+                            <p><?php echo esc_html(get_theme_mod('contact_text_2', '')); ?></p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 contactus">
                         <div class="contactus-details">
                             <div class="icon-holder">
-                                <span class="icon-surround"><i class="<?php echo get_theme_mod('contact_1_icon', ''); ?>"></i></span>
+                                <span class="icon-surround"><i class="<?php echo esc_html(get_theme_mod('contact_1_icon', '')); ?>"></i></span>
                             </div>
                             <div class="contactus-detail">
-								<?php echo get_theme_mod('contact_1_text', ''); ?>
+								<?php echo esc_html(get_theme_mod('contact_1_text', '')); ?>
                             </div>
                         </div>
                         <div class="clearfix"></div>
                         <div class="contactus-details">
                             <div class="icon-holder">
-                                <span class="icon-surround"><i class="<?php echo get_theme_mod('contact_2_icon', ''); ?>"></i></span>
+                                <span class="icon-surround"><i class="<?php echo esc_html(get_theme_mod('contact_2_icon', '')); ?>"></i></span>
                             </div>
                             <div class="contactus-detail">
-								<?php echo get_theme_mod('contact_2_text', ''); ?>
+								<?php echo esc_html(get_theme_mod('contact_2_text', '')); ?>
                             </div>
                         </div>
                         <div class="clearfix"></div>
                         <div class="contactus-details">
                             <div class="icon-holder">
-                                <span class="icon-surround"><i class="<?php echo get_theme_mod('contact_3_icon', ''); ?>"></i></span>
+                                <span class="icon-surround"><i class="<?php echo esc_html(get_theme_mod('contact_3_icon', '')); ?>"></i></span>
                             </div>
                             <div class="contactus-detail">
-                                <?php echo get_theme_mod('contact_3_text', ''); ?>
+                                <?php echo esc_html(get_theme_mod('contact_3_text', '')); ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 contact-form">
-                        <h3><?php echo get_theme_mod('contact_form_title', ''); ?></h3>
+                        <h3><?php echo esc_html(get_theme_mod('contact_form_title', '')); ?></h3>
                         <form class="contact-form" action="#" name="contact-form" method="post" id="contact-form">
                             <div class="input-holder">
                                 <input type="text" class="input_name" name="input_name" 
-									placeholder="<?php echo get_theme_mod('contact_form_name', ''); ?>" required />
+									placeholder="<?php echo esc_html(get_theme_mod('contact_form_name', '')); ?>" required />
                             </div>
                             <div class="input-holder">
                                 <input type="text" class="input_email" name="input_email" 
-                                    placeholder="<?php echo get_theme_mod('contact_form_email', ''); ?>" required />
+                                    placeholder="<?php echo esc_html(get_theme_mod('contact_form_email', '')); ?>" required />
                             </div>
                             <div class="clearfix"></div>
                             <div class="input-holder">
                                 <textarea class="input_message" name="input_message" 
-                                    placeholder="<?php echo get_theme_mod('contact_form_message', ''); ?>" required></textarea>
+                                    placeholder="<?php echo esc_html(get_theme_mod('contact_form_message', '')); ?>" required></textarea>
                             </div>
                             <div class="input-holder">
                                 <input type="submit" id="submit" class="form-submit" 
-									name="submit" value="<?php echo get_theme_mod('contact_form_btn_text', ''); ?>" />
+									name="submit" value="<?php echo esc_html(get_theme_mod('contact_form_btn_text', '')); ?>" />
                                 <div class="response"></div>
                             </div>
                         </form>

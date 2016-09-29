@@ -21,13 +21,13 @@
 </head>
 
 <?php 
-$theme_resources = new theme_resources();
+$theme_resources = new tfn_theme_resources();
 $options = $theme_resources->return_options();
 // print_r($options);
 $menu_exists = $theme_resources->menu_check('tfn-primary');
 
 $four_o_four = is_404();  // detect 404 page for display
-$header_logo = get_theme_mod( 'header_logo', '' );
+$header_logo = get_theme_mod( 'header_logo', get_template_directory_uri() . '/img/25north.png' );
 ?>
 
 <body <?php body_class(); ?>>
@@ -51,7 +51,7 @@ $header_logo = get_theme_mod( 'header_logo', '' );
 							</button>
 							<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) );?>">
 								<div class="nav-logo">
-									<img src="<?php echo $header_logo; ?>" alt="Logo" class="smaller-logo img-responsive center-block" />
+									<img src="<?php echo esc_url($header_logo); ?>" alt="" class="smaller-logo img-responsive center-block" />
 								</div>
 							</a>
 						</div>

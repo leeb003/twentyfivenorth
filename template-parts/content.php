@@ -12,7 +12,7 @@ $entry_img = wp_get_attachment_url(get_post_thumbnail_id(), 'full');
 $tile_date = esc_html(get_the_date('M'));
 $tile_month = esc_html(get_the_date('m'));
 $tile_year = esc_html(get_the_date('Y'));
-$theme_resources = new theme_resources;
+$theme_resources = new tfn_theme_resources;
 $meta = $theme_resources->tfn_meta($post, 'blog_meta'); // pass the post array and theme option to get
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -118,7 +118,7 @@ $meta = $theme_resources->tfn_meta($post, 'blog_meta'); // pass the post array a
 					</div>
 					<?php echo implode(' ', $meta);?>
 					<a class="readmore" 
-						href="<?php echo $get_permalink;?>"><?php echo __('Read more', 'twenty-five-north');?></a>
+						href="<?php echo $get_permalink;?>"><?php echo esc_html__('Read more', 'twenty-five-north');?></a>
 				</div>
 			</div>
 		</div><!-- .col -->

@@ -2,7 +2,7 @@
 /**
  * Class to add our demo import section
  **/
-class theme_import_admin {
+class tfn_theme_import_admin {
     //properties
     //public $config = array();
 

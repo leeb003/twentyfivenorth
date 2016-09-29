@@ -3,7 +3,7 @@
    Admin Main Class
 */
 
-class themeAdmin {
+class tfn_themeAdmin {
 	//properties
 	public $config = array();
 
@@ -19,8 +19,8 @@ class themeAdmin {
 		/**
 		 * Include our demo import admin page
 		 */
-		require_once dirname( __FILE__) . '/theme-import-admin.php';
-		new theme_import_admin();
+		require_once TWENTYFIVENORTH_ADMIN_DIR . 'theme-import-admin.php';
+		new tfn_theme_import_admin();
 
 	} // end construct
 
@@ -29,8 +29,7 @@ class themeAdmin {
     */
 	public function load_custom_wp_admin_style() {
         wp_enqueue_media();
-        wp_enqueue_script( 'jquery' );
-        wp_enqueue_script( 'jquery-ui-core' );
+        wp_enqueue_script( 'jquery-ui-core',  false, array('jquery') );
         wp_enqueue_script( 'jquery-ui-slider' );
         wp_enqueue_script( 'jquery-ui-sortable' );
 		wp_enqueue_script( 'jquery-ui-dialog' );
@@ -72,11 +71,11 @@ class themeAdmin {
 		// 1 is Main
 		if (!class_exists("WP_Import")) {
             if (!defined("WP_LOAD_IMPORTERS")) define("WP_LOAD_IMPORTERS",true);
-            require_once(dirname(__FILE__) . '/inc/importer/wordpress-importer.php');
+            require_once(TWENTYFIVENORTH_ADMIN_DIR . 'inc/importer/wordpress-importer.php');
         }
-		require_once(dirname(__FILE__) . '/theme-import.php');
+		require_once(TWENTYFIVENORTH_ADMIN_DIR . 'theme-import.php');
 
-        $this->importer = new CTImport();
+        $this->importer = new tfn_import();
         $this->importer->fetch_attachments = true;
 
         $response = $this->importer->getDemo($demo_choice);

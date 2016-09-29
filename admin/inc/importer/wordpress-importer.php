@@ -26,7 +26,7 @@ if ( ! class_exists( 'WP_Importer' ) ) {
 }
 
 // include WXR file parsers
-require dirname( __FILE__ ) . '/parsers.php';
+require TWENTYFIVENORTH_ADMIN_DIR . 'inc/importer/parsers.php';
 
 /**
  * WordPress Importer class for managing the import process of a WXR file
@@ -1148,7 +1148,7 @@ class WP_Import extends WP_Importer {
 } // class_exists( 'WP_Importer' )
 
 function wordpress_custom_importer_init() {
-	load_plugin_textdomain( 'twenty-five-north', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	/* load_plugin_textdomain( 'twenty-five-north', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); */
 
 	/**
 	 * WordPress Importer object for registering the import callback

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Twenty Five North\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-23 21:56-0700\n"
+"POT-Creation-Date: 2016-09-29 16:59-0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Lee Beck <info@scripthat.com>\n"
 "Language-Team: SH-Themes <info@scripthat.com>\n"
@@ -12,12 +12,20 @@ msgstr ""
 "X-Poedit-Language: English\n"
 "X-Poedit-Country: UNITED STATES\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__\n"
 "X-Poedit-Basepath: /var/www/html/wp/25north/wp-content/themes/twenty-five-north\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: functions.php:55
 msgid "Primary"
+msgstr ""
+
+#: functions.php:172
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:174
+msgid "Add widgets here."
 msgstr ""
 
 #: functions.php:426
@@ -32,16 +40,35 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: functions.php:481
-msgid "Post author"
+#: functions.php:451
+msgid "Comment"
 msgstr ""
 
 #: functions.php:485
+msgid "Post author"
+msgstr ""
+
+#: functions.php:489
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:492
+#: functions.php:496
 msgid "(Edit)"
+msgstr ""
+
+#: search.php:26
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: comments.php:43
+#: comments.php:67
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:44
+#: comments.php:68
+msgid "Newer Comments"
 msgstr ""
 
 #: comments.php:89
@@ -52,37 +79,33 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: page-templates/about-us-template.php:57
+#: page-templates/about-us-template.php:58
 msgid "PHONE"
 msgstr ""
 
-#: page-templates/about-us-template.php:61
+#: page-templates/about-us-template.php:62
 msgid "EMAIL"
 msgstr ""
 
-#: page-templates/home-template.php:227
+#: page-templates/home-template.php:228
 msgid "All"
 msgstr ""
 
-#: page-templates/home-template.php:431
-#: page-templates/home-template.php:448
+#: page-templates/home-template.php:432
+#: page-templates/home-template.php:449
 msgid "Read more"
-msgstr ""
-
-#: page-templates/home-template.php:482
-msgid "agent"
 msgstr ""
 
 #: admin/theme-resources.php:57
 msgid "Comments"
 msgstr ""
 
-#: admin/theme-resources.php:76
+#: admin/theme-resources.php:77
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: admin/theme-resources.php:85
+#: admin/theme-resources.php:86
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
@@ -341,31 +364,21 @@ msgstr ""
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
+#: template-parts/content-page.php:22
+#: template-parts/content.php:55
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-page.php:34
+#: inc/template-tags.php:74
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
 #: template-parts/content.php:50
 #: template-parts/content.php:106
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/class-tfn-widget-recent-posts.php:28
-msgid "Your site&#8217;s most recent Posts."
-msgstr ""
-
-#: inc/class-tfn-widget-recent-posts.php:31
-msgid "Recent Posts - Twenty Five North"
-msgstr ""
-
-#: inc/class-tfn-widget-recent-posts.php:50
-#: inc/customizer.php:737
-msgid "Recent Posts"
-msgstr ""
-
-#: inc/class-tfn-widget-recent-posts.php:142
-msgid "Title:"
-msgstr ""
-
-#: inc/class-tfn-widget-recent-posts.php:145
-msgid "Number of posts to show:"
 msgstr ""
 
 #: inc/customizer.php:49
@@ -653,6 +666,10 @@ msgstr ""
 
 #: inc/customizer.php:736
 msgid "Additional Information"
+msgstr ""
+
+#: inc/customizer.php:737
+msgid "Recent Posts"
 msgstr ""
 
 #: inc/customizer.php:738
@@ -1403,6 +1420,19 @@ msgstr ""
 msgid "The Kirki Toolkit plugin is installed but not activated. Please <strong><a href=\"%s\">activate it</a></strong> in order to take full advantage of the theme's options."
 msgstr ""
 
+#: inc/template-tags.php:51
+#: inc/template-tags.php:57
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:53
+msgid "Categories"
+msgstr ""
+
+#: inc/template-tags.php:59
+msgid "Tags"
+msgstr ""
+
 #: inc/template-tags.php:67
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
@@ -1435,6 +1465,9 @@ msgid "Return to Required Plugins Installer"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:393
+#: inc/class-tgm-plugin-activation.php:912
+#: inc/class-tgm-plugin-activation.php:2618
+#: inc/class-tgm-plugin-activation.php:3665
 msgid "Return to the Dashboard"
 msgstr ""
 
@@ -1472,6 +1505,23 @@ msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1019
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1019
+#: inc/class-tgm-plugin-activation.php:1022
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1022
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:2067
@@ -1535,6 +1585,10 @@ msgstr ""
 msgid "Available version:"
 msgstr ""
 
+#: inc/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
 #: inc/class-tgm-plugin-activation.php:2632
 msgid "Plugin"
 msgstr ""
@@ -1570,6 +1624,10 @@ msgstr ""
 msgid "Activate %2$s"
 msgstr ""
 
+#: inc/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
 #: inc/class-tgm-plugin-activation.php:2802
 msgid "Install"
 msgstr ""
@@ -1596,6 +1654,14 @@ msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:2887
 msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:3243
@@ -1626,6 +1692,16 @@ msgstr ""
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
+#: inc/class-tgm-plugin-activation.php:3594
+#: inc/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#: inc/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
 #: inc/class-tgm-plugin-activation.php:3595
 msgid "All installations and activations have been completed."
 msgstr ""
@@ -1637,6 +1713,11 @@ msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:3600
 msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed successfully."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:3603
@@ -1687,25 +1768,5 @@ msgstr ""
 
 #: inc/post-like.php:375
 msgid "Most Popular Posts"
-msgstr ""
-
-#: inc/class-tfn-widget-tag-cloud.php:27
-msgid "A cloud of your most used tags."
-msgstr ""
-
-#: inc/class-tfn-widget-tag-cloud.php:30
-msgid "Tag Cloud - Twenty Five North"
-msgstr ""
-
-#: inc/class-tfn-widget-tag-cloud.php:49
-msgid "Tags"
-msgstr ""
-
-#: inc/class-tfn-widget-tag-cloud.php:136
-msgid "The tag cloud will not be displayed since there are no taxonomies that support the tag cloud widget."
-msgstr ""
-
-#: inc/class-tfn-widget-tag-cloud.php:153
-msgid "Taxonomy:"
 msgstr ""
 

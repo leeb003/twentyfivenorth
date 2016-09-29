@@ -1,6 +1,6 @@
 <?php
 
-class CTImport extends WP_Import {
+class tfn_import extends WP_Import {
 	protected $importer;
 	public $site_url;
 	public $demo_url;
@@ -35,10 +35,10 @@ class CTImport extends WP_Import {
         $this->site_url = get_site_url();
         if ($demo_choice == 1) {  // Twenty Five North Main Demo
             $this->demo_url         = 'http://demo.sh-themes.com/25north-demo';
-            $this->demo_file        = dirname(__FILE__) . '/inc/imports/25north-demo.xml';
-            $this->demo_options     = dirname(__FILE__) . '/inc/imports/theme_mods_twenty-five-north.txt';
-            $this->sidebar_file    = dirname(__FILE__) . '/inc/imports/sidebars_widgets.txt';
-            $this->demo_widget_file = dirname(__FILE__) . '/inc/imports/widget_data.json';
+            $this->demo_file        = TWENTYFIVENORTH_ADMIN_DIR . 'inc/imports/25north-demo.xml';
+            $this->demo_options     = TWENTYFIVENORTH_ADMIN_DIR . 'inc/imports/theme_mods_twenty-five-north.txt';
+            $this->sidebar_file     = TWENTYFIVENORTH_ADMIN_DIR . 'inc/imports/sidebars_widgets.txt';
+            $this->demo_widget_file = TWENTYFIVENORTH_ADMIN_DIR . 'inc/imports/widget_data.json';
         }
 
 		$this->success = false;
@@ -82,8 +82,16 @@ class CTImport extends WP_Import {
          */
         if ($demo_choice == 1) {
             global $wpdb;
-            $home_id = $wpdb->get_var( 'select ID from ' . $wpdb->prefix . 'posts WHERE post_name="home"');
-			$blog_id = $wpdb->get_var( 'select ID from ' . $wpdb->prefix . 'posts WHERE post_name="Blog"');
+			$home_name = "home";
+			$blog_name = "Blog";
+            $home_id = $wpdb->get_var( wpdb->prepare(
+				"SELECT ID from " . $wpdb->prefix . "posts WHERE post_name=%s",
+				$home
+			) );
+			$blog_id = $wpdb->get_var( wpdb->prepare(
+				"SELECT ID from " . $wpdb->prefix . "posts WHERE post_name=%s",
+				$blog_name
+			) );
             // set front page
             if ($home_id) {
                 update_option('show_on_front', 'page');
@@ -92,28 +100,6 @@ class CTImport extends WP_Import {
 			if ($blog_id) {
 				update_option('page_for_posts', $blog_id);
 			}
-			/* Don't think this is necessary since we import all options from demo... but we'll keep for reference
-            // set menu locations
-            $primary_id = $wpdb->get_var( 'select term_id from ' . $wpdb->prefix  . 'terms WHERE slug="navigation"');
-            $secondary_id = $wpdb->get_var( 'select term_id from ' . $wpdb->prefix  . 'terms WHERE slug="secondary-navigation"');
-            $top_minor_id = $wpdb->get_var( 'select term_id from ' . $wpdb->prefix  . 'terms WHERE slug="top-layered-minor"');
-            $off_canvas_id = $wpdb->get_var( 'select term_id from ' . $wpdb->prefix  . 'terms WHERE slug="side-menu"');
-            $footer_id = $wpdb->get_var( 'select term_id from ' . $wpdb->prefix  . 'terms WHERE slug="footer"');
-
-            $menu_locations = array(
-                'nav_menu_locations' => array(
-                    'nav-menu'           => $primary_id,
-                    'top-minor-menu'     => $top_minor_id,
-                    'nav-menu-secondary' => $secondary_id,
-                    'main-side-menu'     => '',
-                    'side-menu'          => $off_canvas_id,
-                    'footer-menu'        => $footer_id
-                )
-            );
-            $theme = wp_get_theme();
-            $theme = strtolower($theme);
-            update_option("theme_mods_$theme", $menu_locations);
-			*/
             /* update_option('permalink_structure', '/%postname%/');  // pretty permalinks - they'd have to reset anyways, just leave it for now */
         } // end update front page and menu setup (Main Demo)
 	}

@@ -25,7 +25,7 @@ if ($sidebar_pos == 'left') {
 	<section id="top-section" class="top-section">
         <div class="blog-header">
             <div class="blog-header-inner">
-                <h1><?php echo get_theme_mod('blog_title'); ?></h1>
+                <h1><?php echo esc_html(get_theme_mod('blog_title')); ?></h1>
             </div>
             <div class="blog-header-overlay">
             </div>

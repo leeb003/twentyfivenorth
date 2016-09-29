@@ -7,10 +7,10 @@
  * @packageTwentyFiveNorth
  */
 // Define constants
-define('ADMIN_DIR', get_template_directory() . '/admin/');
-define('INC_DIR', get_template_directory() . '/inc/');
-define('TEMPLATES_DIR', get_template_directory() . '/page-templates/');
-define('CSS_DIR', get_template_directory() . '/css/'); // used for less generation
+define('TWENTYFIVENORTH_ADMIN_DIR', get_template_directory() . '/admin/');
+define('TWENTYFIVENORTH_INC_DIR', get_template_directory() . '/inc/');
+define('TWENTYFIVENORTH_TEMPLATES_DIR', get_template_directory() . '/page-templates/');
+define('TWENTYFIVENORTH_CSS_DIR', get_template_directory() . '/css/'); // used for less generation
 
 if ( ! function_exists( 'twentyfivenorth_setup' ) ) :
 /**
@@ -83,7 +83,7 @@ add_action( 'after_setup_theme', 'twentyfivenorth_setup' );
  * WPML Language Switcher bootstrap nav layout
  */
 function twentyfivenorth_lang_switch($items, $args) {
-	$wpml_switcher = get_theme_mod('wpml_switcher', '');
+	$wpml_switcher = esc_html(get_theme_mod('wpml_switcher', ''));
 	if ($wpml_switcher != '1') { return $items; }
     $languages = apply_filters( 'wpml_active_languages', NULL, array( 'skip_missing' => 0) );
     $count = count($languages);
@@ -143,8 +143,8 @@ function add_icons_to_nav( $items, $args ) {
 		$items .= '<li class="nav-sep"><span></span></li>';
 		foreach ($header_social_pick as $k => $v) {
 			$items  .= '<li class="social-link">'
-					. '<a href="' . $v['social_url'] . '" target="_blank">'
-					. '<i class="fa ' . $v['social_choice'] . '"></i></a></li>';
+					. '<a href="' . esc_url($v['social_url']) . '" target="_blank">'
+					. '<i class="fa ' . esc_html($v['social_choice']) . '"></i></a></li>';
 		}
 	}
 	return $items;
@@ -202,8 +202,8 @@ function twentyfivenorth_scripts() {
 		$top_background = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
 		$top_background = $top_background[0];
 		$testimonial_color = get_theme_mod('testimonial_color');
-		$testimonial_bg = get_theme_mod('testimonial_bg');
-		$four_o_four_bg = get_theme_mod('background_404');
+		$testimonial_bg = esc_url(get_theme_mod('testimonial_bg'));
+		$four_o_four_bg = esc_url(get_theme_mod('background_404'));
 		$about_css = "
 			.tfn-page-header.blog-header {
 				background: transparent url('$top_background') no-repeat fixed top;
@@ -226,7 +226,7 @@ function twentyfivenorth_scripts() {
 	} else { // home template
 		$color_primary = get_theme_mod('color_primary', '#fec107');
 		$secondary_color = get_theme_mod('color_secondary', '#46505c');
-		$gallery_bg = get_theme_mod('gallery_background', get_template_directory_uri() . '/img/gallery-bg.jpg');
+		$gallery_bg = esc_url(get_theme_mod('gallery_background', get_template_directory_uri() . '/img/gallery-bg.jpg'));
 		$gallery_css = "
 			.overlay-col {
 				background-image: url('$gallery_bg');
@@ -251,9 +251,9 @@ function twentyfivenorth_scripts() {
 	wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '', true);
 	// Front Page or demo pages
 	if (is_page_template($templates)) {
-		$agent_map_marker = get_theme_mod('agent_map_marker');
-    	$agent_map_lat = trim(get_theme_mod('agent_map_lat'));
-    	$agent_map_lng = trim(get_theme_mod('agent_map_lng'));
+		$agent_map_marker = esc_url(get_theme_mod('agent_map_marker'));
+    	$agent_map_lat = esc_html(get_theme_mod('agent_map_lat'));
+    	$agent_map_lng = esc_html(get_theme_mod('agent_map_lng'));
     	wp_enqueue_script( 'twentyfivenorth-js', get_template_directory_uri() . '/js/25north.js', 
     	array( 'bootstrap-dropdown' ), $tfn_theme->get('Version'), true);
     	wp_localize_script(  'twentyfivenorth-js', 'tfn_vars', array(
@@ -265,7 +265,7 @@ function twentyfivenorth_scripts() {
 		
 		// and if map enabled
 		if (get_theme_mod('agent_map') == 'enable' ) {
-			$google_key = get_theme_mod('google_key');
+			$google_key = esc_html(get_theme_mod('google_key'));
 			wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=' . $google_key);
 		}
 	}
@@ -290,13 +290,13 @@ function twentyfivenorth_scripts() {
 			$sm_view = 2;
 		}
 		wp_localize_script( 'twentyfivenorth-pagejs', 'tfnpage_vars', array(
-			'maxView'        => $max_view,
-			'medView'        => $med_view,
-			'smView'         => $sm_view,
-			'sendingMsg'     => $sending_msg,
-			'aboutMapMarker' => $about_map_marker,
-			'aboutMapLat'	 => $about_map_lat,
-			'aboutMapLng'	 => $about_map_lng,
+			'maxView'        => esc_js($max_view),
+			'medView'        => esc_js($med_view),
+			'smView'         => esc_js($sm_view),
+			'sendingMsg'     => esc_js($sending_msg),
+			'aboutMapMarker' => esc_js($about_map_marker),
+			'aboutMapLat'	 => esc_js($about_map_lat),
+			'aboutMapLng'	 => esc_js($about_map_lng),
 			'tfnAdminUrl'    => admin_url(),
 			'is_rtl'         => is_rtl()
 		));
@@ -312,7 +312,7 @@ function twentyfivenorth_scripts() {
 			}
 		}
 		if ($map_enabled) {
-            $google_key = get_theme_mod('google_key');
+            $google_key = esc_html(get_theme_mod('google_key'));
             wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=' . $google_key);
         }
 	}
@@ -333,14 +333,14 @@ add_action( 'wp_ajax_tfn_contact_form', 'tfn_contact_form' );
  */
 function tfn_contact_form() {
 	// check for email option, if not use the admin email
-	$contact_form_email = get_theme_mod('contact_form_email_address');
+	$contact_form_email = esc_html(get_theme_mod('contact_form_email_address'));
 	if (!$contact_form_email) {
     	$email_to = get_option('admin_email');
 	} else {
 		$email_to = $contact_form_email;
 	}
-	$success_text = get_theme_mod('contact_form_success_msg');
-	$error_text = get_theme_mod('contact_form_error_msg');
+	$success_text = esc_html(get_theme_mod('contact_form_success_msg'));
+	$error_text = esc_html(get_theme_mod('contact_form_error_msg'));
     $jsonData = array();
     // Clean and convert post vars for html
     foreach ($_POST as $key => $value) {
@@ -360,7 +360,7 @@ function tfn_contact_form() {
 
 	if ( isset( $_POST['from_form']) && $_POST['from_form'] == 'about-us-page') {
     	if (isset($_POST['email'])) {
-        	$subject = get_theme_mod('contact_form_subject');
+        	$subject = esc_html(get_theme_mod('contact_form_subject'));
         	$message = send_mail_confirm( $email_to, $post['name'], $post['email'], $subject, $post['message'] );
     	}
     	if( $message ){
@@ -515,48 +515,48 @@ function twentyfivenorth_comments($comment, $args, $depth) {
 /**
  * Custom template tags for this theme.
  */
-require INC_DIR . 'template-tags.php';
+require TWENTYFIVENORTH_INC_DIR . 'template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require INC_DIR . 'extras.php';
+require TWENTYFIVENORTH_INC_DIR . 'extras.php';
 
 /**
  * Font Selection functions for customizer
  */
-require INC_DIR . 'font-arrays.php';
+require TWENTYFIVENORTH_INC_DIR . 'font-arrays.php';
 
 /**
  * Kirki Dynamic styles
  */
-require INC_DIR . 'dynamic-styles.php';
+require TWENTYFIVENORTH_INC_DIR . 'dynamic-styles.php';
 
 /**
  * Recommend the Kirki plugin
  */
-require_once INC_DIR . 'include-kirki.php';
+require_once TWENTYFIVENORTH_INC_DIR . 'include-kirki.php';
 
 /**
  * Load the Kirki Fallback class (if Kirki is uninstalled, settings should still work on the frontend)
  */
-require INC_DIR . 'twenty-five-north-kirki.php';
+require TWENTYFIVENORTH_INC_DIR . 'twenty-five-north-kirki.php';
 
 /**
  * Customizer additions.
  */
-require INC_DIR . 'customizer.php';
+require TWENTYFIVENORTH_INC_DIR . 'customizer.php';
 
 /**
  * Theme Resources - common components used in the theme
  */
-require_once ADMIN_DIR . 'theme-resources.php';
+require_once TWENTYFIVENORTH_ADMIN_DIR . 'theme-resources.php';
 
 /**
  * Theme Custom CSS and JS Code
  */
-require_once ADMIN_DIR . 'custom-code-output.php';
-$custom_code_output = new custom_code_output;
+require_once TWENTYFIVENORTH_ADMIN_DIR . 'custom-code-output.php';
+$custom_code_output = new tfn_custom_code_output;
 add_action('wp_head', array($custom_code_output, 'output_custom_css') );
 add_action('wp_footer', array($custom_code_output, 'output_custom_js') );
 
@@ -564,37 +564,26 @@ add_action('wp_footer', array($custom_code_output, 'output_custom_js') );
 /**
  * Theme Hooks - hooks provided for development
  */
-require_once ADMIN_DIR . 'theme-hooks.php';
+require_once TWENTYFIVENORTH_ADMIN_DIR . 'theme-hooks.php';
 
 /**
  * TGMPA inclusion
  */
-require_once INC_DIR . 'class-tgm-plugin-activation.php';
-require_once INC_DIR . 'tgmpa-config.php';
+require_once TWENTYFIVENORTH_INC_DIR . 'class-tgm-plugin-activation.php';
+require_once TWENTYFIVENORTH_INC_DIR . 'tgmpa-config.php';
 add_action( 'tgmpa_register', 'twentyfivenorth_register_required_plugins' );
 
 /**
  * Include our post like system
  */
-require_once INC_DIR . 'post-like.php';
-
-/** 
- * Custom Recent Posts and Tag Cloud Widgets
- */
-require_once INC_DIR . 'class-tfn-widget-recent-posts.php';
-require_once INC_DIR . 'class-tfn-widget-tag-cloud.php';
-function twentyfivenorth_register_custom_recent_posts() {
-	register_widget( 'TFN_Widget_Recent_Posts' );
-	register_widget( 'TFN_Widget_Tag_Cloud' );
-}
-add_action( 'widgets_init', 'twentyfivenorth_register_custom_recent_posts' );
+require_once TWENTYFIVENORTH_INC_DIR . 'post-like.php';
 
 /**
  * Admin Classes and functions
  */
 if (is_admin()) {
-    require_once ADMIN_DIR . '/theme-admin.php';
-    new themeAdmin();
+    require_once TWENTYFIVENORTH_ADMIN_DIR . '/theme-admin.php';
+    new tfn_themeAdmin();
 }
 
 /**
@@ -606,4 +595,4 @@ add_filter( 'masterslider_disable_auto_update', '__return_true' );
 /**
  * Load Jetpack compatibility file.
  */
-require INC_DIR . 'jetpack.php';
+require TWENTYFIVENORTH_INC_DIR . 'jetpack.php';

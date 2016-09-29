@@ -21,19 +21,19 @@ $footer_social_pick = get_theme_mod( 'footer_social_pick', array() );
 				<div class="col-md-12">
 					<?php if (isset($footer_social) && $footer_social == 1) { ?>	
 					<div class="footer_text">
-						<?php echo $footer_text; ?>
+						<?php echo esc_html($footer_text); ?>
 					</div>
 					<span class="footer_icons">
 						<?php 
 						foreach ($footer_social_pick as $k => $v) {
-							echo '<a href="' . $v['social_url'] . '" target="_blank"><i class="fa ' 
-								. $v['social_choice'] . '"> </i></a>';
+							echo '<a href="' . esc_url($v['social_url']) . '" target="_blank"><i class="fa ' 
+								. esc_html($v['social_choice']) . '"> </i></a>';
 						}
 						?>
 					</span>
 				<?php } else { // no social links ?>
 					<div class="footer_text text-center">
-						<?php echo $footer_text; ?>
+						<?php echo esc_html($footer_text); ?>
 					</div>
 				<?php } ?>
 				</div>
