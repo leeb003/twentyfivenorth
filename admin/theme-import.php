@@ -86,7 +86,7 @@ class tfn_import extends WP_Import {
 			$blog_name = "Blog";
             $home_id = $wpdb->get_var( $wpdb->prepare(
 				"SELECT ID from " . $wpdb->prefix . "posts WHERE post_name=%s",
-				$home
+				$home_name
 			) );
 			$blog_id = $wpdb->get_var( $wpdb->prepare(
 				"SELECT ID from " . $wpdb->prefix . "posts WHERE post_name=%s",
