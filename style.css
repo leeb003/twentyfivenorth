@@ -1104,6 +1104,9 @@ ul.filter > li.active a {
   padding: 40px;
   text-align: left;
 }
+.posts-container .post-content {
+  padding: 0 40px;
+}
 .post-content.pull-left {
   text-align: right;
 }
