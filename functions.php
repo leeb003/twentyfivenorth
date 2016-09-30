@@ -274,7 +274,6 @@ function twentyfivenorth_scripts() {
 	if (!is_page_template($templates)) {
 		wp_enqueue_script( 'twentyfivenorth-pagejs', get_template_directory_uri() . '/js/25north-page.js',
         array( 'bootstrap-dropdown' ), $tfn_theme->get('Version'), true);
-		$sending_msg = get_theme_mod('contact_form_sending_text');
 		$about_map_marker = get_theme_mod('about_map_marker');
         $about_map_lat = trim(get_theme_mod('about_map_lat'));
         $about_map_lng = trim(get_theme_mod('about_map_lng'));
@@ -293,7 +292,6 @@ function twentyfivenorth_scripts() {
 			'maxView'        => esc_js($max_view),
 			'medView'        => esc_js($med_view),
 			'smView'         => esc_js($sm_view),
-			'sendingMsg'     => esc_js($sending_msg),
 			'aboutMapMarker' => esc_js($about_map_marker),
 			'aboutMapLat'	 => esc_js($about_map_lat),
 			'aboutMapLng'	 => esc_js($about_map_lng),
@@ -322,86 +320,6 @@ function twentyfivenorth_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'twentyfivenorth_scripts' );
-
-// contact form handled through admin
-// creating Ajax call for WordPress  
-add_action( 'wp_ajax_nopriv_tfn_contact_form', 'tfn_contact_form' );
-add_action( 'wp_ajax_tfn_contact_form', 'tfn_contact_form' );
-
-/**
- * Contact form handling
- */
-function tfn_contact_form() {
-	// check for email option, if not use the admin email
-	$contact_form_email = esc_html(get_theme_mod('contact_form_email_address'));
-	if (!$contact_form_email) {
-    	$email_to = get_option('admin_email');
-	} else {
-		$email_to = $contact_form_email;
-	}
-	$success_text = esc_html(get_theme_mod('contact_form_success_msg'));
-	$error_text = esc_html(get_theme_mod('contact_form_error_msg'));
-    $jsonData = array();
-    // Clean and convert post vars for html
-    foreach ($_POST as $key => $value) {
-        $key        = trim(htmlentities($key));
-        $value      = trim(htmlentities($value));
-        $post[$key] = $value;
-    }
-
-	// Alert messages
-	$success = '<div class="alert alert-success" role="alert">'
-         . '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>'
-         . $success_text . '</div>';
-
-	$fail    = '<div class="alert alert-danger" role="alert">'
-         . '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>'
-         . $error_text . '</div>';
-
-	if ( isset( $_POST['from_form']) && $_POST['from_form'] == 'about-us-page') {
-    	if (isset($_POST['email'])) {
-        	$subject = esc_html(get_theme_mod('contact_form_subject'));
-        	$message = send_mail_confirm( $email_to, $post['name'], $post['email'], $subject, $post['message'] );
-    	}
-    	if( $message ){
-        	$message = $success;
-    	} else {
-        	$message = $fail;
-    	}
-	}
-	die(json_encode($message)); // send back the response
-}
-
-/**
- * Sending the contact form email
- */
-function send_mail_confirm( $email_to, $name, $email, $subject, $message){
-    $msg      = '<p>Name : ' . $name . '</p>';
-    $msg     .= '<p>Email : ' . $email . '</p>';
-    $msg     .= '<p>Message : ' . $message . '</p>';
-
-	$headers = '';
-	$headers .= 'From: ' . $email . "\r\n";
-	add_filter( 'wp_mail_content_type', 'tfn_html_content_type' );
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		return false;
-    }
-	$to = explode(',', $email);
-	$sent = wp_mail($email_to, $subject, $msg, $headers);
-	// Reset content-type to avoid conflicts 
-	// -- https://core.trac.wordpress.org/ticket/23578
-	remove_filter( 'wp_mail_content_type', 'tfn_html_content_type' );
-	
-	return $sent;
-}
-
-/**
- * Set email message to html
- */
-function tfn_html_content_type() {
-	return 'text/html';
-}
-
 
 /**
  * Enqueue Customizer scripts and styles.

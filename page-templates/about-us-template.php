@@ -11,6 +11,7 @@
 
 get_header();
 $about_sections = get_theme_mod('about_sections', '');
+$contact_form = get_theme_mod( 'contact_form_shortcode', '' );
 ?>
 	<?php do_action('before_about_header'); ?>
 	<section id="top-section" class="top-section">
@@ -176,26 +177,7 @@ $about_sections = get_theme_mod('about_sections', '');
                     </div>
                     <div class="col-lg-4 col-md-6 contact-form">
                         <h3><?php echo esc_html(get_theme_mod('contact_form_title', '')); ?></h3>
-                        <form class="contact-form" action="#" name="contact-form" method="post" id="contact-form">
-                            <div class="input-holder">
-                                <input type="text" class="input_name" name="input_name" 
-									placeholder="<?php echo esc_html(get_theme_mod('contact_form_name', '')); ?>" required />
-                            </div>
-                            <div class="input-holder">
-                                <input type="text" class="input_email" name="input_email" 
-                                    placeholder="<?php echo esc_html(get_theme_mod('contact_form_email', '')); ?>" required />
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="input-holder">
-                                <textarea class="input_message" name="input_message" 
-                                    placeholder="<?php echo esc_html(get_theme_mod('contact_form_message', '')); ?>" required></textarea>
-                            </div>
-                            <div class="input-holder">
-                                <input type="submit" id="submit" class="form-submit" 
-									name="submit" value="<?php echo esc_html(get_theme_mod('contact_form_btn_text', '')); ?>" />
-                                <div class="response"></div>
-                            </div>
-                        </form>
+						<?php echo do_shortcode($contact_form);?>
 					</div>
                 </div>
             </div>

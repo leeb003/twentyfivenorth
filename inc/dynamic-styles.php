@@ -275,8 +275,10 @@ function tfn_secondary_color(){
 			'element'  => '.blog-section .bl-title h2 a, .blog-section .bl-title h2 a:hover, .blog-section .bl-title h2 a:active',
 			'property' => 'color'
 		),
-
-
+		array(
+            'element'  => '.sticky .bl-date-holder .featured',
+            'property' => 'background-color'
+        ),
 
 	);
 	return $output;

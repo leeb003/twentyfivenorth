@@ -66,6 +66,17 @@ function twentyfivenorth_register_required_plugins() {
             'external_url'       => 'http://sh-themes.com',
             'required'           => true
         ),
+		// Contact Form 7
+		array(
+			'name'				 => 'Contact Form 7',
+			'slug'				 => 'contact-form-7',
+			'source'			 => 'https://wordpress.org/plugins/contact-form-7/',
+			'version'		 	 => '4.5.1',
+			'force_activation'	 => false,
+			'force_deactivation' => false,
+			'external_url'		 => 'http://contactform7.com/',
+			'required'		     => false,
+		),
 		// Kirki - yes, here too
 		array(
 			'name'				 => 'Kirki',

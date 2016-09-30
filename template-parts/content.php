@@ -88,6 +88,7 @@ $meta = $theme_resources->tfn_meta($post, 'blog_meta'); // pass the post array a
                        			<span><?php echo $tile_year; ?></span>
 							</h2>
 						</div>
+						<p class="featured"><?php echo esc_html__('Featured', 'twenty-five-north');?></p>
 					</div>
 				</div>
 
@@ -111,7 +112,7 @@ $meta = $theme_resources->tfn_meta($post, 'blog_meta'); // pass the post array a
 							$words = get_theme_mod('blog_summary_length');
 							echo wp_trim_words($content, $words, '...');
 						} else {
-							echo $content;
+							echo do_shortcode($content);
 						}
         				?>
 

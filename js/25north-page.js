@@ -120,35 +120,4 @@
 			autoplayTimeout: 5000
 		});
 	});
-
-	// var form="form-send.php";  // The PHP handler script used that we submit to
-	var form = tfnpage_vars.tfnAdminUrl + "/admin-ajax.php";
-    // About Us Page Form Submission
-    $(document).on('submit', '.contact-section #contact-form', function() {
-        var btnText = $('#submit').val();
-        //$('#submit').val('Sending...');
-		$('#submit').val(tfnpage_vars.sendingMsg);
-        $('#submit').attr('disabled', 'disabled');
-
-        var name      = $('#contact-form .input_name').val();
-        var email     = $('#contact-form .input_email').val();
-        var message   = $('#contact-form .input_message').val();
-        var from_form = 'about-us-page';
-        $.ajax({
-            type: "POST",
-            dataType: 'json',
-            url: form,
-            data: {action: 'tfn_contact_form', from_form:from_form, name:name, email:email, message:message},
-            success: function(response) {
-                $('.response').html(response);
-                $('#submit').val(btnText);
-                $('#submit').removeAttr('disabled');
-                //$('#submit').hide();
-                $('#contact-form').trigger('reset');
-            }
-        });
-        return false;  // Don't trigger normal form post, since this handles it
-    });
-
-
 })(jQuery);
