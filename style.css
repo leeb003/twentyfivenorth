@@ -794,7 +794,7 @@ table.property-info {
   margin-bottom: 40px;
 }
 .highlight-info .col-md-4:hover .rct {
-  background-color: #daa70a;
+  filter: brightness(85%);
 }
 .decagon {
   height: 80px;
