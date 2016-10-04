@@ -28,18 +28,18 @@ $home_sections = get_theme_mod( 'home_sections', array());
 				<div class="row">
 					<div class="col-sm-6 col-xs-10 top-info-sect">
 						<h3>
-							<?php echo esc_html(get_theme_mod( 'home_info_address', '25 North Street / Your Town, CO 88888 United States')); ?>
+							<?php echo esc_html(get_theme_mod( 'home_info_address', __('25 North Street / Your Town, CO 88888 United States', 'twenty-five-north') )); ?>
 						</h3>
 						<h1><?php echo esc_html(get_theme_mod( 'home_info_price', '$1,799,000')); ?></h1>
 						<p>
-							<?php echo esc_html(get_theme_mod( 'home_info_desc', 'Lovely one owner home with an open floor plan on a corner lot!  Spacious living room with fireplace and walk out to a fully fenced backyard with patio.')); ?>
+							<?php echo esc_html(get_theme_mod( 'home_info_desc', __('Lovely one owner home with an open floor plan on a corner lot!  Spacious living room with fireplace and walk out to a fully fenced backyard with patio.', 'twenty-five-north') )); ?>
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-6 col-xs-10 top-cta">
 						<a href="<?php echo esc_url(get_theme_mod( 'home_info_btn_url', '#')); ?>" class="schedule">
-							<?php echo esc_html(get_theme_mod( 'home_info_btn_text', 'SCHEDULE A SHOWING')); ?>
+							<?php echo esc_html(get_theme_mod( 'home_info_btn_text', __('SCHEDULE A SHOWING', 'twenty-five-north') )); ?>
 						</a>
 					</div>
 				</div>
@@ -56,7 +56,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 					 <div class="feature">
 						<div class="feature-inner">
 							<i class="<?php echo esc_html(get_theme_mod( 'feature_1_icon', 'icon-bed')); ?>"></i><br />
-							<span><?php echo esc_html(get_theme_mod( 'feature_1_text', '4 Bedrooms')); ?></span>
+							<span><?php echo esc_html(get_theme_mod( 'feature_1_text', __('4 Bedrooms', 'twenty-five-north') )); ?></span>
 						</div>
 					</div>
 				</div>
@@ -64,7 +64,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 					<div class="feature">
 						<div class="feature-inner">
 							<i class="<?php echo esc_html(get_theme_mod( 'feature_2_icon', 'icon-bathtub')); ?>"></i><br />
-							<span><?php echo esc_html(get_theme_mod( 'feature_2_text', '4 Bathrooms')); ?></span>
+							<span><?php echo esc_html(get_theme_mod( 'feature_2_text', __('4 Bathrooms', 'twenty-five-north') )); ?></span>
 						</div>
 					</div>
 				</div>
@@ -72,7 +72,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 					<div class="feature">
 						<div class="feature-inner">
 							<i class="<?php echo esc_html(get_theme_mod( 'feature_3_icon', 'icon-car2')); ?>"></i><br />
-							<span><?php echo esc_html(get_theme_mod( 'feature_3_text', '3 Car Garage')); ?></span>
+							<span><?php echo esc_html(get_theme_mod( 'feature_3_text', __('3 Car Garage', 'twenty-five-north') )); ?></span>
 						</div>
 					</div>
 				</div>
@@ -80,7 +80,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 					<div class="feature">
 						<div class="feature-inner">
 							<i class="<?php echo esc_html(get_theme_mod( 'feature_4_icon', 'icon-pencil-ruler')); ?>"></i><br />
-							<span><?php echo esc_html(get_theme_mod( 'feature_4_text', '4078 SQ.FT.')); ?></span>
+							<span><?php echo esc_html(get_theme_mod( 'feature_4_text', __('4078 SQ.FT.', 'twenty-five-north') )); ?></span>
 						</div>
 					</div>
 				</div>

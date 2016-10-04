@@ -15,7 +15,7 @@
 
 	/* Smooth scroll function */
 	$(document).on('click', 'ul.navbar-nav a', function(e) {
-		if ( $(e.target).is('a[href*="#"]:not([href="#"]') ) {
+		if ( $(e.target).is('a[href*="#"]:not([href="#"])') ) {
         	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
             	|| location.hostname == this.hostname) {
 

@@ -8,7 +8,7 @@
  *
  * @packageTwentyFiveNorth
  */
-$footer_text = get_theme_mod( 'footer_text', 'Your Footer Text Here' );
+$footer_text = get_theme_mod( 'footer_text', __('Your Footer Text Here', 'twenty-five-north') );
 $footer_social = get_theme_mod( 'footer_social', '' );
 $footer_social_pick = get_theme_mod( 'footer_social_pick', array() );
 ?>

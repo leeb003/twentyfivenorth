@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Twenty Five North\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-29 16:59-0700\n"
+"POT-Creation-Date: 2016-10-03 23:10-0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Lee Beck <info@scripthat.com>\n"
 "Language-Team: SH-Themes <info@scripthat.com>\n"
@@ -28,32 +28,36 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:426
+#: functions.php:344
 msgid "Name"
 msgstr ""
 
-#: functions.php:432
+#: functions.php:350
 msgid "Email"
 msgstr ""
 
-#: functions.php:437
+#: functions.php:355
 msgid "Website"
 msgstr ""
 
-#: functions.php:451
+#: functions.php:369
 msgid "Comment"
 msgstr ""
 
-#: functions.php:485
+#: functions.php:403
 msgid "Post author"
 msgstr ""
 
-#: functions.php:489
+#: functions.php:407
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:496
+#: functions.php:414
 msgid "(Edit)"
+msgstr ""
+
+#: footer.php:11
+msgid "Your Footer Text Here"
 msgstr ""
 
 #: search.php:26
@@ -79,12 +83,40 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: page-templates/about-us-template.php:58
+#: page-templates/about-us-template.php:59
 msgid "PHONE"
 msgstr ""
 
-#: page-templates/about-us-template.php:62
+#: page-templates/about-us-template.php:63
 msgid "EMAIL"
+msgstr ""
+
+#: page-templates/home-template.php:31
+msgid "25 North Street / Your Town, CO 88888 United States"
+msgstr ""
+
+#: page-templates/home-template.php:35
+msgid "Lovely one owner home with an open floor plan on a corner lot!  Spacious living room with fireplace and walk out to a fully fenced backyard with patio."
+msgstr ""
+
+#: page-templates/home-template.php:42
+msgid "SCHEDULE A SHOWING"
+msgstr ""
+
+#: page-templates/home-template.php:59
+msgid "4 Bedrooms"
+msgstr ""
+
+#: page-templates/home-template.php:67
+msgid "4 Bathrooms"
+msgstr ""
+
+#: page-templates/home-template.php:75
+msgid "3 Car Garage"
+msgstr ""
+
+#: page-templates/home-template.php:83
+msgid "4078 SQ.FT."
 msgstr ""
 
 #: page-templates/home-template.php:228
@@ -376,9 +408,13 @@ msgid "Edit %s"
 msgstr ""
 
 #: template-parts/content.php:50
-#: template-parts/content.php:106
+#: template-parts/content.php:107
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/content.php:91
+msgid "Featured"
 msgstr ""
 
 #: inc/customizer.php:49
@@ -538,10 +574,6 @@ msgstr ""
 
 #: inc/customizer.php:501
 msgid "Top Infobox Button Text"
-msgstr ""
-
-#: inc/customizer.php:503
-msgid "SCHEDULE A SHOWING"
 msgstr ""
 
 #: inc/customizer.php:504
@@ -1140,17 +1172,17 @@ msgid "Enable Map below agent?"
 msgstr ""
 
 #: inc/customizer.php:2090
-#: inc/customizer.php:2774
+#: inc/customizer.php:2614
 msgid "Insert your map marker"
 msgstr ""
 
 #: inc/customizer.php:2112
-#: inc/customizer.php:2791
+#: inc/customizer.php:2631
 msgid "Insert the location latitude"
 msgstr ""
 
 #: inc/customizer.php:2134
-#: inc/customizer.php:2808
+#: inc/customizer.php:2648
 msgid "Insert the location longitude"
 msgstr ""
 
@@ -1292,126 +1324,58 @@ msgid "Contact Icon Text 3"
 msgstr ""
 
 #: inc/customizer.php:2590
-msgid "Contact Form Title"
+msgid "Contact Form"
 msgstr ""
 
 #: inc/customizer.php:2593
-msgid "Add your contact form title"
+msgid "Set the Shortcode for the Contact Form you want to use."
 msgstr ""
 
-#: inc/customizer.php:2608
-msgid "Contact Form Name Placeholder"
+#: inc/customizer.php:2594
+msgid "We include Contact Form 7 and style it but you can use other contact forms as well"
 msgstr ""
 
-#: inc/customizer.php:2611
-msgid "Add your contact form name placeholder"
-msgstr ""
-
-#: inc/customizer.php:2626
-msgid "Contact Form Email Placeholder"
-msgstr ""
-
-#: inc/customizer.php:2629
-msgid "Add your contact form email placeholder"
-msgstr ""
-
-#: inc/customizer.php:2644
-msgid "Contact Form Message Placeholder"
-msgstr ""
-
-#: inc/customizer.php:2647
-msgid "Add your contact form message placeholder"
-msgstr ""
-
-#: inc/customizer.php:2662
-msgid "Contact Form Button Text"
-msgstr ""
-
-#: inc/customizer.php:2665
-msgid "Add your contact form Button Text"
-msgstr ""
-
-#: inc/customizer.php:2680
-msgid "Contact Form Sending Text"
-msgstr ""
-
-#: inc/customizer.php:2683
-msgid "Add the text to display when sending"
-msgstr ""
-
-#: inc/customizer.php:2698
-msgid "Contact Form Email"
-msgstr ""
-
-#: inc/customizer.php:2701
-msgid "Add the email address to recieve the contact submission.  If not set, the admin email will be used."
-msgstr ""
-
-#: inc/customizer.php:2716
-msgid "Contact Form Subject"
-msgstr ""
-
-#: inc/customizer.php:2719
-msgid "Add the email subject line for the contact form submissions."
-msgstr ""
-
-#: inc/customizer.php:2734
-msgid "Contact Form Success Message"
-msgstr ""
-
-#: inc/customizer.php:2737
-msgid "Add the text to display on success"
-msgstr ""
-
-#: inc/customizer.php:2752
-msgid "Contact Form Error Message"
-msgstr ""
-
-#: inc/customizer.php:2755
-msgid "Add the text to display on error"
-msgstr ""
-
-#: inc/customizer.php:2834
+#: inc/customizer.php:2674
 msgid "Blog Title"
 msgstr ""
 
-#: inc/customizer.php:2835
+#: inc/customizer.php:2675
 msgid "Set the title to be displayed for your blog."
 msgstr ""
 
-#: inc/customizer.php:2845
+#: inc/customizer.php:2685
 msgid "Insert the blog top background image"
 msgstr ""
 
-#: inc/customizer.php:2861
+#: inc/customizer.php:2701
 msgid "Blog Sidebar"
 msgstr ""
 
-#: inc/customizer.php:2862
+#: inc/customizer.php:2702
 msgid "Choose the blog sidebar location."
 msgstr ""
 
-#: inc/customizer.php:2876
+#: inc/customizer.php:2716
 msgid "Blog Roll Content"
 msgstr ""
 
-#: inc/customizer.php:2877
+#: inc/customizer.php:2717
 msgid "Choose to display a summary or full content."
 msgstr ""
 
-#: inc/customizer.php:2891
+#: inc/customizer.php:2731
 msgid "Blog Summary Length"
 msgstr ""
 
-#: inc/customizer.php:2892
+#: inc/customizer.php:2732
 msgid "Choose how many words to display for main blog view content."
 msgstr ""
 
-#: inc/customizer.php:2915
+#: inc/customizer.php:2755
 msgid "Blog Meta"
 msgstr ""
 
-#: inc/customizer.php:2916
+#: inc/customizer.php:2756
 msgid "Choose the meta tags to display with posts"
 msgstr ""
 
