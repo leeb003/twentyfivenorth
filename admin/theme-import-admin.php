@@ -49,7 +49,7 @@ class tfn_theme_import_admin {
 			  <img src="<?php echo get_template_directory_uri() . '/admin/images/animated_progress_bar.gif';?>" />
 			  <br />
 			  <br />
-			  <?php echo __("Import in progress, please don't close the page. If this takes more than 10 minutes - leave the page, check if you are getting content (pages, posts, media), delete any menus under Appearance -> menus (these are the only item that will duplicate, come back and re-run. Repeat until you get the Success message.", 'twenty-five-north');?>
+			  <?php echo __("Import in progress, please don't close the page. If this takes more than 10 minutes - leave the page, check if you are getting content (pages, posts, media), delete any menus under Appearance -> menus - these are the only item that will duplicate, come back and re-run. Repeat until you get the Success message.", 'twenty-five-north');?>
 			</p>
 		</div>
 		

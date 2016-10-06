@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Twenty Five North\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-03 23:10-0700\n"
+"POT-Creation-Date: 2016-10-06 06:51-0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Lee Beck <info@scripthat.com>\n"
 "Language-Team: SH-Themes <info@scripthat.com>\n"
@@ -175,7 +175,7 @@ msgid "Please Wait, this could take a few moments..."
 msgstr ""
 
 #: admin/theme-import-admin.php:52
-msgid "Import in progress, please don't close the page. If this takes more than 10 minutes - leave the page, check if you are getting content (pages, posts, media), delete any menus under Appearance -> menus (these are the only item that will duplicate, come back and re-run. Repeat until you get the Success message."
+msgid "Import in progress, please don't close the page. If this takes more than 10 minutes - leave the page, check if you are getting content (pages, posts, media), delete any menus under Appearance -> menus - these are the only item that will duplicate, come back and re-run. Repeat until you get the Success message."
 msgstr ""
 
 #: admin/theme-import-admin.php:59
