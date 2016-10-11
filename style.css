@@ -148,6 +148,14 @@ textarea:focus::-moz-placeholder {
 textarea:focus::-ms-input-placeholder {
   color: #efefef;
 }
+.blog img,
+.single-post img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
 /* Master Slider control styles */
 .ms-nav-next,
 .ms-nav-prev {
