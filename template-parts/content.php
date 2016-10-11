@@ -112,7 +112,12 @@ $meta = $theme_resources->tfn_meta($post, 'blog_meta'); // pass the post array a
 							$words = get_theme_mod('blog_summary_length');
 							echo wp_trim_words($content, $words, '...');
 						} else {
-							echo do_shortcode($content);
+							//echo do_shortcode($content);
+							the_content( sprintf(
+                				/* translators: %s: Name of current post. */
+                				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twenty-five-north' ), array( 'span' => array( 'class' => array() ) ) ),
+                				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+            				) );
 						}
         				?>
 

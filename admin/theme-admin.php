@@ -14,13 +14,13 @@ class tfn_themeAdmin {
 		add_action( 'admin_enqueue_scripts', array($this, 'load_custom_wp_admin_style') );
 
 		// import demo action
-		add_action("wp_ajax_import_demo_content", array(&$this, "import_demo_content") );
+		//add_action("wp_ajax_import_demo_content", array(&$this, "import_demo_content") );
 
 		/**
 		 * Include our demo import admin page
 		 */
-		require_once TWENTYFIVENORTH_ADMIN_DIR . 'theme-import-admin.php';
-		new tfn_theme_import_admin();
+		//require_once TWENTYFIVENORTH_ADMIN_DIR . 'theme-import-admin.php';
+		//new tfn_theme_import_admin();
 
 	} // end construct
 
@@ -38,9 +38,11 @@ class tfn_themeAdmin {
         wp_register_script( 'custom-admin-script', get_template_directory_uri() 
 				. '/admin/js/theme-admin.js', false, '1.0.0' );
         wp_enqueue_script( 'custom-admin-script' );
-		wp_localize_script(  'custom-admin-script', 'tfnAdmin', array(
+		/*
+		wp_localize_script(  'custom-admin-script', 'tfnThemeAdmin', array(
             'adminUrl'       => admin_url('admin-ajax.php'),
         ));
+		*/
         wp_register_style( 'custom-admin-css', get_template_directory_uri() . '/admin/css/theme-admin.css', false, '1.0.0' );
         wp_enqueue_style( 'custom-admin-css' );
     }
@@ -61,6 +63,7 @@ class tfn_themeAdmin {
 	/*
 	 * Import Demo Content
 	 */
+	/*
 	public function import_demo_content() {
 		if (!wp_verify_nonce( $_POST['nonce'], "import_demo_content")) {
 			exit("Invalid Request");
@@ -89,4 +92,5 @@ class tfn_themeAdmin {
 		echo json_encode($jsonData);
 		die();
 	}
+	*/
 }

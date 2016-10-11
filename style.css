@@ -1691,6 +1691,31 @@ p.text {
 a.readmore {
   font-weight: 500;
 }
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-width: 1px 0 0 1px;
+  margin: 0 0 1.6em;
+  table-layout: fixed;
+  width: 100%;
+}
+dl, dd, table {
+  margin-bottom: 1.6842em;
+}
+blockquote.alignleft, .wp-caption.alignleft, img.alignleft {
+  margin: 0.4211em 1.6842em 1.6842em 0;
+}
+.alignleft {
+  display: inline;
+  float: left;
+}
+blockquote.alignright, .wp-caption.alignright, img.alignright {
+  margin: 0.4211em 0 1.6842em 1.6842em;
+}
+.alignright {
+  display: inline;
+  float: right;
+}
 /*
  * --- 5.1 Blog Sidebar ---
  */

@@ -16,9 +16,9 @@ class tfn_theme_import_admin {
 	 * Add the import menu item
     **/
 	public function add_theme_import_section() {
-		add_management_page(__('Import Theme Demo', 'twenty-five-north'), __('Import Theme Demo', 'twenty-five-north'), 
-			'manage_options', 'importthemedemo',array($this, 'import_page_content') );
-	}
+        add_theme_page(__('Import Theme Demo', 'twenty-five-north'), __('Import Theme Demo', 'twenty-five-north'),     
+            'edit_theme_options', 'importthemedemo',array($this, 'import_page_content') );
+    }
 
 	/** 
      * Page content
