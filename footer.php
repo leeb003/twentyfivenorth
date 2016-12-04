@@ -21,7 +21,7 @@ $footer_social_pick = get_theme_mod( 'footer_social_pick', array() );
 				<div class="col-md-12">
 					<?php if (isset($footer_social) && $footer_social == 1) { ?>	
 					<div class="footer_text">
-						<?php echo esc_html($footer_text); ?>
+						<?php echo wp_kses_post($footer_text); ?>
 					</div>
 					<span class="footer_icons">
 						<?php 
@@ -33,7 +33,7 @@ $footer_social_pick = get_theme_mod( 'footer_social_pick', array() );
 					</span>
 				<?php } else { // no social links ?>
 					<div class="footer_text text-center">
-						<?php echo esc_html($footer_text); ?>
+						<?php echo wp_kses_post($footer_text); ?>
 					</div>
 				<?php } ?>
 				</div>

@@ -4,7 +4,7 @@ Theme URI: http://www.sh-themes.com/themes
 Author: SH Themes
 Author URI: http://www.sh-themes.com/
 Description: Twenty Five North is a gorgeous Single Property Real Estate Theme with included theme options, sliders and tools to make your next property listing stand out above the crowd.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twenty-five-north
@@ -1148,7 +1148,7 @@ ul.filter > li.active a {
   bottom: 2px;
   border: 2px solid #FFF;
 }
-.bl-date h2 {
+.bl-date-holder .bl-date h2 {
   margin-top: 10px;
   margin-bottom: 10px;
   color: #ffffff;

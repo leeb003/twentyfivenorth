@@ -348,6 +348,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'label'         => __('Insert your footer text', 'twenty-five-north'),
     'section'       => 'footer_section',
     'description'   => __( 'Text for the footer area', 'twenty-five-north'),
+	'sanitize_callback' => 'wp_kses_post',
     'priority'      => 10,
     'default'       => ''
 ) );
@@ -482,6 +483,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'priority'  => 10,
     'default'   => __('$1,799,000', 'twenty-five-north'),
     'description'=> __('Insert the property price', 'twenty-five-north'),
+	'sanitize_callback' => 'wp_kses_post',
     'section'   => 'page_home',
 ) );
 /* Home Page infobox Description */
@@ -635,6 +637,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'default'   => '4 Bedrooms',
     'description'=> __('Add your short description', 'twenty-five-north'),
     'section'   => 'page_home',
+	'sanitize_callback' => 'wp_kses_post',
 	'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'home_features',
@@ -653,6 +656,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'default'   => '4 Bathrooms',
     'description'=> __('Add your short description', 'twenty-five-north'),
     'section'   => 'page_home',
+	'sanitize_callback' => 'wp_kses_post',
 	'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'home_features',
@@ -671,6 +675,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'default'   => '3 Car Garage',
     'description'=> __('Add your short description', 'twenty-five-north'),
     'section'   => 'page_home',
+	'sanitize_callback' => 'wp_kses_post',
 	'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'home_features',
@@ -689,6 +694,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'default'   => '4078 sq.ft.',
     'description'=> __('Add your short description', 'twenty-five-north'),
     'section'   => 'page_home',
+	'sanitize_callback' => 'wp_kses_post',
 	'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'home_features',
@@ -1518,6 +1524,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'priority'  => 12,
     'default'   => 'Nearby Hostpitals',
     'section'   => 'configure_sections',
+	'sanitize_callback' => 'wp_kses_post',
     'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'section_choice',
@@ -1535,6 +1542,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'priority'  => 14,
     'default'   => 'Excellent Schools',
     'section'   => 'configure_sections',
+	'sanitize_callback' => 'wp_kses_post',
     'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'section_choice',
@@ -1552,6 +1560,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'priority'  => 16,
     'default'   => 'Nearby Shopping',
     'section'   => 'configure_sections',
+	'sanitize_callback' => 'wp_kses_post',
     'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'section_choice',
@@ -1569,6 +1578,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'priority'  => 18,
     'default'   => 'Neighborhood Parks',
     'section'   => 'configure_sections',
+	'sanitize_callback' => 'wp_kses_post',
     'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'section_choice',
@@ -2004,6 +2014,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'priority'  => 12,
     'default'   => '25 North Street / Your Town, CO 88888 United States.',
     'section'   => 'configure_sections',
+	'sanitize_callback' => 'wp_kses_post',
     'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'section_choice',
@@ -2026,6 +2037,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'priority'  => 14,
     'default'   => 'Phone: (+314) 0454 3234 23',
     'section'   => 'configure_sections',
+	'sanitize_callback' => 'wp_kses_post',
     'active_callback'   => array(  // Kirki field dependency
         array(
             'setting'   => 'section_choice',
@@ -2047,6 +2059,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'label'     => __('Agent Info 3 Text', 'twenty-five-north'),
     'priority'  => 16,
     'default'   => 'Email: NOREPLY@GMAIL.COM',
+	'sanitize_callback' => 'wp_kses_post',
     'section'   => 'configure_sections',
     'active_callback'   => array(  // Kirki field dependency
         array(
@@ -2213,6 +2226,7 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     ),
     'default'       => array(
     ),
+	'sanitize_callback' => 'wp_kses_post',
 
     'fields' => array(
         'agent_photo' => array(
@@ -2573,6 +2587,24 @@ twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
     'priority'  => 16,
     'default'   => 'Email: noreply@gmail.com',
     'description'=> __('Add your short description', 'twenty-five-north'),
+    'section'   => 'configure_sections',
+    'active_callback'   => array(  // Kirki field dependency
+        array(
+            'setting'   => 'section_choice',
+            'operator'  => '==',
+            'value'     => 'contact'
+        ),
+    ),
+) );
+
+/* Contact Form Title */
+twentyfivenorth_Kirki::add_field( 'twentyfivenorth_theme', array(
+    'type'      => 'text',
+    'settings'  => 'contact_form_title',
+    'label'     => __('Contact Form Title', 'twenty-five-north'),
+    'priority'  => 17,
+    'default'   => 'Contact Title',
+    'description'=> __('Set the contact form title.', 'twenty-five-north'),
     'section'   => 'configure_sections',
     'active_callback'   => array(  // Kirki field dependency
         array(

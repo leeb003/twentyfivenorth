@@ -26,8 +26,8 @@ function twentyfivenorth_register_required_plugins() {
 		array( 
 			'name'				 => 'Master Slider',
 			'slug'				 => 'masterslider',
-			'source'			 => 'http://tfn-plugins.sh-themes.com/masterslider-installable.zip',
-			'version'			 => '2.29.0',
+			'source'			 => TWENTYFIVENORTH_INC_DIR . 'plugins/masterslider-installable.zip',
+			'version'			 => '3.1.0',
 			'force_activation'   => false,
 			'force_deactivation' => false,
 			'external_url'       => 'http://docs.averta.net/display/mswpdoc/Master+Slider+WordPress+Documentation',
@@ -59,7 +59,7 @@ function twentyfivenorth_register_required_plugins() {
 		array(
             'name'               => 'Twenty Five North Plugin',
             'slug'               => 'tfn-plugin',
-            'source'             => 'http://tfn-plugins.sh-themes.com/tfn-plugin.zip',
+            'source'             => TWENTYFIVENORTH_INC_DIR . 'plugins/tfn-plugin.zip',
             'version'            => '1.0',
             'force_activation'   => false,
             'force_deactivation' => false,

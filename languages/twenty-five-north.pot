@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Twenty Five North\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-10 23:38-0700\n"
+"POT-Creation-Date: 2016-12-04 16:03-0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Lee Beck <info@scripthat.com>\n"
 "Language-Team: SH-Themes <info@scripthat.com>\n"
@@ -142,58 +142,6 @@ msgstr ""
 msgid "View all posts by %s"
 msgstr ""
 
-#: admin/theme-import-admin.php:19
-msgid "Import Theme Demo"
-msgstr ""
-
-#: admin/theme-import-admin.php:29
-msgid "Import The Content From Live Demo"
-msgstr ""
-
-#: admin/theme-import-admin.php:31
-msgid "Choosing to import the demo content will give you the settings and example posts, tags, theme options and categories similar to what is set up in the live theme previews.  Select the demo you would like to import below and click the button to begin."
-msgstr ""
-
-#: admin/theme-import-admin.php:31
-msgid "Please Note: Images used in the preview are strickty for the demo and are replaced with placeholder images."
-msgstr ""
-
-#: admin/theme-import-admin.php:34
-msgid "Select The Demo to Import"
-msgstr ""
-
-#: admin/theme-import-admin.php:36
-msgid "Main Demo"
-msgstr ""
-
-#: admin/theme-import-admin.php:40
-msgid "Import Demo"
-msgstr ""
-
-#: admin/theme-import-admin.php:46
-msgid "Please Wait, this could take a few moments..."
-msgstr ""
-
-#: admin/theme-import-admin.php:52
-msgid "Import in progress, please don't close the page. If this takes more than 10 minutes - leave the page, check if you are getting content (pages, posts, media), delete any menus under Appearance -> menus - these are the only item that will duplicate, come back and re-run. Repeat until you get the Success message."
-msgstr ""
-
-#: admin/theme-import-admin.php:59
-msgid "Warning!"
-msgstr ""
-
-#: admin/theme-import-admin.php:61
-msgid "There was a problem importing the demo content, please try again. (Server could be unreachable)"
-msgstr ""
-
-#: admin/theme-import-admin.php:67
-msgid "Success!"
-msgstr ""
-
-#: admin/theme-import-admin.php:69
-msgid "The Import has completed successfully!  Now you can start changing things to how you want using the customizer."
-msgstr ""
-
 #: template-parts/content-none.php:21
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
@@ -270,33 +218,33 @@ msgid "Choose to display social links in the header"
 msgstr ""
 
 #: inc/customizer.php:290
-#: inc/customizer.php:368
+#: inc/customizer.php:369
 msgid "Social Links"
 msgstr ""
 
 #: inc/customizer.php:292
-#: inc/customizer.php:370
+#: inc/customizer.php:371
 msgid "Choose the social network and set a link."
 msgstr ""
 
 #: inc/customizer.php:296
-#: inc/customizer.php:374
+#: inc/customizer.php:375
 msgid "Social Link"
 msgstr ""
 
 #: inc/customizer.php:322
-#: inc/customizer.php:389
+#: inc/customizer.php:390
 msgid "Social URL"
 msgstr ""
 
 #: inc/customizer.php:323
-#: inc/customizer.php:390
+#: inc/customizer.php:391
 msgid "This is the Link URL"
 msgstr ""
 
 #: inc/customizer.php:328
-#: inc/customizer.php:395
-#: inc/customizer.php:2245
+#: inc/customizer.php:396
+#: inc/customizer.php:2259
 msgid "Social Network"
 msgstr ""
 
@@ -316,870 +264,878 @@ msgstr ""
 msgid "Text for the footer area"
 msgstr ""
 
-#: inc/customizer.php:358
+#: inc/customizer.php:359
 msgid "Enable Footer social links?"
 msgstr ""
 
-#: inc/customizer.php:360
+#: inc/customizer.php:361
 msgid "Choose to display social links in the footer"
 msgstr ""
 
-#: inc/customizer.php:406
+#: inc/customizer.php:407
 msgid "Home Page"
 msgstr ""
 
-#: inc/customizer.php:415
+#: inc/customizer.php:416
 msgid "Top Image or Slider"
 msgstr ""
 
-#: inc/customizer.php:416
+#: inc/customizer.php:417
 msgid "Choose to use either an image or slider for the top of the home page.  Note - you need to use the Home Page template on the page you selected for your homepage."
 msgstr ""
 
-#: inc/customizer.php:429
+#: inc/customizer.php:430
 msgid "Home Page Top Image"
 msgstr ""
 
-#: inc/customizer.php:452
+#: inc/customizer.php:453
 msgid "Home Page Top Slider"
 msgstr ""
 
-#: inc/customizer.php:455
+#: inc/customizer.php:456
 msgid "Insert the shortcode for your slider here"
 msgstr ""
 
-#: inc/customizer.php:471
+#: inc/customizer.php:472
 msgid "Top Infobox Address"
 msgstr ""
 
-#: inc/customizer.php:474
+#: inc/customizer.php:475
 msgid "Insert the property address"
 msgstr ""
 
-#: inc/customizer.php:481
+#: inc/customizer.php:482
 msgid "Top Infobox Price"
 msgstr ""
 
-#: inc/customizer.php:483
+#: inc/customizer.php:484
 msgid "$1,799,000"
 msgstr ""
 
-#: inc/customizer.php:484
+#: inc/customizer.php:485
 msgid "Insert the property price"
 msgstr ""
 
-#: inc/customizer.php:491
+#: inc/customizer.php:493
 msgid "Top Infobox Description"
 msgstr ""
 
-#: inc/customizer.php:494
+#: inc/customizer.php:496
 msgid "Insert a property short description"
 msgstr ""
 
-#: inc/customizer.php:501
+#: inc/customizer.php:503
 msgid "Top Infobox Button Text"
 msgstr ""
 
-#: inc/customizer.php:504
+#: inc/customizer.php:506
 msgid "Insert the button text"
 msgstr ""
 
-#: inc/customizer.php:511
+#: inc/customizer.php:513
 msgid "Top Infobox Button Url"
 msgstr ""
 
-#: inc/customizer.php:513
+#: inc/customizer.php:515
 msgid "http://www.example.com"
 msgstr ""
 
-#: inc/customizer.php:514
+#: inc/customizer.php:516
 msgid "Insert the button url e.g. http://www.example.com"
 msgstr ""
 
-#: inc/customizer.php:522
+#: inc/customizer.php:524
 msgid "Top Features section."
 msgstr ""
 
-#: inc/customizer.php:523
+#: inc/customizer.php:525
 msgid "Enable or Disable the top features section for the home page.  When enabled, choices will appear below."
 msgstr ""
 
-#: inc/customizer.php:528
+#: inc/customizer.php:530
 msgid "Enabled"
 msgstr ""
 
-#: inc/customizer.php:529
+#: inc/customizer.php:531
 msgid "Disabled"
 msgstr ""
 
-#: inc/customizer.php:563
+#: inc/customizer.php:565
 msgid "Top Feature Icon 1"
 msgstr ""
 
-#: inc/customizer.php:564
-#: inc/customizer.php:579
-#: inc/customizer.php:594
-#: inc/customizer.php:609
+#: inc/customizer.php:566
+#: inc/customizer.php:581
+#: inc/customizer.php:596
+#: inc/customizer.php:611
 msgid "Choose the first icon for the Home Page top feature section"
 msgstr ""
 
-#: inc/customizer.php:578
+#: inc/customizer.php:580
 msgid "Top Feature Icon 2"
 msgstr ""
 
-#: inc/customizer.php:593
+#: inc/customizer.php:595
 msgid "Top Feature Icon 3"
 msgstr ""
 
-#: inc/customizer.php:608
+#: inc/customizer.php:610
 msgid "Top Feature Icon 4"
 msgstr ""
 
-#: inc/customizer.php:633
+#: inc/customizer.php:635
 msgid "Top Feature Text 1"
 msgstr ""
 
-#: inc/customizer.php:636
-#: inc/customizer.php:654
-#: inc/customizer.php:672
-#: inc/customizer.php:690
-#: inc/customizer.php:2539
-#: inc/customizer.php:2557
-#: inc/customizer.php:2575
+#: inc/customizer.php:638
+#: inc/customizer.php:657
+#: inc/customizer.php:676
+#: inc/customizer.php:695
+#: inc/customizer.php:2553
+#: inc/customizer.php:2571
+#: inc/customizer.php:2589
 msgid "Add your short description"
 msgstr ""
 
-#: inc/customizer.php:651
+#: inc/customizer.php:654
 msgid "Top Feature Text 2"
 msgstr ""
 
-#: inc/customizer.php:669
+#: inc/customizer.php:673
 msgid "Top Feature Text 3"
 msgstr ""
 
-#: inc/customizer.php:687
+#: inc/customizer.php:692
 msgid "Top Feature Text 4"
 msgstr ""
 
-#: inc/customizer.php:715
+#: inc/customizer.php:721
 msgid "Home Page Sections"
 msgstr ""
 
-#: inc/customizer.php:717
+#: inc/customizer.php:723
 msgid "Add, Remove, and sort your home page sections.  Sections are setup in the Configure Sections Tab."
 msgstr ""
 
-#: inc/customizer.php:721
-#: inc/customizer.php:770
+#: inc/customizer.php:727
+#: inc/customizer.php:776
 msgid "Page Section"
 msgstr ""
 
-#: inc/customizer.php:729
-#: inc/customizer.php:778
-#: inc/customizer.php:876
+#: inc/customizer.php:735
+#: inc/customizer.php:784
+#: inc/customizer.php:882
 msgid "Section"
 msgstr ""
 
-#: inc/customizer.php:730
-#: inc/customizer.php:779
-#: inc/customizer.php:877
-#: inc/customizer.php:880
+#: inc/customizer.php:736
+#: inc/customizer.php:785
+#: inc/customizer.php:883
+#: inc/customizer.php:886
 msgid "Choose a section"
 msgstr ""
 
-#: inc/customizer.php:733
-#: inc/customizer.php:782
+#: inc/customizer.php:739
+#: inc/customizer.php:788
 msgid "Select A Section"
 msgstr ""
 
-#: inc/customizer.php:734
+#: inc/customizer.php:740
 msgid "Property Highlights"
 msgstr ""
 
-#: inc/customizer.php:735
+#: inc/customizer.php:741
 msgid "Photo Gallery"
 msgstr ""
 
-#: inc/customizer.php:736
+#: inc/customizer.php:742
 msgid "Additional Information"
 msgstr ""
 
-#: inc/customizer.php:737
+#: inc/customizer.php:743
 msgid "Recent Posts"
 msgstr ""
 
-#: inc/customizer.php:738
-msgid "Featured Agent"
-msgstr ""
-
-#: inc/customizer.php:739
-#: inc/customizer.php:787
-msgid "Page Builder Section"
-msgstr ""
-
 #: inc/customizer.php:744
-#: inc/customizer.php:792
-msgid "Page Builder Choice"
+msgid "Featured Agent"
 msgstr ""
 
 #: inc/customizer.php:745
 #: inc/customizer.php:793
+msgid "Page Builder Section"
+msgstr ""
+
+#: inc/customizer.php:750
+#: inc/customizer.php:798
+msgid "Page Builder Choice"
+msgstr ""
+
+#: inc/customizer.php:751
+#: inc/customizer.php:799
 msgid "If this is a Page Builder Section, choose the page with content to use."
 msgstr ""
 
-#: inc/customizer.php:755
+#: inc/customizer.php:761
 msgid "About Us Page"
 msgstr ""
 
-#: inc/customizer.php:764
+#: inc/customizer.php:770
 msgid "About Us Sections"
 msgstr ""
 
-#: inc/customizer.php:766
+#: inc/customizer.php:772
 msgid "Add, Remove, and sort your about us page sections.  Sections are setup in the Configure Sections Tab."
 msgstr ""
 
-#: inc/customizer.php:783
+#: inc/customizer.php:789
 msgid "Top Agents Slider"
 msgstr ""
 
-#: inc/customizer.php:784
+#: inc/customizer.php:790
 msgid "Testimonials"
 msgstr ""
 
-#: inc/customizer.php:785
+#: inc/customizer.php:791
 msgid "Contact Us Section"
 msgstr ""
 
-#: inc/customizer.php:786
+#: inc/customizer.php:792
 msgid "Map"
 msgstr ""
 
-#: inc/customizer.php:813
+#: inc/customizer.php:819
 msgid "404 Page background image"
 msgstr ""
 
-#: inc/customizer.php:823
+#: inc/customizer.php:829
 msgid "Top Heading"
 msgstr ""
 
-#: inc/customizer.php:826
+#: inc/customizer.php:832
 msgid "Insert the Heading below 404"
 msgstr ""
 
-#: inc/customizer.php:833
+#: inc/customizer.php:839
 msgid "Heading description"
 msgstr ""
 
-#: inc/customizer.php:836
+#: inc/customizer.php:842
 msgid "Insert the description below the heading"
 msgstr ""
 
-#: inc/customizer.php:843
+#: inc/customizer.php:849
 msgid "Banner Text"
 msgstr ""
 
-#: inc/customizer.php:846
+#: inc/customizer.php:852
 msgid "Insert the text for the banner below"
 msgstr ""
 
-#: inc/customizer.php:853
+#: inc/customizer.php:859
 msgid "Banner Button Text"
 msgstr ""
 
-#: inc/customizer.php:856
+#: inc/customizer.php:862
 msgid "Insert the home button text"
 msgstr ""
 
-#: inc/customizer.php:881
+#: inc/customizer.php:887
 msgid "Home - Property Highlights"
 msgstr ""
 
-#: inc/customizer.php:882
+#: inc/customizer.php:888
 msgid "Home - Photo Gallery"
 msgstr ""
 
-#: inc/customizer.php:883
+#: inc/customizer.php:889
 msgid "Home - Additional Information"
 msgstr ""
 
-#: inc/customizer.php:884
+#: inc/customizer.php:890
 msgid "Home - Recent Posts"
 msgstr ""
 
-#: inc/customizer.php:885
+#: inc/customizer.php:891
 msgid "Home - Featured Agent"
 msgstr ""
 
-#: inc/customizer.php:886
+#: inc/customizer.php:892
 msgid "About - Top Agents"
 msgstr ""
 
-#: inc/customizer.php:887
+#: inc/customizer.php:893
 msgid "About - Testimonials"
 msgstr ""
 
-#: inc/customizer.php:888
+#: inc/customizer.php:894
 msgid "About - Contact"
 msgstr ""
 
-#: inc/customizer.php:889
+#: inc/customizer.php:895
 msgid "About - Map"
 msgstr ""
 
-#: inc/customizer.php:902
+#: inc/customizer.php:908
 msgid "Set the Highlights section title"
 msgstr ""
 
-#: inc/customizer.php:919
+#: inc/customizer.php:925
 msgid "Set the Highlights section description"
 msgstr ""
 
-#: inc/customizer.php:951
+#: inc/customizer.php:957
 msgid "Highlight Icon 1"
 msgstr ""
 
-#: inc/customizer.php:952
-#: inc/customizer.php:968
-#: inc/customizer.php:984
+#: inc/customizer.php:958
+#: inc/customizer.php:974
+#: inc/customizer.php:990
 msgid "Choose an icon for the Home Page Highlight Section"
 msgstr ""
 
-#: inc/customizer.php:967
+#: inc/customizer.php:973
 msgid "Highlight Icon 2"
 msgstr ""
 
-#: inc/customizer.php:983
+#: inc/customizer.php:989
 msgid "Highlight Icon 3"
 msgstr ""
 
-#: inc/customizer.php:1008
+#: inc/customizer.php:1014
 msgid "Highlight 1 Title"
 msgstr ""
 
-#: inc/customizer.php:1025
+#: inc/customizer.php:1031
 msgid "Highlight 1 Text"
 msgstr ""
 
-#: inc/customizer.php:1042
+#: inc/customizer.php:1048
 msgid "Highlight 2 Title"
 msgstr ""
 
-#: inc/customizer.php:1059
+#: inc/customizer.php:1065
 msgid "Highlight 2 Text"
 msgstr ""
 
-#: inc/customizer.php:1076
+#: inc/customizer.php:1082
 msgid "Highlight 3 Title"
 msgstr ""
 
-#: inc/customizer.php:1093
+#: inc/customizer.php:1099
 msgid "Highlight 3 Text"
 msgstr ""
 
-#: inc/customizer.php:1110
+#: inc/customizer.php:1116
 msgid "Highlight Icon Hover Color"
 msgstr ""
 
-#: inc/customizer.php:1145
+#: inc/customizer.php:1151
 msgid "Highlight Slider"
 msgstr ""
 
-#: inc/customizer.php:1146
+#: inc/customizer.php:1152
 msgid "Enable or disable the highlight slider. Note - you need at least 2 slides."
 msgstr ""
 
-#: inc/customizer.php:1167
+#: inc/customizer.php:1173
 msgid "Slide settings"
 msgstr ""
 
-#: inc/customizer.php:1169
+#: inc/customizer.php:1175
 msgid "Set up the slides for the highlights section."
 msgstr ""
 
-#: inc/customizer.php:1173
+#: inc/customizer.php:1179
 msgid "Slide"
 msgstr ""
 
-#: inc/customizer.php:1193
-#: inc/customizer.php:2387
+#: inc/customizer.php:1199
+#: inc/customizer.php:2401
 msgid "Title"
 msgstr ""
 
-#: inc/customizer.php:1194
+#: inc/customizer.php:1200
 msgid "This is the slide title"
 msgstr ""
 
-#: inc/customizer.php:1199
+#: inc/customizer.php:1205
 msgid "Slide Text"
 msgstr ""
 
-#: inc/customizer.php:1204
+#: inc/customizer.php:1210
 msgid "Feature list, separate items with commas"
 msgstr ""
 
-#: inc/customizer.php:1209
+#: inc/customizer.php:1215
 msgid "Slide feature text"
 msgstr ""
 
-#: inc/customizer.php:1214
+#: inc/customizer.php:1220
 msgid "Slide feature text 2"
 msgstr ""
 
-#: inc/customizer.php:1219
+#: inc/customizer.php:1225
 msgid "Slide Image"
 msgstr ""
 
-#: inc/customizer.php:1231
+#: inc/customizer.php:1237
 msgid "Photo Gallery Title"
 msgstr ""
 
-#: inc/customizer.php:1248
+#: inc/customizer.php:1254
 msgid "Photo Gallery Description"
 msgstr ""
 
-#: inc/customizer.php:1265
+#: inc/customizer.php:1271
 msgid "Enable Banner"
 msgstr ""
 
-#: inc/customizer.php:1266
+#: inc/customizer.php:1272
 msgid "Enable or disable the bottom gallery banner and link."
 msgstr ""
 
-#: inc/customizer.php:1287
-#: inc/customizer.php:1308
+#: inc/customizer.php:1293
+#: inc/customizer.php:1314
 msgid "Photo Gallery Banner Text"
 msgstr ""
 
-#: inc/customizer.php:1329
+#: inc/customizer.php:1335
 msgid "Photo Gallery Banner Link"
 msgstr ""
 
-#: inc/customizer.php:1330
-#: inc/customizer.php:1874
+#: inc/customizer.php:1336
+#: inc/customizer.php:1884
 msgid "Link in the form http://www.example.com"
 msgstr ""
 
-#: inc/customizer.php:1351
+#: inc/customizer.php:1357
 msgid "Banner Button Link Window"
 msgstr ""
 
-#: inc/customizer.php:1352
-#: inc/customizer.php:1620
-#: inc/customizer.php:1891
+#: inc/customizer.php:1358
+#: inc/customizer.php:1630
+#: inc/customizer.php:1901
 msgid "Choose to open link in new or existing window."
 msgstr ""
 
-#: inc/customizer.php:1357
-#: inc/customizer.php:1625
-#: inc/customizer.php:1896
+#: inc/customizer.php:1363
+#: inc/customizer.php:1635
+#: inc/customizer.php:1906
 msgid "Blank Page"
 msgstr ""
 
-#: inc/customizer.php:1358
-#: inc/customizer.php:1626
-#: inc/customizer.php:1897
+#: inc/customizer.php:1364
+#: inc/customizer.php:1636
+#: inc/customizer.php:1907
 msgid "Same Page"
 msgstr ""
 
-#: inc/customizer.php:1378
+#: inc/customizer.php:1384
 msgid "Photo Gallery Background Image"
 msgstr ""
 
-#: inc/customizer.php:1379
+#: inc/customizer.php:1385
 msgid ""
 "Choose a background image for the photo gallery section.  All images and categories are set under the Port\n"
 "folio Entries tab in your WordPress admin."
 msgstr ""
 
-#: inc/customizer.php:1401
+#: inc/customizer.php:1407
 msgid "Additional Information Title"
 msgstr ""
 
-#: inc/customizer.php:1417
+#: inc/customizer.php:1423
 msgid "Additional Information Description"
 msgstr ""
 
-#: inc/customizer.php:1447
+#: inc/customizer.php:1453
 msgid "Additional Icon 1"
 msgstr ""
 
-#: inc/customizer.php:1448
-#: inc/customizer.php:1463
-#: inc/customizer.php:1478
-#: inc/customizer.php:1493
+#: inc/customizer.php:1454
+#: inc/customizer.php:1469
+#: inc/customizer.php:1484
+#: inc/customizer.php:1499
 msgid "Choose an icon for the Additional Information area."
 msgstr ""
 
-#: inc/customizer.php:1462
+#: inc/customizer.php:1468
 msgid "Additional Icon 2"
 msgstr ""
 
-#: inc/customizer.php:1477
+#: inc/customizer.php:1483
 msgid "Additional Icon 3"
 msgstr ""
 
-#: inc/customizer.php:1492
+#: inc/customizer.php:1498
 msgid "Additional Icon 4"
 msgstr ""
 
-#: inc/customizer.php:1517
+#: inc/customizer.php:1523
 msgid "Icon 1 Text"
 msgstr ""
 
-#: inc/customizer.php:1534
+#: inc/customizer.php:1541
 msgid "Icon 2 Text"
 msgstr ""
 
-#: inc/customizer.php:1551
+#: inc/customizer.php:1559
 msgid "Icon 3 Text"
 msgstr ""
 
-#: inc/customizer.php:1568
+#: inc/customizer.php:1577
 msgid "Icon 4 Text"
 msgstr ""
 
-#: inc/customizer.php:1585
+#: inc/customizer.php:1595
 msgid "Additional Information Button Text"
 msgstr ""
 
-#: inc/customizer.php:1602
+#: inc/customizer.php:1612
 msgid "Additional Information Button Link"
 msgstr ""
 
-#: inc/customizer.php:1619
+#: inc/customizer.php:1629
 msgid "Button Link Window"
 msgstr ""
 
-#: inc/customizer.php:1645
+#: inc/customizer.php:1655
 msgid "Posts Section Title"
 msgstr ""
 
-#: inc/customizer.php:1662
+#: inc/customizer.php:1672
 msgid "Posts Section Description"
 msgstr ""
 
-#: inc/customizer.php:1686
+#: inc/customizer.php:1696
 msgid "Posts"
 msgstr ""
 
-#: inc/customizer.php:1687
+#: inc/customizer.php:1697
 msgid "Choose the number of posts to display in this section"
 msgstr ""
 
-#: inc/customizer.php:1704
+#: inc/customizer.php:1714
 msgid "Posts Sorting"
 msgstr ""
 
-#: inc/customizer.php:1705
+#: inc/customizer.php:1715
 msgid "Choose how you would like to sort the posts"
 msgstr ""
 
-#: inc/customizer.php:1708
+#: inc/customizer.php:1718
 msgid "Ascending"
 msgstr ""
 
-#: inc/customizer.php:1709
+#: inc/customizer.php:1719
 msgid "Descending"
 msgstr ""
 
-#: inc/customizer.php:1723
+#: inc/customizer.php:1733
 msgid "Choose the meta attributes to display"
 msgstr ""
 
-#: inc/customizer.php:1724
+#: inc/customizer.php:1734
 msgid "3 or less recommended for display"
 msgstr ""
 
-#: inc/customizer.php:1754
-#: inc/customizer.php:2230
+#: inc/customizer.php:1764
+#: inc/customizer.php:2244
 msgid "Agent Title"
 msgstr ""
 
-#: inc/customizer.php:1771
+#: inc/customizer.php:1781
 msgid "Agent Description"
 msgstr ""
 
-#: inc/customizer.php:1788
-#: inc/customizer.php:2225
+#: inc/customizer.php:1798
+#: inc/customizer.php:2239
 msgid "Agent Name"
 msgstr ""
 
-#: inc/customizer.php:1805
+#: inc/customizer.php:1815
 msgid "Agent Credentials"
 msgstr ""
 
-#: inc/customizer.php:1822
+#: inc/customizer.php:1832
 msgid "Agent Information"
 msgstr ""
 
-#: inc/customizer.php:1839
+#: inc/customizer.php:1849
 msgid "Insert your agent photo"
 msgstr ""
 
-#: inc/customizer.php:1841
+#: inc/customizer.php:1851
 msgid "Demo image is 350px x 558px"
 msgstr ""
 
-#: inc/customizer.php:1857
+#: inc/customizer.php:1867
 msgid "Agent Button Text"
 msgstr ""
 
-#: inc/customizer.php:1873
+#: inc/customizer.php:1883
 msgid "Agent Button Link"
 msgstr ""
 
-#: inc/customizer.php:1890
+#: inc/customizer.php:1900
 msgid "Agent Button Link Window"
 msgstr ""
 
-#: inc/customizer.php:1912
+#: inc/customizer.php:1922
 msgid "Enable Infobar below agent?"
 msgstr ""
 
-#: inc/customizer.php:1917
-#: inc/customizer.php:2074
+#: inc/customizer.php:1927
+#: inc/customizer.php:2087
 msgid "Enable"
 msgstr ""
 
-#: inc/customizer.php:1918
-#: inc/customizer.php:2075
+#: inc/customizer.php:1928
+#: inc/customizer.php:2088
 msgid "Disable"
 msgstr ""
 
-#: inc/customizer.php:1950
+#: inc/customizer.php:1960
 msgid "Agent Info Icon 1"
 msgstr ""
 
-#: inc/customizer.php:1964
+#: inc/customizer.php:1974
 msgid "Agent Info Icon 2"
 msgstr ""
 
-#: inc/customizer.php:1978
+#: inc/customizer.php:1988
 msgid "Agent Info Icon 3"
 msgstr ""
 
-#: inc/customizer.php:2003
+#: inc/customizer.php:2013
 msgid "Agent Info 1 Text"
 msgstr ""
 
-#: inc/customizer.php:2025
+#: inc/customizer.php:2036
 msgid "Agent Info 2 Text"
 msgstr ""
 
-#: inc/customizer.php:2047
+#: inc/customizer.php:2059
 msgid "Agent Info 3 Text"
 msgstr ""
 
-#: inc/customizer.php:2069
+#: inc/customizer.php:2082
 msgid "Enable Map below agent?"
 msgstr ""
 
-#: inc/customizer.php:2090
-#: inc/customizer.php:2614
+#: inc/customizer.php:2103
+#: inc/customizer.php:2646
 msgid "Insert your map marker"
 msgstr ""
 
-#: inc/customizer.php:2112
-#: inc/customizer.php:2631
+#: inc/customizer.php:2125
+#: inc/customizer.php:2663
 msgid "Insert the location latitude"
 msgstr ""
 
-#: inc/customizer.php:2134
-#: inc/customizer.php:2648
+#: inc/customizer.php:2147
+#: inc/customizer.php:2680
 msgid "Insert the location longitude"
 msgstr ""
 
-#: inc/customizer.php:2159
+#: inc/customizer.php:2172
 msgid "Add your Agents Slider Title"
 msgstr ""
 
-#: inc/customizer.php:2175
+#: inc/customizer.php:2188
 msgid "Add your Agents Slider Description"
 msgstr ""
 
-#: inc/customizer.php:2191
+#: inc/customizer.php:2204
 msgid "Select An Icon"
 msgstr ""
 
-#: inc/customizer.php:2199
-#: inc/customizer.php:2356
+#: inc/customizer.php:2212
+#: inc/customizer.php:2370
 msgid "Agents"
 msgstr ""
 
-#: inc/customizer.php:2201
+#: inc/customizer.php:2214
 msgid "Add, Remove, and sort your agents and their info."
 msgstr ""
 
-#: inc/customizer.php:2205
+#: inc/customizer.php:2218
 msgid "Agent"
 msgstr ""
 
-#: inc/customizer.php:2220
+#: inc/customizer.php:2234
 msgid "Agent Photo"
 msgstr ""
 
-#: inc/customizer.php:2235
+#: inc/customizer.php:2249
 msgid "Agent Phone"
 msgstr ""
 
-#: inc/customizer.php:2240
+#: inc/customizer.php:2254
 msgid "Agent Email"
 msgstr ""
 
-#: inc/customizer.php:2251
+#: inc/customizer.php:2265
 msgid "Social Link (e.g. http://www.example.com)"
 msgstr ""
 
-#: inc/customizer.php:2256
+#: inc/customizer.php:2270
 msgid "Social Network 2"
 msgstr ""
 
-#: inc/customizer.php:2262
+#: inc/customizer.php:2276
 msgid "Social Link 2 (e.g. http://www.example.com)"
 msgstr ""
 
-#: inc/customizer.php:2267
+#: inc/customizer.php:2281
 msgid "Social Network 3"
 msgstr ""
 
-#: inc/customizer.php:2273
+#: inc/customizer.php:2287
 msgid "Social Link 3 (e.g. http://www.example.com)"
 msgstr ""
 
-#: inc/customizer.php:2286
+#: inc/customizer.php:2300
 msgid "Add your Testimonial Title"
 msgstr ""
 
-#: inc/customizer.php:2303
+#: inc/customizer.php:2317
 msgid "Insert a background image for this section"
 msgstr ""
 
-#: inc/customizer.php:2304
+#: inc/customizer.php:2318
 msgid "Our demo uses a transparent image"
 msgstr ""
 
-#: inc/customizer.php:2329
+#: inc/customizer.php:2343
 msgid "Testimonial Background Color"
 msgstr ""
 
-#: inc/customizer.php:2358
+#: inc/customizer.php:2372
 msgid "Add, Remove, and sort your testimonials.  You need at least 2 to display."
 msgstr ""
 
-#: inc/customizer.php:2362
+#: inc/customizer.php:2376
 msgid "Testimonial"
 msgstr ""
 
-#: inc/customizer.php:2377
+#: inc/customizer.php:2391
 msgid "The Testimonial"
 msgstr ""
 
-#: inc/customizer.php:2401
+#: inc/customizer.php:2415
 msgid "First Text Section Title"
 msgstr ""
 
-#: inc/customizer.php:2418
+#: inc/customizer.php:2432
 msgid "First Text Section"
 msgstr ""
 
-#: inc/customizer.php:2435
+#: inc/customizer.php:2449
 msgid "Second Text Section Title"
 msgstr ""
 
-#: inc/customizer.php:2452
+#: inc/customizer.php:2466
 msgid "Second Text Section"
 msgstr ""
 
-#: inc/customizer.php:2481
+#: inc/customizer.php:2495
 msgid "Contact Section Icon 1"
 msgstr ""
 
-#: inc/customizer.php:2482
+#: inc/customizer.php:2496
 msgid "Choose the first icon for the contact section"
 msgstr ""
 
-#: inc/customizer.php:2496
+#: inc/customizer.php:2510
 msgid "Contact Section Icon 2"
 msgstr ""
 
-#: inc/customizer.php:2497
+#: inc/customizer.php:2511
 msgid "Choose the second icon for the contact section"
 msgstr ""
 
-#: inc/customizer.php:2511
+#: inc/customizer.php:2525
 msgid "Contact Section Icon 3"
 msgstr ""
 
-#: inc/customizer.php:2512
+#: inc/customizer.php:2526
 msgid "Choose the third icon for the contact section"
 msgstr ""
 
-#: inc/customizer.php:2536
+#: inc/customizer.php:2550
 msgid "Contact Icon Text 1"
 msgstr ""
 
-#: inc/customizer.php:2554
+#: inc/customizer.php:2568
 msgid "Contact Icon Text 2"
 msgstr ""
 
-#: inc/customizer.php:2572
+#: inc/customizer.php:2586
 msgid "Contact Icon Text 3"
 msgstr ""
 
-#: inc/customizer.php:2590
+#: inc/customizer.php:2604
+msgid "Contact Form Title"
+msgstr ""
+
+#: inc/customizer.php:2607
+msgid "Set the contact form title."
+msgstr ""
+
+#: inc/customizer.php:2622
 msgid "Contact Form"
 msgstr ""
 
-#: inc/customizer.php:2593
+#: inc/customizer.php:2625
 msgid "Set the Shortcode for the Contact Form you want to use."
 msgstr ""
 
-#: inc/customizer.php:2594
+#: inc/customizer.php:2626
 msgid "We include Contact Form 7 and style it but you can use other contact forms as well"
 msgstr ""
 
-#: inc/customizer.php:2674
+#: inc/customizer.php:2706
 msgid "Blog Title"
 msgstr ""
 
-#: inc/customizer.php:2675
+#: inc/customizer.php:2707
 msgid "Set the title to be displayed for your blog."
 msgstr ""
 
-#: inc/customizer.php:2685
+#: inc/customizer.php:2717
 msgid "Insert the blog top background image"
 msgstr ""
 
-#: inc/customizer.php:2701
+#: inc/customizer.php:2733
 msgid "Blog Sidebar"
 msgstr ""
 
-#: inc/customizer.php:2702
+#: inc/customizer.php:2734
 msgid "Choose the blog sidebar location."
 msgstr ""
 
-#: inc/customizer.php:2716
+#: inc/customizer.php:2748
 msgid "Blog Roll Content"
 msgstr ""
 
-#: inc/customizer.php:2717
+#: inc/customizer.php:2749
 msgid "Choose to display a summary or full content."
 msgstr ""
 
-#: inc/customizer.php:2731
+#: inc/customizer.php:2763
 msgid "Blog Summary Length"
 msgstr ""
 
-#: inc/customizer.php:2732
+#: inc/customizer.php:2764
 msgid "Choose how many words to display for main blog view content."
 msgstr ""
 
-#: inc/customizer.php:2755
+#: inc/customizer.php:2787
 msgid "Blog Meta"
 msgstr ""
 
-#: inc/customizer.php:2756
+#: inc/customizer.php:2788
 msgid "Choose the meta tags to display with posts"
 msgstr ""
 

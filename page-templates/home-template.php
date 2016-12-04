@@ -28,11 +28,11 @@ $home_sections = get_theme_mod( 'home_sections', array());
 				<div class="row">
 					<div class="col-sm-6 col-xs-10 top-info-sect">
 						<h3>
-							<?php echo esc_html(get_theme_mod( 'home_info_address', __('25 North Street / Your Town, CO 88888 United States', 'twenty-five-north') )); ?>
+							<?php echo wp_kses_post(get_theme_mod( 'home_info_address', __('25 North Street / Your Town, CO 88888 United States', 'twenty-five-north') )); ?>
 						</h3>
-						<h1><?php echo esc_html(get_theme_mod( 'home_info_price', '$1,799,000')); ?></h1>
+						<h1><?php echo wp_kses_post(get_theme_mod( 'home_info_price', '$1,799,000')); ?></h1>
 						<p>
-							<?php echo esc_html(get_theme_mod( 'home_info_desc', __('Lovely one owner home with an open floor plan on a corner lot!  Spacious living room with fireplace and walk out to a fully fenced backyard with patio.', 'twenty-five-north') )); ?>
+							<?php echo wp_kses_post(get_theme_mod( 'home_info_desc', __('Lovely one owner home with an open floor plan on a corner lot!  Spacious living room with fireplace and walk out to a fully fenced backyard with patio.', 'twenty-five-north') )); ?>
 						</p>
 					</div>
 				</div>
@@ -56,7 +56,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 					 <div class="feature">
 						<div class="feature-inner">
 							<i class="<?php echo esc_html(get_theme_mod( 'feature_1_icon', 'icon-bed')); ?>"></i><br />
-							<span><?php echo esc_html(get_theme_mod( 'feature_1_text', __('4 Bedrooms', 'twenty-five-north') )); ?></span>
+							<span><?php echo wp_kses_post(get_theme_mod( 'feature_1_text', __('4 Bedrooms', 'twenty-five-north') )); ?></span>
 						</div>
 					</div>
 				</div>
@@ -64,7 +64,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 					<div class="feature">
 						<div class="feature-inner">
 							<i class="<?php echo esc_html(get_theme_mod( 'feature_2_icon', 'icon-bathtub')); ?>"></i><br />
-							<span><?php echo esc_html(get_theme_mod( 'feature_2_text', __('4 Bathrooms', 'twenty-five-north') )); ?></span>
+							<span><?php echo wp_kses_post(get_theme_mod( 'feature_2_text', __('4 Bathrooms', 'twenty-five-north') )); ?></span>
 						</div>
 					</div>
 				</div>
@@ -72,7 +72,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 					<div class="feature">
 						<div class="feature-inner">
 							<i class="<?php echo esc_html(get_theme_mod( 'feature_3_icon', 'icon-car2')); ?>"></i><br />
-							<span><?php echo esc_html(get_theme_mod( 'feature_3_text', __('3 Car Garage', 'twenty-five-north') )); ?></span>
+							<span><?php echo wp_kses_post(get_theme_mod( 'feature_3_text', __('3 Car Garage', 'twenty-five-north') )); ?></span>
 						</div>
 					</div>
 				</div>
@@ -80,7 +80,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 					<div class="feature">
 						<div class="feature-inner">
 							<i class="<?php echo esc_html(get_theme_mod( 'feature_4_icon', 'icon-pencil-ruler')); ?>"></i><br />
-							<span><?php echo esc_html(get_theme_mod( 'feature_4_text', __('4078 SQ.FT.', 'twenty-five-north') )); ?></span>
+							<span><?php echo wp_kses_post(get_theme_mod( 'feature_4_text', __('4078 SQ.FT.', 'twenty-five-north') )); ?></span>
 						</div>
 					</div>
 				</div>
@@ -96,7 +96,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<h2 class="sectionh"><?php echo esc_html(get_theme_mod( 'highlights_title', '')); ?></h2>
-					<p><?php echo esc_html(get_theme_mod( 'highlights_desc', '')); ?></p>
+					<p><?php echo wp_kses_post(get_theme_mod( 'highlights_desc', '')); ?></p>
 				</div>
 			</div>
 			<div class="row highlight-info">
@@ -112,7 +112,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 						<i class="fa <?php echo esc_html(get_theme_mod( 'highlight_1_icon', '')); ?>"></i>
 					</div>
 					<h4><?php echo esc_html(get_theme_mod( 'highlight_1_title', '')); ?></h4>
-					<p><?php echo esc_html(get_theme_mod( 'highlight_1_text', '')); ?></p>
+					<p><?php echo wp_kses_post(get_theme_mod( 'highlight_1_text', '')); ?></p>
 				</div>
 				<div class="col-md-4">
 					<div class="shape">
@@ -126,7 +126,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 						<i class="fa <?php echo esc_html(get_theme_mod( 'highlight_2_icon', '')); ?>"></i>
 					</div>
 					<h4><?php echo esc_html(get_theme_mod( 'highlight_2_title', '')); ?></h4>
-					<p><?php echo esc_html(get_theme_mod( 'highlight_2_text', '')); ?></p>
+					<p><?php echo wp_kses_post(get_theme_mod( 'highlight_2_text', '')); ?></p>
 				</div>
 				<div class="col-md-4">
 					<div class="shape">
@@ -140,7 +140,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 						<i class="fa <?php echo esc_html(get_theme_mod( 'highlight_3_icon', '')); ?>"></i>
 					</div>
 					<h4><?php echo esc_html(get_theme_mod( 'highlight_3_title', '')); ?></h4>
-					<p><?php echo esc_html(get_theme_mod( 'highlight_3_text', '')); ?></p>
+					<p><?php echo wp_kses_post(get_theme_mod( 'highlight_3_text', '')); ?></p>
 				</div>
 			</div>
 		<!-- Highlights slider -->
@@ -177,7 +177,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
                     	<div class="col-sm-12 col-md-7">
                     		<div class="infoblock">
                         		<h3><?php echo esc_html($v['slide_title']); ?></h3>
-                            	<p><?php echo esc_html($v['slide_text']); ?></p>
+                            	<p><?php echo wp_kses_post($v['slide_text']); ?></p>
                             	<ul class="infoblock-feats">
 								<?php 
 								$feature_list = explode(',', $v['slide_feature_list']);
@@ -220,7 +220,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
     	<div class="overlay-col">
         	<div class="container">
             	<h2 class="sectionh"><?php echo esc_html(get_theme_mod('gallery_title', ''));?></h2>
-               	<p><?php echo esc_html(get_theme_mod('gallery_text', ''));?></p>
+               	<p><?php echo wp_kses_post(get_theme_mod('gallery_text', ''));?></p>
                 <div class="row">
                   	<div class="col-md-12">
                        	<div id="isotope-filters2" class="filter-container isotopeFilters2">
@@ -318,7 +318,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
     	<div class="container-fluid color-back">
         	<div class="row text-center">
             	<div class="col-md-12">
-                	<span><?php echo esc_html(get_theme_mod('gallery_banner_text', '')); ?></span>
+                	<span><?php echo wp_kses_post(get_theme_mod('gallery_banner_text', '')); ?></span>
 					<a href="<?php echo esc_url(get_theme_mod('gallery_banner_btn_link', '')); ?>" target="_<?php echo esc_html(get_theme_mod('gallery_banner_btn_window', '')); ?>" class="vtour btn-pri"><?php echo esc_html(get_theme_mod('gallery_banner_btn_text', '')); ?></a>
                 </div>
             </div>
@@ -337,7 +337,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
         	<div class="row text-center">
             	<div class="col-md-12">
                 	<h2 class="sectionh"><?php echo esc_html(get_theme_mod('additional_title', '')); ?></h2>
-                    <p><?php echo esc_html(get_theme_mod('additional_text', '')); ?></p>
+                    <p><?php echo wp_kses_post(get_theme_mod('additional_text', '')); ?></p>
                 </div>
             </div>
             <div class="row additional-items">
@@ -345,7 +345,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
                 	<div class="add-item">
                     	<div class="add-inner">
                         	<i class="<?php echo esc_html(get_theme_mod('additional_1_icon', '')); ?>"></i><br />
-                            <span><?php echo esc_html(get_theme_mod('additional_1_text', '')); ?></span>
+                            <span><?php echo wp_kses_post(get_theme_mod('additional_1_text', '')); ?></span>
                         </div>
                     </div>
                 </div>
@@ -353,7 +353,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
                     <div class="add-item">
                         <div class="add-inner">
                             <i class="<?php echo esc_html(get_theme_mod('additional_2_icon', '')); ?>"></i><br />
-                            <span><?php echo esc_html(get_theme_mod('additional_2_text', '')); ?></span>
+                            <span><?php echo wp_kses_post(get_theme_mod('additional_2_text', '')); ?></span>
                         </div>
                     </div>
                 </div>
@@ -361,7 +361,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
                     <div class="add-item">
                         <div class="add-inner">
                             <i class="<?php echo esc_html(get_theme_mod('additional_3_icon', '')); ?>"></i><br />
-                            <span><?php echo esc_html(get_theme_mod('additional_3_text', '')); ?></span>
+                            <span><?php echo wp_kses_post(get_theme_mod('additional_3_text', '')); ?></span>
                         </div>
                     </div>
                 </div>
@@ -369,7 +369,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
                     <div class="add-item">
                         <div class="add-inner">
                             <i class="<?php echo esc_html(get_theme_mod('additional_4_icon', '')); ?>"></i><br />
-                            <span><?php echo esc_html(get_theme_mod('additional_4_text', '')); ?></span>
+                            <span><?php echo wp_kses_post(get_theme_mod('additional_4_text', '')); ?></span>
                         </div>
                     </div>
                 </div>
@@ -397,7 +397,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="sectionh"><?php echo esc_html(get_theme_mod('posts_title', '')); ?></h2>
-                    <p><?php echo esc_html(get_theme_mod('posts_text', '')); ?></p>
+                    <p><?php echo wp_kses_post(get_theme_mod('posts_text', '')); ?></p>
                 </div>
             </div>
 			<div class="posts-container">
@@ -475,7 +475,7 @@ $home_sections = get_theme_mod( 'home_sections', array());
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="sectionh"><?php echo esc_html(get_theme_mod('agent_title', '')); ?></h2>
-					<p><?php echo esc_html(get_theme_mod('agent_desc', '')); ?></p>
+					<p><?php echo wp_kses_post(get_theme_mod('agent_desc', '')); ?></p>
 				</div>
 			</div>
 			<div class="row vcenter agent-info">
@@ -484,8 +484,8 @@ $home_sections = get_theme_mod( 'home_sections', array());
 				</div>
 				<div class="col-md-6 text-left agent-details">
 					<h3><?php echo esc_html(get_theme_mod('agent_name', '')); ?></h3>
-					<span><?php echo esc_html(get_theme_mod('agent_cred', '')); ?></span>
-					<p><?php echo esc_html(get_theme_mod('agent_info', '')); ?></p>
+					<span><?php echo wp_kses_post(get_theme_mod('agent_cred', '')); ?></span>
+					<p><?php echo wp_kses_post(get_theme_mod('agent_info', '')); ?></p>
 					<a class="btn-third" href="<?php echo esc_url(get_theme_mod('agent_btn_link', '')); ?>" target="_<?php echo esc_html(get_theme_mod('agent_btn_window', '')); ?>"><?php echo esc_html(get_theme_mod('agent_btn_text', '')); ?></a>
 				</div>
 			</div>
@@ -498,15 +498,15 @@ $home_sections = get_theme_mod( 'home_sections', array());
 				<div class="row">
 					<div class="col-md-6 col-lg-4">
 						<div class="icon-ring"><i class="fa <?php echo esc_html(get_theme_mod('agent_1_icon', ''));?>"></i></div>
-						<p class="text"><?php echo esc_html(get_theme_mod('agent_1_text', ''));?></p>
+						<p class="text"><?php echo wp_kses_post(get_theme_mod('agent_1_text', ''));?></p>
 					</div>
 					<div class="col-md-6 col-lg-4">
 						<div class="icon-ring"><i class="fa <?php echo esc_html(get_theme_mod('agent_2_icon', ''));?>"></i></div>
-						<p class="text"><?php echo esc_html(get_theme_mod('agent_2_text', ''));?></p>
+						<p class="text"><?php echo wp_kses_post(get_theme_mod('agent_2_text', ''));?></p>
 					</div>
 					<div class="col-md-6 col-lg-4">
 						<div class="icon-ring"><i class="fa <?php echo esc_html(get_theme_mod('agent_3_icon', ''));?>"></i></div>
-						<p class="text"><?php echo esc_html(get_theme_mod('agent_3_text', ''));?></p>
+						<p class="text"><?php echo wp_kses_post(get_theme_mod('agent_3_text', ''));?></p>
 					</div>
 				</div>
 			</div>

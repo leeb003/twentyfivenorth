@@ -480,11 +480,6 @@ add_action('wp_footer', array($custom_code_output, 'output_custom_js') );
 
 
 /**
- * Theme Hooks - hooks provided for development
- */
-require_once TWENTYFIVENORTH_ADMIN_DIR . 'theme-hooks.php';
-
-/**
  * TGMPA inclusion
  */
 require_once TWENTYFIVENORTH_INC_DIR . 'class-tgm-plugin-activation.php';

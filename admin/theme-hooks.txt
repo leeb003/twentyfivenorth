@@ -2,6 +2,7 @@
 /**
  * Theme Hooks
  * tfn = Twenty Five North
+ * Reference for all hooks included
  * @package Twenty Five North
  * @subpackage inc
  */

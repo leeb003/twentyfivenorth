@@ -32,7 +32,7 @@ $contact_form = get_theme_mod( 'contact_form_shortcode', '' );
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2 class="sectionh"><?php echo esc_html(get_theme_mod('topagents_title', '')); ?></h2>
-                    <p><?php echo esc_html(get_theme_mod('topagents_text', '')); ?></p>
+                    <p><?php echo wp_kses_post(get_theme_mod('topagents_text', '')); ?></p>
                 </div>
             </div>
             <div class="row">
@@ -56,11 +56,11 @@ $contact_form = get_theme_mod( 'contact_form_shortcode', '' );
                             <div class="agent-contact">
                                 <div class="agent-contact-row">
                                     <div class="icon-holder"><i class="icon-telephone"></i></div>
-                                    <div class="contact-details"><span><?php echo esc_html__('PHONE', 'twenty-five-north');?></span><?php echo esc_html($details['agent_phone']);?></div>
+                                    <div class="contact-details"><span><?php echo esc_html__('PHONE', 'twenty-five-north');?></span><?php echo wp_kses_post($details['agent_phone']);?></div>
                                 </div>
                                 <div class="agent-contact-row">
                                     <div class="icon-holder"><i class="icon-envelope"></i></div>
-                                    <div class="contact-details"><span><?php echo esc_html__('EMAIL', 'twenty-five-north');?></span><?php echo esc_html($details['agent_email']);?></div>
+                                    <div class="contact-details"><span><?php echo esc_html__('EMAIL', 'twenty-five-north');?></span><?php echo wp_kses_post($details['agent_email']);?></div>
                                 </div>
                             </div>
                             <div class="agent-social">
@@ -113,7 +113,7 @@ $contact_form = get_theme_mod( 'contact_form_shortcode', '' );
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div>
-                            <p class="quote"><?php echo esc_html($entry['testimonial']);?></p>
+                            <p class="quote"><?php echo wp_kses_post($entry['testimonial']);?></p>
                             <div class="quote-person">
                                 <?php echo esc_html($entry['name']); ?> - <span><?php echo esc_html($entry['title']);?></span>
                             </div>
@@ -139,12 +139,12 @@ $contact_form = get_theme_mod( 'contact_form_shortcode', '' );
                     <div class="col-lg-4 col-md-6 statement">
                         <div>
                             <h4><?php echo esc_html(get_theme_mod('contact_title_1', '')); ?></h4>
-                            <p><?php echo esc_html(get_theme_mod('contact_text_1', '')); ?></p>
+                            <p><?php echo wp_kses_post(get_theme_mod('contact_text_1', '')); ?></p>
                         </div>
 
                         <div>
                             <h4><?php echo esc_html(get_theme_mod('contact_title_2', '')); ?></h4>
-                            <p><?php echo esc_html(get_theme_mod('contact_text_2', '')); ?></p>
+                            <p><?php echo wp_kses_post(get_theme_mod('contact_text_2', '')); ?></p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 contactus">
@@ -153,7 +153,7 @@ $contact_form = get_theme_mod( 'contact_form_shortcode', '' );
                                 <span class="icon-surround"><i class="<?php echo esc_html(get_theme_mod('contact_1_icon', '')); ?>"></i></span>
                             </div>
                             <div class="contactus-detail">
-								<?php echo esc_html(get_theme_mod('contact_1_text', '')); ?>
+								<?php echo wp_kses_post(get_theme_mod('contact_1_text', '')); ?>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -162,7 +162,7 @@ $contact_form = get_theme_mod( 'contact_form_shortcode', '' );
                                 <span class="icon-surround"><i class="<?php echo esc_html(get_theme_mod('contact_2_icon', '')); ?>"></i></span>
                             </div>
                             <div class="contactus-detail">
-								<?php echo esc_html(get_theme_mod('contact_2_text', '')); ?>
+								<?php echo wp_kses_post(get_theme_mod('contact_2_text', '')); ?>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -171,7 +171,7 @@ $contact_form = get_theme_mod( 'contact_form_shortcode', '' );
                                 <span class="icon-surround"><i class="<?php echo esc_html(get_theme_mod('contact_3_icon', '')); ?>"></i></span>
                             </div>
                             <div class="contactus-detail">
-                                <?php echo esc_html(get_theme_mod('contact_3_text', '')); ?>
+                                <?php echo wp_kses_post(get_theme_mod('contact_3_text', '')); ?>
                             </div>
                         </div>
                     </div>
