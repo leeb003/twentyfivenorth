@@ -65,6 +65,29 @@
       <key name="highlight_2_text"/>
       <key name="highlight_3_title"/>
       <key name="highlight_3_text"/>
+	  <key name="highlight_slides">
+        <key name="0">
+          <key name="slide_title"/>
+          <key name="slide_text"/>
+          <key name="slide_feature_list"/>
+          <key name="slide_feature_text"/>
+          <key name="slide_feature_text_2"/>
+        </key>
+        <key name="1">
+          <key name="slide_title"/>
+          <key name="slide_text"/>
+          <key name="slide_feature_list"/>
+          <key name="slide_feature_text"/>
+          <key name="slide_feature_text_2"/>
+        </key>
+        <key name="2">
+          <key name="slide_title"/>
+          <key name="slide_text"/>
+          <key name="slide_feature_list"/>
+          <key name="slide_feature_text"/>
+          <key name="slide_feature_text_2"/>
+        </key>
+      </key>
       <key name="gallery_title"/>
       <key name="gallery_text"/>
       <key name="gallery_banner_text"/>

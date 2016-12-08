@@ -196,7 +196,13 @@ function twentyfivenorth_scripts() {
 	wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css' );
 	wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css' );
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.min.css' );
-	wp_enqueue_style( 'twentyfivenorth-style', get_stylesheet_uri() );
+	$deps = false;
+    if (is_child_theme()) {
+        $deps = array('parent-styles');
+        // load parent styles if active child theme
+        wp_enqueue_style('parent-styles', trailingslashit(get_template_directory_uri()) .'style.css', false);
+    }
+	wp_enqueue_style( 'twentyfivenorth-style', get_stylesheet_uri(), $deps );
 	// Other pages (not Front Page) styles
 	if (!is_page_template($templates)) {
 		$top_background = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
@@ -262,6 +268,14 @@ function twentyfivenorth_scripts() {
         	'agentMapLng' => $agent_map_lng,
 			'is_rtl'      => is_rtl()
     	));
+		/**
+		 * Theme Custom JS Code
+		 * output in inline script
+		 */
+		require_once TWENTYFIVENORTH_ADMIN_DIR . 'custom-code-output.php';
+		$custom_code_output = new tfn_custom_code_output;
+		$tfn_custom_js = $custom_code_output->output_custom_js();
+		wp_add_inline_script( 'twentyfivenorth-js', $tfn_custom_js );
 		
 		// and if map enabled
 		if (get_theme_mod('agent_map') == 'enable' ) {
@@ -299,6 +313,11 @@ function twentyfivenorth_scripts() {
 			'is_rtl'         => is_rtl()
 		));
 
+		require_once TWENTYFIVENORTH_ADMIN_DIR . 'custom-code-output.php';
+        $custom_code_output = new tfn_custom_code_output;
+        $tfn_custom_js = $custom_code_output->output_custom_js();
+        wp_add_inline_script( 'twentyfivenorth-pagejs', $tfn_custom_js );
+
 		// and if about map enabled
 		$about_sections = get_theme_mod('about_sections');
 		$map_enabled = false;
@@ -333,7 +352,20 @@ function twentyfivenorth_admin_scripts() {
 		get_template_directory_uri() . '/js/customizer-admin.js', array(), $tfn_theme->get('Version'), true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'twentyfivenorth_admin_scripts'); // only for the customizer
-//add_action( 'admin_enqueue_scripts', 'twentyfivenorth_admin_scripts');
+
+/**
+ * Appends our custom CSS to the global kirki-generated CSS.
+ *
+ * @return string
+ */
+function ephic_add_custom_css_to_dynamic_css( $css ) {
+    // Get the custom CSS
+    $custom_css = get_theme_mod( 'css_code', '' );
+    // Append our custom CSS to the Kirki-generated custom-css
+    // and return the result
+    return $css . $custom_css;
+}
+add_filter( 'kirki/twentyfivenorth_theme/dynamic_css', 'ephic_add_custom_css_to_dynamic_css' );
 
 /**
  * Add Placeholders to the comment form
@@ -469,15 +501,6 @@ require TWENTYFIVENORTH_INC_DIR . 'customizer.php';
  * Theme Resources - common components used in the theme
  */
 require_once TWENTYFIVENORTH_ADMIN_DIR . 'theme-resources.php';
-
-/**
- * Theme Custom CSS and JS Code
- */
-require_once TWENTYFIVENORTH_ADMIN_DIR . 'custom-code-output.php';
-$custom_code_output = new tfn_custom_code_output;
-add_action('wp_head', array($custom_code_output, 'output_custom_css') );
-add_action('wp_footer', array($custom_code_output, 'output_custom_js') );
-
 
 /**
  * TGMPA inclusion

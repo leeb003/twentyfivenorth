@@ -2,25 +2,24 @@
 
 class tfn_custom_code_output {
 
-    // Properties
+	// Properties
 
-    // Methods
-    /* Header custom CSS output */
-    public function output_custom_css() {
-        if (get_theme_mod('css_code') ) { ?>
-    <style>
-        <?php print(get_theme_mod('css_code')); ?>
-    </style>
-    <?php
-        }
-    }
-	/* Custom Javascript output */
+	// Methods
+
+	/* Custom CSS output 
+	 * Not using since we are attaching it to kirki's output called in functions.php 
+	 */
+	public function output_custom_css() {
+		if (get_theme_mod('css_code') ) {
+			return(get_theme_mod('css_code')); 
+		}
+	}
+	/* Custom Javascript output 
+	 * being called in functions.php with wp_add_inline_script on main script
+	 */
 	public function output_custom_js() {
-		if (get_theme_mod('js_code') ) { ?>
-	<script>
-		<?php print(get_theme_mod('js_code')); ?>
-	</script>
-	<?php
+		if (get_theme_mod('js_code') ) { 
+			return(get_theme_mod('js_code')); 
 		}
 	}
 }
